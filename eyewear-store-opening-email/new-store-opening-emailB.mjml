@@ -1,0 +1,178 @@
+<mjml>
+  <mj-head>
+    <mj-preview>New Framler Eyewear Store Opening Notification.</mj-preview>
+    <mj-title>Hi, Audrey we sent you an invitation to our store opening</mj-title>
+    
+    <mj-style inline="inline">
+      /* Media query for screens smaller than 480px */
+      @media only screen and (max-width: 480px) {
+        .button {
+          width: auto !important;
+          display: flex !important;
+          text-align: center !important;
+        }
+        mj-column {
+          width: 320px !important;
+        }
+      }
+
+      /* Media query for screens between 481px and 767px */
+      @media screen and (max-width: 767px) {
+        .mobile-center {
+          text-align: center !important; 
+        }
+        mj-column {
+          width: 50% !important;
+        }
+      }
+
+      /* Media query for screens between 768px and 991px */
+      @media screen and (max-width: 992px) {
+        mj-column {
+          width: 70% !important;
+        }
+      }
+
+      /* Default media query for screens larger than 1023px */
+      @media screen and (min-width: 1024px) {
+        mj-column {
+          width: 80% !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#00101F">
+    
+    <mj-section padding="0">
+      <mj-column padding="15px">
+        <mj-image src="https://i.ibb.co/HHV1vq6/DALL-E-2024-02-19-19-53-42-Create-a-sophisticated-logo-for-the-eyewear-brand-Frameler-The-logo-shoul.webp" alt="Frameler Eyewear Logo" border="0" padding="0px" width="180px" border-radius="10px" />
+      </mj-column>
+    </mj-section>
+    
+    <mj-section background-color="#FFF" padding="0">
+      <mj-column padding="0">
+        <mj-image src="https://i.ibb.co/mCL1K69/DALL-E-2024-02-23-10-51-45-Create-a-wide-horizontal-hero-image-for-Frameler-featuring-one-pair-of-me.webp" alt="Frameler Eyewear Hero Image" border="0" padding="0px" width="600px" />
+      </mj-column>
+    </mj-section>
+    
+    <mj-section background-color="#FFF" border="0" padding="30px">
+      <mj-column>
+        <mj-image width="380px" align="center" src="https://i.ibb.co/BVvRVRjB/Gemini-Generated-Image-4ujd5q4ujd5q4ujd.png" alt="Audrey wearing stylish Frameler glasses" border="0" padding="0px" border-radius="20px" css-class="responsive-image" />
+        <mj-text padding="45px" color="#00101F" align="center" font-family="Georgia, serif" font-size="32px">
+          <strong>G'day Linley!</strong>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section padding="25px" background-color="#FFF">
+      <mj-column width="100%" background-color="#F0F0F0" border-radius="8px">
+        <mj-text align="left" font-family="Georgia, serif" font-size="22px" line-height="1.5">
+          <strong>We Will Open a New Frameler Eyewear Store</strong>
+        </mj-text>
+        <mj-text align="left" font-family="Georgia, serif" font-size="18px" line-height="2.0" padding-bottom="35px">
+          We are sending you this email since you participated in receiving notifications about the opening of our new store in Melbourne.<br /><br />
+          <strong>GET THE CHANCE TO GET A NEW IPHONE</strong><br /><br />
+          Our new premises are located at <strong>Marina Wharf, Rite Complex Level 1 (opposite KFC) in Melbourne city.</strong><br /><br />
+          As part of our <strong>Grand Opening on Saturday 14th of March 2026 at 11am</strong> we are giving away <strong>50 Frameler Sunglasses to the first 50 customers</strong> through the door.<br /><br /> 
+          Register below to participate!
+        </mj-text>
+      </mj-column>
+      
+      <mj-column width="100%" background-color="#F0F0F0" padding="25px">
+        <mj-button css-class="button" align="left" background-color="yellow" color="#000" font-size="20px" border-radius="5px" height="60px" width="70%" font-family="Tahoma, serif" font-weight="bold" border="4px solid #00101F" padding="0" line-height="1.5" href="#">
+          Register Participation
+        </mj-button>
+      </mj-column>
+      
+      <mj-column width="100%" background-color="#FFF">
+        <mj-text align="left" font-size="18px" line-height="1.5" font-family="Georgia, serif" color="#000" padding="35px">
+          If you have questions or how you received this invitation please do not hesitate to contact us or just reply to this email, or contact: <a href="mailto:support@example.com" style="text-decoration: underline; color: #000;">support@example.com</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section background-color="#FFF" padding="0">
+      <mj-column>
+        <mj-text align="center" font-size="20px" font-family="Tahoma, serif" color="#333" padding="5px">
+          <strong>Want To Download Our New APP?</strong><br /><br />
+          You can download on.... <br /><br />
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section padding="20px" background-color="#FFF">
+      <mj-column>
+        <mj-social mode="horizontal" align="center" icon-size="60px" font-size="18px">
+          <mj-social-element name="Google Play" href="#" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
+          <mj-social-element name="Microsoft Store" href="#" src="https://i.ibb.co/VWNzQH4/microsoft-store-2.png" alt="Microsoft Store" />
+          <mj-social-element name="App Store" href="#" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1200px-Download_on_the_App_Store_Badge.svg.png" alt="App Store" />
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section background-color="#000C1B" padding-bottom="5px" padding-top="40px">
+      <mj-column width="100%">
+        <mj-text align="center" font-size="16px" font-family="Georgia, serif" padding="0" color="#FFF" line-height="1.5">Follow us on:</mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section padding="0" border="0" background-color="#000C1B">
+      <mj-column background-color="#000C1B" padding-top="5px" padding-bottom="0" padding-left="5px" padding-right="5px" width="600px">
+        <mj-social font-size="18px" icon-size="33px" mode="horizontal" padding-top="0" padding-bottom="0" padding-left="25px" padding-right="25px">
+          <mj-social-element name="facebook" href="#" background-color="#00101F" color="#FFF">&nbsp;Facebook&nbsp;</mj-social-element>
+          <mj-social-element name="twitter" href="#" background-color="#00101F" color="#FFF">&nbsp;Twitter&nbsp;</mj-social-element>
+          <mj-social-element name="instagram" href="#" background-color="#00101F" color="#FFF">&nbsp;Instagram&nbsp;</mj-social-element>
+          <mj-social-element name="youtube" href="#" background-color="#00101F" color="#FFF">&nbsp;YouTube&nbsp;</mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section background-color="#000C1B" border="0" padding="20px">
+      <mj-column width="100%">
+        <mj-text line-height="1.5" color="yellow" align="center" text-decoration="underline" font-size="17px">
+          <a href="#" style="color:yellow;">Unsubscribe</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section background-color="#000C1B" padding="0">
+      <mj-column>
+        <mj-text align="center" font-size="15px">
+          <span style="white-space: nowrap;">
+            <a href="#" style="text-decoration:none;color:#FFF;">Data Privacy</a>
+            &nbsp;|&nbsp;
+            <a href="#" style="text-decoration:none;color:#FFF;">Home</a>
+            &nbsp;|&nbsp;
+            <a href="#" style="text-decoration:none;color:#FFF;">Contact Us</a>
+            &nbsp;|&nbsp;
+            <a href="#" style="text-decoration:none;color:#FFF;">Webview</a>
+          </span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section>
+      <mj-column>
+        <mj-divider width="500px" border-color="#CCCCCC" border-width="2px" border-style="solid" />
+      </mj-column>
+    </mj-section>
+    
+    <mj-section padding="0">
+      <mj-column padding="15px">
+        <mj-image src="https://i.ibb.co/HHV1vq6/DALL-E-2024-02-19-19-53-42-Create-a-sophisticated-logo-for-the-eyewear-brand-Frameler-The-logo-shoul.webp" alt="Frameler Eyewear Logo" border="0" padding="0" width="180px" border-radius="10px" />
+      </mj-column>
+    </mj-section>
+    
+    <mj-section background-color="#000C1B" padding="0">
+      <mj-column>
+        <mj-text font-size="14px" align="center" color="#FFF" line-height="1.5">
+          <strong>&copy; Frameler Eyewear</strong><br /><br />
+          1 Smithy Place, Melbourne, VIC 3000, Australia<br /><br />
+          Tel + (230) 5831 0268
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+  </mj-body>
+</mjml>
