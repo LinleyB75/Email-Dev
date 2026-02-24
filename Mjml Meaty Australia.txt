@@ -1,0 +1,124 @@
+<mjml>
+    <mj-head>
+  <!-- Add Preview Text -->
+  <mj-preview>
+    This week's special offer from Meaty Australian - Quality Meat Products.
+  </mj-preview>
+
+  <!-- Add Subject Line -->
+  <mj-title>
+    Exclusive Offer: 20% Off + Free Delivery!
+  </mj-title>
+ 
+    <mj-style>
+      .custom-image {
+        width: 800px;
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body width="600px" background-color="#f9f5eb">
+
+    <!-- Logo Text Section -->
+    <mj-section padding="14px 0">
+      <mj-column>
+        <mj-text font-size="38px" font-weight="bold" font-family="Impact" color="#000" align="center">Meaty Australian</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Hero Section -->
+    <mj-section padding="50px 0">
+      <mj-column>
+        <mj-text font-size="57px" font-weight="bold" color="#FF0000" align="center">20% off in March</mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <!-- Styled Image Target in CSS-->
+    <mj-section>
+  <mj-column align="center">
+    <mj-image src="https://i.ibb.co/G9KD6gW/pexels-jacob-moseholt-4015401.jpg" alt="pexels-jacob-moseholt-4015401" border="0" alt="Placeholder Image" align="center" width="800px" css-class="custom-image"/>
+  </mj-column>
+</mj-section>
+    
+
+    <!-- Text Sections with Reduced Spacing -->
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-text font-size="18px" color="#000" align="center" line-height="1.5">Don't forget to use your code when you purchase your first order with us.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Coupon Code Section -->
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="bold" color="#000" align="center" line-height="1.5">Use coupon code: <mj-text font-weight="bold" color="#000" role="presentation">7EF7BBEA</mj-text> at checkout.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-text font-size="18px" color="#000" align="center"></mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Contact Us Section -->
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-text font-size="18px" color="#000" align="center" line-height="1.5">Call us if you have any questions or queries about our products or services we provide. Also, if you would like to know what we stand for and how we strive to give our customers great quality meat, feel free to contact us.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Delivery Information Section -->
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-text font-size="17px" color="#000" align="center" line-height="1.5">In providing and maintaining good customer service and loyalty towards our customers, any purchase over $100 dollars has free delivery nationwide.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Call to Action Button with Adjusted Width -->
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-button background-color="#000" color="#fff" font-size="22px" align="center" width="200px" height="48px" border-radius="5px">Enquire today</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Social Icons Section with Adjusted Spacing -->
+    <mj-section background-color="#f9f5eb" padding="20px 0">
+      <mj-column>
+        <mj-social font-size="16px" icon-size="30px" mode="horizontal">
+          <mj-social-element name="instagram" background-color="#000" color="#fff"></mj-social-element>
+          <mj-social-element name="facebook" background-color="#000" color="#fff"></mj-social-element>
+          <mj-social-element name="twitter" background-color="#000" color="#fff"></mj-social-element>
+          <mj-social-element name="linkedin" background-color="#000" color="#fff"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Section with Black Divider -->
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-divider border-color="#000" border-width="1px" padding="10px 0"></mj-divider>
+        <mj-text font-size="12px" color="#000" align="center" line-height="1.5">
+          Unsubscribe | Visit Us | Contact Us | Privacy<br>
+          Allee des Bambous Montagne Ory,Moka, 80825 Mauritius
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Preview and Preheader -->
+    <mj-section padding="10px 0">
+      <mj-column>
+        <mj-text
+
+
+
+
+
+
+
+
+
+
+
+
+

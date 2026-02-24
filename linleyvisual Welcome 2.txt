@@ -1,0 +1,177 @@
+<mjml>
+  <mj-head>
+     <mj-preview>Set up your Online Account at Mindable Insurance</mj-preview>
+      <!-- Title -->
+    <mj-title>Set up account notification.</mj-title>
+       <!-- Breakpoints -->
+    <!-- Media queries -->
+    <mj-style inline="inline">
+  <!-- Media query for screens smaller than 480px (typical mobile devices) -->
+ @media only screen and (max-width: 480px) {
+    .button-container {
+      display: flex !important;
+      align: center !important;
+      justify-content: center !important; /* Center the button horizontally */
+      align-items: center !important;
+      text-align: center !important
+      /* Center the button vertically if needed */
+    }
+      
+    .button {
+      width: auto !important;
+      align: center !imporatnt;
+      display: flex !important;
+      text-align: center !important
+      /* Let the button width adjust based on content */
+
+    mj-column {
+      width: 320px !important;
+    }
+  }
+
+  <!-- Media query for screens between 481px and 767px -->
+  @media screen and (max-width: 767px) {
+    .mobile-center {
+      text-align: center !important; /* Center text for mobile */
+    }
+    mj-column {
+      width: 50% !important;
+    }
+  }
+
+  <!-- Media query for screens between 768px and 991px -->
+  @media screen and (max-width: 992px) {
+    mj-column {
+      width: 70% !important;
+    }
+  }
+
+  <!-- Media query for screens between 992px and 1023px -->
+  @media screen and (max-width: 1024px) {
+    mj-column {
+      width: 80% !important;
+    }
+  }
+
+  <!-- Default media query for screens larger than 1023px -->
+  @media screen and (min-width: 1024px) {
+    mj-column {
+      width: 100% !important;
+    }
+  }
+
+  <!-- Additional media queries can be added if needed -->
+</mj-style>
+
+</mj-head>
+  <mj-body background-color="#FFF">
+<mj-section background-color="#FFF" border="0" padding="0">
+      <mj-column width="60%">
+        <mj-text align="center" color="red" font-size="38px" padding-top="65px"><span style="color: #000;" line-height="1.5"><strong>linleyvisual</strong></span>
+          .com </mj-text>
+        </mj-column>
+       <mj-column width="40%">
+        <mj-image width="200px" align="left" src="https://i.ibb.co/6PWg52Q/tripy.jpg" alt="tripy" border="0" padding="35px" class="responsive-image"/>
+               </mj-column>
+   </mj-section>
+     <!-- Main text info-->
+  <mj-section padding="25px" background-color="#FFF">
+    <mj-column width="100%">
+       <mj-text align="center" font-family="Georgia ,serif" font-size="36px" line-height="1.5"><strong>Thanks for Signing Up Linley !</strong></mj-text>
+    <mj-text align="center" font-size="18px" line-height="1.5" font-family="Arial ,serif" color="#333">
+      <strong>Use code :<span style="color: red;"> WELCOMENOW11</span>  linleyvisual → Your  15% off</strong>
+      </mj-text>
+      </mj-column>
+    </mj-section>
+     <mj-section padding="0">
+      <mj-column background-color="yellow">
+        <!-- Image -->
+        <mj-image  src="https://i.ibb.co/Vqwm85X/banner.png" alt="banner" border="0" padding="0" width="550px" />
+      </mj-column>
+    </mj-section>
+<mj-section padding="10px" background-color="#FFF">
+          <mj-column width="100%" background-color="#FFF">
+        <mj-text align="left"font-size="18px" line-height="1.5" font-family="Arial ,serif" color="#000">
+ We are glad you have joined  us Linley.<br></br>Welcome to linleyvisual.com → Web Development !<br></br> You will now be the first to recieve exclusive offers and updates and news about linleyvisual.com →  Web Development and Design .
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" background-color="#FFF">
+          <mj-column width="100%" background-color="#FFF">
+        <mj-text align="center"font-size="18px" line-height="1.5" font-family="Arial ,serif" color="#000">
+<strong>Don't forget to use code :<span style="color: red;"> WELCOMENOW11</span> linleyvisual → Your  15% discount</strong>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+ <mj-section padding="5px" background-color="#FFF">
+    <mj-column  width="100%" background-color="#FFF">
+     <!-- Login Button Option -->
+<mj-button css-class="button" align="center" background-color="yellow"
+ color="#000" font-size="18px" border-radius="8px" height="60px" width="80%" font-family="Tahoma, serif" font-weight="bold" border="4px solid red;" padding="45px"  line-height="1.5">
+         Try linleyvisual → Your Web &nbsp;→ 
+        </mj-button>
+      </mj-column>
+      </mj-section>
+    
+          
+<!-- address and social links -->
+<mj-section background-color="#000" padding-bottom="5px" padding-top="35px">
+      <mj-column width="100%">
+       <mj-text align="center" font-size="14px" font-family="Georgia, serif" padding="0" color="#FFF" line-height="1.5">Follow us on:</mj-text>
+      </mj-column>
+    </mj-section>
+ <mj-section padding="0" border="0" background-color="#000">
+      <mj-column background-color="#000" padding-top="5px" padding-bottom="0" padding-left="5px" padding-right="5px" width="600px">
+        <mj-social font-size="18px" icon-size="33px" mode="horizontal" background-color="#000" padding-top="0" padding-bottom="0" padding-left="25px" padding-right="25px">
+          <mj-social-element  name="facebook" href="your-facebook-link" background-color="#000" color="#FFF"><mj-column padding="0px"><mj-text>&nbsp;Facebook&nbsp;</mj-text></mj-column></mj-social-element>
+          <mj-social-element name="twitter" href="your-twitter-link" background-color="#000" color="#FFF"><mj-column padding="0px"><mj-text>&nbsp;Twitter&nbsp;</mj-text></mj-column></mj-social-element>
+          <mj-social-element name="instagram" href="your-instagram-link" background-color="#000" color="#FFF"><mj-column padding="0px"><mj-text>&nbsp;Instagram&nbsp;</mj-text></mj-column></mj-social-element>
+          <mj-social-element  name="youtube" href="your-youtube-link" background-color="#000" color="#FFF"><mj-column padding="0px"><mj-text>&nbsp;YouTube&nbsp;</mj-text></mj-column></mj-social-element>
+      </mj-social>
+      </mj-column>
+    </mj-section>
+
+<!--Subscribe Option Text-->
+   <mj-section background-color="#000" border="0" padding="20px">
+      <mj-column width="100%">
+        <mj-text line-height="1.5" color="#FFF" align="center" text-decoration="underline" font-size="16px">📮Subscribe to the linleyvisual.com → Your Web Development weekly newsletter !
+</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="white" padding="35px">
+      <mj-column width="30%">
+        <mj-image width="110px" src="https://i.ibb.co/6PWg52Q/tripy.jpg" alt="tripy" padding="0" css-class="responsive-image"  width="70px" align="right" alt="Lin-Edited" border="0"/>
+        </mj-column>
+        <mj-column width="70%">
+        <mj-text font-size="16px" align="left" color="#000" line-height="1.2" font-family="Georgia ,serif" font-weight="bold" padding="45px 15px 0px 35px"><strong>linleyvisual.com </strong></mj-text>
+          </mj-column>
+    </mj-section>
+   
+
+    <!--Company Address info-->
+    <mj-section background-color="grey" padding="15px">
+      <mj-column>
+      <mj-text font-size="14px" align="center" color="white" line-height="1.5" padding="0px">
+        <strong>&copy; linleyvisual→ is brought to you by Linley Web Development</strong></mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="grey" padding="0px">
+        <mj-column>
+          <mj-image align="center" src="https://i.ibb.co/31SXJ1X/Lin-Edited.png" width="70px" border="0"  padding="0px" border-radius="70px"/>
+        </mj-column>
+      </mj-section>
+    <mj-section background-color="grey" padding="5px">
+      <mj-column>
+        <mj-text align="center" color="white">
+          1 Allee Des Bambous,Montagne Ory, Moka 80825,
+          Republic of Mauritius<br></br>
+          Tel + (230) 5831 0268
+        </mj-text>
+           
+      </mj-column>
+    </mj-section>
+    </mj-body>
+    </mjml>
+ 
+ 
+     
