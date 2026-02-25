@@ -1,0 +1,39 @@
+{
+  "product": {
+    "name": "Mens CATS58 Model",
+    "heroImageUrl": "https://i.ibb.co/17xcFFF/DALL-E-2024-02-19-23-28-17-Enhance-the-series-of-product-photos-for-the-eyewear-brand-Frameler-focus.webp"
+  },
+  "customer": {
+    "firstName": "Linley"
+  },
+  "cart": {
+    "itemName": "Mens CATS58 Model",
+    "itemImageUrl": "https://i.ibb.co/PCDPRyr/DALL-E-2024-02-19-19-41-50-Create-a-product-photo-of-men-s-sunglasses-for-the-brand-Frameler-The-sun.png",
+    "itemPrice": "$19.99 AUD",
+    "itemQuantity": 1,
+    "checkoutUrl": "https://frameler.com/checkout/recover"
+  },
+  "company": {
+    "name": "Frameler Eyewear",
+    "address": "1 Allee Des Bambous, Montagne Ory, Moka 80825, Republic of Mauritius",
+    "phone": "+ (230) 5831 0268",
+    "supportEmail": "support@frameler.com",
+    "socialLinks": {
+      "facebook": "https://facebook.com/frameler",
+      "twitter": "https://twitter.com/frameler",
+      "instagram": "https://instagram.com/frameler",
+      "youtube": "https://youtube.com/frameler"
+    }
+  },
+  "app": {
+    "googlePlayUrl": "https://play.google.com/store",
+    "microsoftStoreUrl": "https://www.microsoft.com/en-us/store/apps",
+    "appStoreUrl": "https://www.apple.com/ios/app-store/"
+  },
+  "email": {
+    "unsubscribeUrl": "https://frameler.com/unsubscribe",
+    "privacyUrl": "https://frameler.com/privacy",
+    "webViewUrl": "https://frameler.com/view-in-browser",
+    "preferencesUrl": "https://frameler.com/preferences"
+  }
+}
