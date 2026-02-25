@@ -1,0 +1,45 @@
+{
+  "customer": {
+    "firstName": "Linley",
+    "lastName": "",
+    "accountId": "************"
+  },
+  "billing": {
+    "addressLine1": "[***********]",
+    "city": "[***************]",
+    "state": "[********]",
+    "zip": "",
+    "country": "[******]",
+    "periodStart": "March 1st 2024",
+    "periodEnd": "1st April 2024"
+  },
+  "receipt": {
+    "number": "558879",
+    "invoiceDate": "March 1st, 2024",
+    "paymentDate": "March 1st, 2024"
+  },
+  "plan": {
+    "name": "Monthly plan (2 hours of class)"
+  },
+  "payment": {
+    "amountFormatted": "$50.00 AUD",
+    "cardType": "Mastercard",
+    "cardLast4": "56"
+  },
+  "company": {
+    "name": "Simplify English",
+    "supportEmail": "support@example.com",
+    "accountUrl": "https://example.com/login",
+    "newsletterUrl": "https://example.com/newsletter",
+    "address": "1 Allee des Bambous, 8th Floor Classo Complex Building Montagne Ory Moka, 80825 Mauritius",
+    "phone": "+ (230) 5831 0268",
+    "socialLinks": {
+      "facebook": "https://facebook.com/..."
+    }
+  },
+  "promo": {
+    "ebookName": "Teach Ezy Ebook",
+    "trialLength": "14 day",
+    "downloadUrl": "https://example.com/download"
+  }
+}
