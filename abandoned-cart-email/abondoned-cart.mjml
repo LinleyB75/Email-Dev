@@ -1,0 +1,155 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Something in your cart, still interested?</mj-preview>
+    <mj-title>Mens CATS58 Model Frameler, you can still have it.</mj-title>
+    <mj-style inline="inline">
+      .button a {
+        width: 100% !important;
+      }
+      @media screen and (max-width: 480px) {
+        .responsive-image img {
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#000000">
+    
+    <mj-section padding="0">
+      <mj-column background-color="#000000" padding="0" width="30%" vertical-align="middle">
+        <mj-image src="https://i.ibb.co/S7Vrqqz/DALL-E-2024-02-19-19-53-42-Create-a-sophisticated-logo-for-the-eyewear-brand-Frameler-The-logo-shoul.png" alt="Frameler Eyewear Logo" border="0" padding="0" css-class="responsive-image" width="180px" />
+      </mj-column>
+      <mj-column width="70%" background-color="#000000" padding="40px 0" vertical-align="middle">
+        <mj-text color="#FFFFFF" font-size="30px" padding-bottom="5px">Frameler Eyewear</mj-text>
+        <mj-text color="#FFFFFF" font-size="14px" padding-top="0">Since 1997</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FFFFFF" padding="25px">
+      <mj-column padding="0" width="100%">
+        <mj-image src="https://i.ibb.co/17xcFFF/DALL-E-2024-02-19-23-28-17-Enhance-the-series-of-product-photos-for-the-eyewear-brand-Frameler-focus.webp" alt="Model wearing Mens CATS58 Sunglasses" border="0" padding="0" width="550px" css-class="responsive-image" />
+        <mj-text align="center" color="#333333" font-family="Georgia, serif" font-size="30px" padding-top="25px">
+          <strong>Still Want This Product ?💡</strong>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FFFFFF" padding="15px">
+      <mj-column width="500px">
+        <mj-image align="center" width="200px" src="https://i.ibb.co/Z1Kkqm8/shopping-cart.png" alt="Shopping Cart Icon" border="0" padding="20px" border-radius="20px" css-class="responsive-image" />
+        <mj-text color="#333333" align="center" font-family="Georgia, serif" font-size="24px" line-height="1.5">
+          You still have items in your shopping cart!<br /><br />Don't miss out on these prices.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 30px 30px" background-color="#FFFFFF">
+      <mj-column width="100%">
+        <mj-text align="center" font-family="Georgia, serif" font-size="22px" color="#000000" line-height="1.5">
+          <strong>Your Cart Linley !🙋🏻‍♂️</strong>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="10px" background-color="#F0F0F0">
+      <mj-column width="33%" vertical-align="middle">
+        <mj-image src="https://i.ibb.co/PCDPRyr/DALL-E-2024-02-19-19-41-50-Create-a-product-photo-of-men-s-sunglasses-for-the-brand-Frameler-The-sun.png" alt="Mens CATS58 Sunglasses Product Shot" border="0" padding="10px" css-class="responsive-image" width="171px" />
+      </mj-column>
+      <mj-column width="33%" vertical-align="middle">
+        <mj-text font-size="16px" line-height="1.5" color="#000000">
+          <h3>Item Description:</h3>
+          <p>Mens CATS58 Model</p>
+          <p class="price">Price<br /><br />$19.99 AUD</p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="33%" vertical-align="middle">
+        <mj-text align="center" font-size="16px" line-height="1.5" color="#000000">
+          Quantity:<br /><br />&nbsp;1
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="30px" background-color="#FFFFFF">
+      <mj-column width="100%">
+        <mj-button href="https://frameler.com/checkout/recover" css-class="button" align="center" background-color="orange" color="#000000" font-size="20px" border-radius="12px" height="60px" width="60%" font-family="Tahoma, serif" font-weight="bold" padding="0" inner-padding="15px 25px">
+          Return to Your Cart
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 35px 35px" background-color="#FFFFFF">
+      <mj-column width="100%">
+        <mj-text align="left" font-size="18px" line-height="1.5" font-family="Georgia, serif" color="#000000" padding="0">
+          If you have questions please do not hesitate to contact us or just reply to this email, or contact: 📩<a href="mailto:support@example.com" style="text-decoration: underline; color: #000000;"> support@example.com</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#DEDCD8" padding="15px">
+      <mj-column width="100%">
+        <mj-text align="center" font-size="20px" font-family="Tahoma, serif" color="#333333" padding="5px">
+          <strong>Want To Download Our New APP ?</strong><br /><br /> You can download on.... <br /><br />
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 20px 20px" background-color="#DEDCD8">
+      <mj-column width="100%">
+        <mj-social mode="horizontal" align="center" icon-size="60px" font-size="15px" padding="0">
+          <mj-social-element name="google-play" href="https://play.google.com/store" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></mj-social-element>
+          <mj-social-element name="microsoft" href="https://www.microsoft.com/en-us/store/apps" src="https://i.ibb.co/VWNzQH4/microsoft-store-2.png" alt="Get it from Microsoft"></mj-social-element>
+          <mj-social-element name="apple" href="https://www.apple.com/ios/app-store/" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1200px-Download_on_the_App_Store_Badge.svg.png" alt="Download on the App Store"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#DEDCD8" padding="40px 0 5px">
+      <mj-column width="100%">
+        <mj-text align="center" font-size="16px" font-family="Georgia, serif" padding="0" color="#000000" line-height="1.5">Follow us on:</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0" background-color="#DEDCD8">
+      <mj-column width="100%">
+        <mj-social font-size="18px" icon-size="33px" mode="horizontal" padding="10px">
+          <mj-social-element name="facebook" href="https://facebook.com" background-color="#000000" color="#000000" alt="Facebook">Facebook</mj-social-element>
+          <mj-social-element name="twitter" href="https://twitter.com" background-color="#000000" color="#000000" alt="Twitter">Twitter</mj-social-element>
+          <mj-social-element name="instagram" href="https://instagram.com" background-color="#000000" color="#000000" alt="Instagram">Instagram</mj-social-element>
+          <mj-social-element name="youtube" href="https://youtube.com" background-color="#000000" color="#000000" alt="YouTube">YouTube</mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#DEDCD8" padding="20px">
+      <mj-column width="100%">
+        <mj-text line-height="1.5" color="#000000" align="center" text-decoration="underline" font-size="16px">
+          <a href="#" style="color:#000000;">Unsubscribe</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#333333" padding="20px 0 0">
+      <mj-column width="100%">
+        <mj-text align="center" font-size="15px" color="#FFFFFF">
+          <a href="#data-privacy" style="text-decoration: none; color: #FFFFFF;">Data Privacy</a> | 
+          <a href="#home" style="text-decoration: none; color: #FFFFFF;">WebView</a> | 
+          <a href="#contact-us" style="text-decoration: none; color: #FFFFFF;">Contact Us</a> | 
+          <a href="#contact-us" style="text-decoration: none; color: #FFFFFF;">Email Preferences</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#333333" padding="10px 0 30px">
+      <mj-column width="100%">
+        <mj-image src="https://i.ibb.co/S7Vrqqz/DALL-E-2024-02-19-19-53-42-Create-a-sophisticated-logo-for-the-eyewear-brand-Frameler-The-logo-shoul.png" alt="Frameler Eyewear Logo" border="0" padding="10px" css-class="responsive-image" width="100px" />
+        <mj-text font-size="14px" align="center" color="#FFFFFF" line-height="1.5">
+          <strong>&copy; Frameler Eyewear</strong><br /><br />
+          1 Allee Des Bambous, Montagne Ory, Moka 80825, Republic of Mauritius<br /><br />
+          Tel + (230) 5831 0268
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
