@@ -28,6 +28,11 @@ An engaging announcement email for a new retail store location, featuring event 
 * **Key Features:** Complex multi-column layouts, integrated social sharing icons, app store badge alignment, and strict adherence to accessibility standards for screen readers.
 * **Files:** Contains both the raw `index.mjml` blueprint and the compiled `index.html` production file.
 
+### 4. Dynamic Abandoned Cart Campaign (`abandoned-cart-email`)
+A behavioral lifecycle email designed to recover lost revenue, utilizing a pure MJML structural blueprint and Handlebars.js data injection.
+* **Key Features:** Behavioral personalization mapping customer data and abandoned item details, pure UI/logic separation, and comprehensive accessibility (a11y) fixes.
+* **Files:** Contains the `index.mjml` structural blueprint, the `index.html` Handlebars production file, and the `data.json` mock backend data.
+
 ## 💡 My Development Workflow
 To ensure maximum reliability across desktop, mobile, and webmail clients, I utilize **MJML**. By writing the structural logic in MJML, I can rapidly develop complex layouts while relying on the compiler to generate the robust, table-based HTML required for strict clients like Outlook and Yahoo Mail. For transactional sends, I build templates ready for dynamic injection using Handlebars.
 
