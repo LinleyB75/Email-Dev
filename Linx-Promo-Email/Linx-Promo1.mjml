@@ -1,0 +1,292 @@
+<!-- ============================================================
+     MJML EMAIL TEMPLATE: Linx Systems — Hear the Future of Audio
+     Purpose: Promotional email for Linx Systems noise-cancelling headphones
+     Max Width: 600px (MJML default container width)
+     Body Background: #000000 (black)
+     Primary Accent Color: #ffea00 / yellow
+     Fonts: Ubuntu (Google), Helvetica, Arial (fallbacks), Tahoma
+     ============================================================ -->
+<mjml>
+  <mj-head>
+
+    <!-- Email preview text shown in inbox before opening (preheader) -->
+    <mj-preview>Linx Headphones - Hear the Future</mj-preview>
+
+    <!-- Browser/tab title and email subject line fallback -->
+    <mj-title>Introducing Linx Systems' advanced noise-cancelling headphones.</mj-title>
+    
+    <!-- ============================================================
+         RESPONSIVE BREAKPOINT OVERRIDES
+         Forces columns to stack at mobile widths.
+         480px  → single column (full width)
+         720px  → two columns (50% each)
+         768px  → single column (full width, tablet stacking)
+         ============================================================ -->
+    <mj-style inline="inline">
+      @media screen and (max-width:480px) {
+        mj-column { width: 100% !important; }
+      }
+      @media screen and (max-width:720px) {
+        mj-column { width: 50% !important; }
+      }
+      @media screen and (max-width:768px) {
+        mj-column { width: 100% !important; }
+      }
+    </mj-style>
+
+  </mj-head>
+  
+  <!-- Email body canvas — black background fills behind all sections -->
+  <mj-body background-color="#000000">
+
+    <!-- ============================================================
+         SECTION 1: HERO HEADLINE
+         Black background, 44px bold headline.
+         "Hear the" in yellow, "Future" in white via inline <span>.
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="20px 0">
+      <mj-column>
+        <!-- Main hero headline: split color treatment, centered, Helvetica -->
+        <mj-text line-height="1.2" font-size="44px" font-family="Helvetica, Arial, sans-serif" font-weight="bold" align="center" color="yellow">
+          Hear the <span style="color:#ffffff;"> Future</span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 2: HERO IMAGE
+         Full-width 600px product hero image (white headphones).
+         Zero padding so image sits flush with the section edges.
+         ============================================================ -->
+    <mj-section padding="0">
+      <mj-column>
+        <!-- Hero product image — white headphones variant, 600px wide -->
+        <mj-image width="600px" src="https://i.ibb.co/vkds8hM/DALL-E-2024-02-20-10-35-07-Produce-an-image-of-white-noise-cancelling-headphones-that-embodies-a-cut.webp" alt="White noise-cancelling headphones by Linx Systems" border="0" padding="0" />
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 3: PRODUCT INTRODUCTION COPY
+         Three stacked text blocks on a black background:
+         1. Section headline in yellow (40px bold)
+         2. Introductory product description (white, Helvetica, 19px)
+         3. Key feature bullet points (white, Ubuntu, 19px)
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="0">
+      <mj-column>
+
+        <!-- Sub-headline: 40px bold yellow, centered, 25px padding all around -->
+        <mj-text line-height="1.2" align="center" color="#ffea00" font-size="40px" font-weight="bold" padding="25px">
+          Discover the Silence<br />Discover the Beat
+        </mj-text>
+        
+        <!-- Introductory copy: 19px white Helvetica, left-aligned, 1.5 line-height -->
+        <mj-text font-family="Helvetica, Arial, sans-serif" align="left" color="#ffffff" font-size="19px" line-height="1.5">
+          Introducing Linx Systems' advanced noise-cancelling headphones.<br /><br />
+          Experience uninterrupted audio wherever life takes you.
+          Engineered for audiophiles who value clarity and serenity in their music.
+        </mj-text>
+
+        <!-- Product feature highlights: battery life, comfort, quick charge -->
+        <mj-text align="left" color="#FFFFFF" font-size="19px" line-height="1.5">
+          Impressive 24-hour battery life on a single charge.<br /><br />
+          Ultra-comfortable design with memory foam ear cushions.<br /><br />
+          Quick charge feature: 15 minutes of charging delivers 3 hours of playback.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 4: LIFESTYLE IMAGE
+         Full-width image showing a user wearing Linx headphones.
+         10px vertical padding adds slight separation from adjacent sections.
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="10px 0">
+      <mj-column>
+        <!-- Lifestyle/in-use shot — default width (fills column) -->
+        <mj-image src="https://i.ibb.co/0XQ4YKZ/DALL-E-2024-02-19-23-51-42-Produce-another-image-for-a-headphone-brand-that-specializes-in-voice-cal.png" alt="Lifestyle shot of user enjoying Linx headphones" border="0" />
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 5: TWO-COLUMN BRAND BLOCK (Logo + Description)
+         Split layout: 30% logo column | 70% brand copy column.
+         Logo has 96px top padding to visually align with the text block.
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="20px 0">
+
+      <!-- LEFT COLUMN (30%): Linx Systems logo badge -->
+      <mj-column width="30%">
+        <!-- Logo badge: 150px wide, 96px top padding for vertical alignment with text -->
+        <mj-image padding-top="96px" src="https://i.ibb.co/m0x3pw3/DALL-E-2024-02-20-11-00-05-Design-a-flat-straightforward-logo-for-Linx-Systems-a-company-specializin.webp" border="0" width="150px" alt="Linx Noise-Cancelling Headphones Badge" />
+      </mj-column>
+
+      <!-- RIGHT COLUMN (70%): Brand description copy -->
+      <mj-column width="70%">
+        <!-- Brand copy: product name in yellow bold, body in white, 17px Arial -->
+        <mj-text font-size="17px" color="#FFFFFF" font-family="Arial, sans-serif" line-height="1.5">
+          <span style="color:yellow;"><strong>Linx Systems Noise-Cancelling Headphones</strong></span><br /><br />
+          Designed for those who demand more than just sound, the Linx Systems Noise-Cancelling Headphones combine sleek modern styling with exceptional engineering.<br /><br /> 
+          Each pair is precision-tested to the highest standards, delivering an immersive audio experience where every note is pure, every beat is rich, and the world fades away.<br /><br />
+          Elevate your listening — indulge in sophistication.
+        </mj-text>
+      </mj-column>
+
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 6: CLOSE-UP DETAIL IMAGE (White background)
+         White (#FFFFFF) section — intentional contrast break from black theme.
+         600px wide image with zero padding for edge-to-edge rendering.
+         ============================================================ -->
+    <mj-section padding="5px" background-color="#FFFFFF">
+      <mj-column>
+        <!-- Close-up product detail shot on white background, 600px wide -->
+        <mj-image src="https://i.ibb.co/ks098ShN/Chat-GPT-Image-Aug-13-2025-12-40-40-PM.png" alt="Close up detail of Linx headphones" width="600px" padding="0px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 7: AUDIO FEATURE TAGLINE
+         Black background, 16px bold yellow text, centered.
+         Highlights high-fidelity audio and Bluetooth connectivity.
+         ============================================================ -->
+    <mj-section background-color="#000000">
+      <mj-column>
+        <!-- Feature tagline: 16px bold yellow, centered, 20px padding, 1.5 line-height -->
+        <mj-text align="center" color="#ffea00" font-size="16px" font-weight="bold" padding="20px" line-height="1.5">
+          Sound Tailored to You<br /><br />
+          High-fidelity audio for studio-quality sound with seamless Bluetooth connectivity with all your devices
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 8: BRAND CTA TAGLINE
+         "Join the Linx Experience" — emotional hook before the CTA button.
+         20px yellow centered text, leads the eye toward the Shop Now button.
+         ============================================================ -->
+    <mj-section background-color="#000000">
+      <mj-column>
+        <!-- CTA lead-in text: 20px yellow, centered, encourages engagement -->
+        <mj-text align="center" color="#ffea00" font-size="20px" line-height="1.5">
+          Join the Linx Experience<br /><br />
+          Don't just listen, feel every beat with Linx Systems.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 9: CTA BUTTON — "SHOP NOW"
+         White pill-shaped button with 6px yellow border.
+         180px wide, 65px tall, 45px border-radius creates the pill shape.
+         60px padding creates generous whitespace around the button.
+         Links to: https://linxsystems.com/shop
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="10px 0">
+      <mj-column>
+        <!-- Primary CTA: white background, black text, yellow border, pill shape -->
+        <mj-button href="https://linxsystems.com/shop" width="180px" height="65px" background-color="#FFFFFF" font-size="18px" font-weight="bold" color="#000000" border-radius="45px" border="6px solid yellow" padding="60px">
+          SHOP NOW
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 10: CLOSING PRODUCT IMAGE (Black headphones)
+         Full-width 600px image of the black headphones variant.
+         Zero padding so image sits flush — acts as a visual closer.
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="10px 0">
+      <mj-column>
+        <!-- Black headphones variant — full-width 600px, no padding -->
+        <mj-image src="https://i.ibb.co/VwHCGgr/DALL-E-2024-02-20-12-22-49-Create-an-image-that-precisely-replicates-the-provided-picture-of-the-noi.webp" alt="Black noise-cancelling headphones by Linx Systems" border="0" padding="0" width="600px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 11: BRAND SIGN-OFF
+         "Stay Connected - with Linx Systems" closing brand statement.
+         17px bold white Tahoma, centered. 40px padding separates it
+         from the product image above.
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="40px">
+      <mj-column>
+        <!-- Brand sign-off text: 17px bold white Tahoma, centered, 2px padding -->
+        <mj-text align="center" font-size="17px" font-family="Tahoma, sans-serif" color="#FFFFFF" padding="2px" font-weight="bold">
+          Stay Connected - with Linx Systems
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 12: SOCIAL MEDIA ICONS
+         Horizontal row of 5 social icons using mj-social component.
+         Each icon is 30px, black background to blend with email canvas.
+         Platforms: Facebook, Twitter, Instagram, YouTube, Tumblr
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="10px">
+      <mj-column background-color="#000000">
+        <!-- Social icon row: 30px icons, horizontal layout, no top/bottom padding -->
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding-top="0" padding-bottom="0">
+          <!-- Facebook: links to brand page -->
+          <mj-social-element name="facebook" href="https://facebook.com/linxsystems" background-color="#000000" />
+          <!-- Twitter: links to brand profile -->
+          <mj-social-element name="twitter" href="https://twitter.com/linxsystems" background-color="#000000" />
+          <!-- Instagram: links to brand profile -->
+          <mj-social-element name="instagram" href="https://instagram.com/linxsystems" background-color="#000000" />
+          <!-- YouTube: links to brand channel -->
+          <mj-social-element name="youtube" href="https://youtube.com/linxsystems" background-color="#000000" />
+          <!-- Tumblr: links to Tumblr homepage (no branded page set) -->
+          <mj-social-element name="tumblr" href="https://tumblr.com" background-color="#000000" />
+        </mj-social>
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 13: FOOTER LOGO
+         Small 100x100px Linx Systems logo centered in footer.
+         Visual brand anchor between social icons and legal text.
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="5px">
+      <mj-column>
+        <!-- Footer logo: fixed 100x100px, 10px padding around it -->
+        <mj-image src="https://i.ibb.co/m0x3pw3/DALL-E-2024-02-20-11-00-05-Design-a-flat-straightforward-logo-for-Linx-Systems-a-company-specializin.webp" alt="Linx Systems Logo" border="0" padding="10px" width="100px" height="100px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- ============================================================
+         SECTION 14: LEGAL FOOTER
+         Required compliance section (CAN-SPAM / GDPR).
+         Contains:
+         - Navigation links: Email Preferences | Contact | About | Unsubscribe
+         - Copyright notice: © Linx Systems Corporation
+         - Physical mailing address (legally required)
+         - Phone number
+         14px white Arial text, centered, 15px padding.
+         Note: # href placeholders should be replaced with real URLs.
+         ============================================================ -->
+    <mj-section background-color="#000000" padding="0">
+      <mj-column>
+        <!-- Legal footer: 14px white Arial, centered, 1.5 line-height -->
+        <mj-text align="center" color="#FFFFFF" font-family="Arial, sans-serif" font-size="14px" padding="15px" line-height="1.5">
+          <!-- Footer nav links — replace # with actual destination URLs -->
+          <a href="#" style="color:#FFFFFF; text-decoration:underline;">Email Preferences</a> | 
+          <a href="#" style="color:#FFFFFF; text-decoration:underline;">Contact us</a> | 
+          <a href="#" style="color:#FFFFFF; text-decoration:underline;">About us</a> | 
+          <a href="#" style="color:#FFFFFF; text-decoration:underline;">Unsubscribe</a><br /><br />
+          <!-- Copyright — consider making the year dynamic -->
+          <strong>&copy; Linx Systems Corporation</strong><br /><br />
+          <!-- Physical address: required by CAN-SPAM Act and GDPR -->
+          1 Allee des Bambous, Montagne Ory, Moka, 80825 Mauritius<br />
+          Tel: +230 5831 0268
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- ============================================================
+         END OF EMAIL TEMPLATE
+         ============================================================ -->
+
+  </mj-body>
+</mjml>
