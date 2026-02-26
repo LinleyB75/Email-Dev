@@ -1,0 +1,29 @@
+{
+  "company": {
+    "name": "Republica Clothing",
+    "supportEmail": "support@republicaclothing.com",
+    "address": "1 Smithy Street, Melbourne, Victoria 3000, Australia",
+    "phone": "+61 93103590"
+  },
+  "user": {
+    "firstName": "Linley",
+    "maskedUsername": "L**********n"
+  },
+  "auth": {
+    "checkUrl": "https://republicaclothing.com/account/security/2fa-check"
+  },
+  "links": {
+    "privacy": "https://republicaclothing.com/privacy",
+    "webView": "https://republicaclothing.com/view-in-browser",
+    "about": "https://republicaclothing.com/about",
+    "website": "https://republicaclothing.com",
+    "securityPolicy": "https://republicaclothing.com/security",
+    "newsletter": "https://republicaclothing.com/subscribe"
+  },
+  "social": {
+    "facebook": "https://facebook.com/republicaclothing",
+    "twitter": "https://twitter.com/republicaclothing",
+    "instagram": "https://instagram.com/republicaclothing",
+    "youtube": "https://youtube.com/republicaclothing"
+  }
+}
