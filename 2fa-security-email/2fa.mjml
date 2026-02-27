@@ -1,0 +1,146 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Two Factor Authentication Request.</mj-preview>
+    <mj-title>You are receiving this message because you requested Two Factor Authentication (2FA) for your Republica Clothing Account.</mj-title>
+    
+    <!-- Responsive breakpoints for mobile, tablet, and small desktop -->
+    <mj-style inline="inline">
+      /* Mobile: stack columns full width */
+      @media screen and (max-width:480px) {
+        mj-column { width: 100% !important; }
+      }
+      /* Tablet: two-column layout */
+      @media screen and (max-width:720px) {
+        mj-column { width: 50% !important; }
+      }
+      /* Small desktop / large tablet: stack columns full width */
+      @media screen and (max-width:768px) {
+        mj-column { width: 100% !important; }
+      }
+    </mj-style>
+  </mj-head>
+  
+  <mj-body background-color="#FFFFFF">
+    
+    <!-- ===== HEADER LOGO ===== -->
+    <mj-section background-color="#ffffff" border="0" padding="20px 0">
+      <mj-column width="600px" vertical-align="top">
+        <mj-image width="600px" src="https://i.ibb.co/j3L6cPM/Lin.png" alt="Republica Clothing Header" border="0" padding="0px" align="center" />
+      </mj-column>
+    </mj-section>
+
+    <!-- ===== GREETING, SHIELD ICON & INTRO TEXT ===== -->
+    <mj-section>
+      <!-- Greeting: "Good morning [user]" -->
+      <mj-column width="100%" vertical-align="top">
+        <mj-text padding="5px" font-size="30px" color="#000000">
+          <strong>Good morning Linley!</strong><br />
+        </mj-text>
+        <mj-text padding="9px" font-size="20px" color="#000000">
+          You requested two-factor security authentication.
+        </mj-text>
+      </mj-column>
+      
+      <!-- Security shield icon + 2FA explanation -->
+      <mj-column width="100%" vertical-align="top">
+        <mj-image align="left" width="150px" padding="0px" src="https://i.ibb.co/gM67kMw6/Chat-GPT-Image-Jan-15-2026-02-42-30-PM-1.png" alt="Security Shield Icon" border="0" />
+        <mj-text padding="14px" line-height="1.6" font-size="18px" color="#000000">
+          Two-Factor Authentication (2FA) adds an extra layer of security by asking for a second verification step after your password, helping keep your account protected.
+        </mj-text>
+      </mj-column>
+      
+      <!-- 2FA confirmation message and login instructions -->
+      <mj-column width="100%" vertical-align="top">
+        <mj-text align="left" font-size="18px" line-height="1.5" font-family="Arial, sans-serif" padding="15px" color="#333333">
+          Your Republica Clothing Two Factor Authentication account has now been enabled.<br /><br />
+          This provides an extra layer of security to your account.<br /><br />
+          Before your next login attempt the system will ask you to provide a two step verification of your security details, and then you will be able to access your account.<br /><br />
+        </mj-text>
+        <mj-text font-weight="600" padding="0px 0px 0px 20px" align="left" font-size="16px" line-height="1.6" font-family="Arial, sans-serif" color="#333333">
+          Below you can check your 2FA Authentication by clicking the yellow button:
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ===== CTA BUTTON ===== -->
+    <mj-section background-color="#FFFFFF">
+      <mj-column vertical-align="top">
+        <mj-button href="#" width="80%" align="left" background-color="#FFDE59" color="#000000" font-size="20px" border-radius="10px" height="60px" font-family="Arial, sans-serif" font-weight="bold" border="4px solid black" padding="0px 0px 10px 18px">
+          Check Your Two Factor Authentication
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- ===== INFO BOX: USERNAME & SUPPORT LINKS ===== -->
+    <mj-section>
+      <mj-column background-color="#EBE9EB" padding="20px" border-radius="10px" vertical-align="top">
+        <mj-text align="left" font-size="18px" line-height="1.5" font-family="Arial, sans-serif" color="#333333">
+          As a reminder (Your username is [**********s**n])<br /><br />
+          If you have any questions or queries about how Two Factor Authentication works you can email us at <a href="mailto:support@example.com" style="text-decoration: underline; color: #007bff;">Contact Support</a> or reply to this email with any questions you may have!<br /><br />
+          You can also visit our website for further details to read up on our security policy and how we safeguard your data and privacy at <a href="#" style="text-decoration: underline; color: #007bff;">Security and Privacy</a> on our Republica Clothing website.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ===== SIGN-OFF ===== -->
+    <mj-section>
+      <mj-column vertical-align="top">
+        <mj-text align="left" font-size="18px" font-family="Arial, sans-serif" color="#333333" line-height="1.5">
+          Thank you,<br /><br />
+          Republica Clothing Team<br /><br />
+          <a href="mailto:support@example.com" style="color: #007bff;">support@example.com</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ===== FOOTER: "FOLLOW US ON" LABEL ===== -->
+    <mj-section background-color="#000000" padding-bottom="15px" padding-top="40px" border-radius="10px 10px 0px 0px">
+      <mj-column>
+        <mj-text align="center" font-size="15px" font-family="Georgia, serif" padding="0px" color="#ffffff" line-height="1.5">
+          Follow us on:
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ===== FOOTER: SOCIAL MEDIA ICONS ===== -->
+    <mj-section padding="0px" border="0" background-color="#000000">
+      <mj-column background-color="#000000" padding="15px">
+        <mj-social font-size="18px" icon-size="33px" mode="horizontal" padding-top="0" padding-bottom="0">
+          <mj-social-element name="facebook" href="https://facebook.com" background-color="#000000" />
+          <mj-social-element name="twitter" href="https://twitter.com" background-color="#000000" />
+          <mj-social-element name="instagram" href="https://instagram.com" background-color="#000000" />
+          <mj-social-element name="youtube" href="https://youtube.com" background-color="#000000" />
+          <mj-social-element name="tumblr" href="https://tumblr.com" background-color="#000000" />
+        </mj-social>
+      </mj-column>
+    </mj-section>
+
+    <!-- ===== FOOTER: NEWSLETTER SUBSCRIBE LINK ===== -->
+    <mj-section background-color="#000000" border="0" padding="30px">
+      <mj-column>
+        <mj-text color="yellow" align="center" text-decoration="underline" font-size="16px">
+          📮Subscribe to the Republica newsletter
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ===== FOOTER: LOGO, LEGAL LINKS & ADDRESS ===== -->
+    <mj-section background-color="#000000" padding="0px" border="0">
+      <!-- Footer logo -->
+      <mj-column width="100%">
+        <mj-image width="120px" src="https://i.ibb.co/j3L6cPM/Lin.png" alt="Republica Clothing Logo" border="0" padding="0px" />
+      </mj-column>
+      
+      <!-- Legal links, copyright notice and company address -->
+      <mj-column width="100%">
+        <mj-text font-size="14px" align="center" color="#FFFFFF" line-height="1.5">
+          Data Privacy | Web View | About us | Visit Website<br /><br />
+          <strong>&copy; Republica Clothing Group</strong><br /><br />
+          1 Smithy Street, Melbourne, Victoria 3000, Australia<br />
+          Tel + 61 93103590
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
