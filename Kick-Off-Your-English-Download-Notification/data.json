@@ -1,0 +1,13 @@
+{
+  "first_name": "Linley",
+  "receipt_number": "GEOENGPPA4567",
+  "download_link": "https://your-download-link.com/ebook",
+  "item_price": "$50.00",
+  "item_currency": "AUD",
+  "item_quantity": "1",
+  "billing_address_line1": "1 Allee des Bambous",
+  "billing_city": "Montagne Ory Moka",
+  "billing_postcode": "80825",
+  "billing_country": "Mauritius",
+  "unsubscribe_url": "https://your-esp.com/unsubscribe?id=abc123"
+}
