@@ -1,0 +1,20 @@
+{
+  "customer": {
+    "firstName": "Linley"
+  },
+  "order": {
+    "trackingNumber": "PPA234RT567",
+    "trackingLink": "https://auspost.com.au/mypost/track/#/details/PPA234RT567",
+    "productName": "Moda 1960 FRAME",
+    "productImage": "https://i.ibb.co/1vx8xz4/DALL-E-2024-02-19-19-48-41-Design-a-product-photo-of-women-s-sunglasses-for-the-brand-Frameler-Captu.webp",
+    "productPrice": "$50.00 AUD",
+    "productQuantity": 1
+  },
+  "shipping": {
+    "street": "10 All Street",
+    "city": "Melbourne",
+    "state": "VIC",
+    "zip": "3000",
+    "country": "Australia"
+  }
+}
