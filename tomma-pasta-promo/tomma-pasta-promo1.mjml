@@ -1,0 +1,173 @@
+<mjml>
+  <mj-head>
+    <mj-title>Your Tomma Pasta Sauce is Waiting!</mj-title>
+    <mj-preview>Dive into the rich flavors of Italy with Tomma Pasta Sauce 🍅</mj-preview>
+    
+    <mj-style>
+      .title { color: #E65100; font-size: 24px; }
+      .highlight { color: #E65100; }
+      .button { background-color: #FFF; color: #FFF; }
+      .benefits { margin-top: 10px; }
+      .image-text-section { margin-bottom: 80px; }
+    </mj-style>
+
+    <mj-style inline="inline">
+      /* Tablet (iPad, large Android tablets) */
+      @media only screen and (max-width: 600px) {
+        .title {
+          font-size: 22px !important;
+          line-height: 28px !important;
+        }
+      } 
+
+      /* Mobile */
+      @media only screen and (max-width: 480px) {
+        .title { font-size: 20px; }
+        .body-text { font-size: 14px; }
+      }
+
+      /* iPhone 6/7/8 width (375px) */
+      @media only screen and (max-width: 375px) {
+        .title { font-size: 18px !important; }
+        .body-text { font-size: 13px !important; }
+      }
+    </mj-style>
+  </mj-head>
+  
+  <mj-body background-color="#FFFFFF">
+
+    <!-- Hero section: full-width product image with intro tagline -->
+    <mj-section background-color="#FFFFFF" padding="0">
+      <mj-column>
+        <mj-image width="600px" src="https://i.ibb.co/F4r5Ckc/DALL-E-2024-02-16-09-12-28-Create-an-ultra-realistic-digital-illustration-of-a-bottle-of-tomato-sauc.webp" alt="Ultra-realistic illustration of Tomma Pasta Sauce" border="0" padding="0" />
+        
+        <mj-text css-class="body-text" font-family="Georgia, serif" font-size="29px" align="center" padding-top="35px" padding-bottom="35px">
+          Dive into the rich flavors of Italy with Tomma Pasta Sauce—crafted from age old recipes to bring the authentic taste of Italian cuisine right to your table.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Feature 1: Authentic Italian Quality - image left, text right -->
+    <mj-section background-color="#FFFFFF">
+      <mj-column width="50%">
+        <mj-image padding-left="0px" src="https://i.ibb.co/vdR6Dqn/pexels-klaus-nielsen-6287497.jpg" alt="Fresh tomatoes and ingredients on a table" border="2px solid black" />
+      </mj-column>
+      
+      <mj-column width="50%">
+        <mj-text css-class="body-text highlight" font-family="Arial, sans-serif" line-height="1.5" font-size="18px" padding="25px"> 
+          <strong>Authentic Italian Quality:</strong><br /><br />
+          Our sauces are made with the finest, locally-sourced ingredients, simmered to perfection, to ensure every meal is a masterpiece.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Feature 2: A Taste of Tradition - image left, text right -->
+    <mj-section background-color="#FFFFFF">
+      <mj-column width="50%">
+        <mj-image padding-left="0px" src="https://i.ibb.co/Gcdr8Wx/pexels-vanessa-loring-5082873.jpg" alt="Chef preparing traditional Italian pasta" border="2px solid black" />
+      </mj-column>
+      
+      <mj-column width="50%">
+        <mj-text css-class="body-text benefits" font-family="Arial, sans-serif" line-height="1.5" font-size="18px" padding="25px">
+          <strong>A Taste of Tradition:</strong><br /><br />
+          Every jar of Tomma Pasta Sauce embodies generations of Italian culinary excellence. Discover the depth of flavors that have been cherished for centuries.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Feature 3: Perfect for Every Dish - image left, text right -->
+    <mj-section background-color="#FFFFFF">
+      <mj-column width="50%">
+        <mj-image padding-left="0px" src="https://i.ibb.co/JBk5R5y/pexels-pixabay-248420.jpg" alt="Deliciously plated pasta dish" border="2px solid black" />
+      </mj-column>
+      
+      <mj-column width="50%">
+        <mj-text css-class="body-text benefits" font-family="Arial, sans-serif" line-height="1.5" font-size="18px" padding="25px">
+          <strong>Perfect for Every Dish:</strong><br /><br /> 
+          Whether it's a family spaghetti night or a sophisticated penne, Tomma enhances your meals with the perfect blend of herbs and spices.
+        </mj-text>
+        <mj-spacer height="75px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Full-width banner: dark background with lifestyle image and occasion copy -->
+    <mj-section background-color="#000000" padding="0px">
+      <mj-column>
+        <mj-image width="600px" src="https://i.ibb.co/drstJ2W/pexels-fauxels-3184183.jpg" alt="Family and friends gathered around a dinner table enjoying a meal" border="0" padding="0px" />
+        
+        <mj-text css-class="body-text" font-family="Arial, sans-serif" line-height="1.5" font-size="18px" padding="15px" align="center" color="#FFFFFF">
+          Perfect for Every Occasion:<br />
+          Family nights to gatherings with friends, Tomma enhances every meal with its perfect blend of herbs and spices. Making each dish a celebration of flavor and togetherness.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Closing tagline encouraging purchase -->
+    <mj-section background-color="#FFFFFF" css-class="image-text-section">
+      <mj-column>
+        <mj-text css-class="body-text" font-family="Arial, sans-serif" line-height="1.5" font-size="18px" padding="27px" align="center" font-weight="bold">
+          Embrace the authentic taste of Italy with family and friends.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Call-to-action button -->
+    <mj-section background-color="#FFFFFF">
+      <mj-column>
+        <mj-button css-class="button" href="https://yourwebsite.com/cart" background-color="red" color="#FFFFFF" width="220px" height="70px" border-radius="35px" font-size="17px">
+          Yes, take me today
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer: divider, unsubscribe link -->
+    <mj-section padding-bottom="5px">
+      <mj-column>
+        <mj-divider border-color="#000000" border-width="3px" padding-bottom="15px" padding-top="100px" align="center" />
+        
+        <mj-text font-size="15px" font-weight="600" align="center" color="#555555">
+          <a href="https://yourwebsite.com/unsubscribe" style="color:#555555; text-decoration: underline;">
+            Unsubscribe
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Social media follow prompt -->
+    <mj-section>
+      <mj-column>
+        <mj-text align="center" font-size="17px" font-family="Tahoma, sans-serif" padding="2px" font-weight="bold">
+          Stay Connected - Follow us for more.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Social media icon links -->
+    <mj-section padding="10px">
+      <mj-column background-color="#FFFFFF">
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding-top="0" padding-bottom="0">
+          <mj-social-element name="facebook" href="https://facebook.com" background-color="#000000" color="#FFFFFF" />
+          <mj-social-element name="twitter" href="https://twitter.com" background-color="#000000" color="#FFFFFF" />
+          <mj-social-element name="instagram" href="https://instagram.com" background-color="#000000" color="#FFFFFF" />
+          <mj-social-element name="youtube" href="https://youtube.com" background-color="#000000" color="#FFFFFF" />
+          <mj-social-element name="tumblr" href="https://tumblr.com" background-color="#000000" color="#FFFFFF" />
+        </mj-social>
+      </mj-column>
+    </mj-section>
+
+    <!-- Legal footer: navigation links, address, and contact info -->
+    <mj-section padding="0px">
+      <mj-column background-color="#FFFFFF" border="0">
+        <mj-text align="center" color="#000000" font-family="Arial, sans-serif" font-size="16px" padding="15px">
+          <a href="#" style="color:#000000; text-decoration:none;">Email Preferences</a> | 
+          <a href="#" style="color:#000000; text-decoration:none;">Contact us</a> | 
+          <a href="#" style="color:#000000; text-decoration:none;">About us</a> | 
+          <a href="#" style="color:#000000; text-decoration:none;">Webview</a><br /><br />
+          &copy; Tomma Foods 1 Allee des Bambous, Montagne Ory, Moka, 80825 Mauritius<br /><br />
+          Tel: +230 5831 0268
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
