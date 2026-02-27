@@ -1,0 +1,190 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Your order is on its way!</mj-preview>
+    <mj-title>Your Order is on its way!</mj-title>
+    <mj-style>
+      @media (prefers-color-scheme: dark) {
+      .dm-w { background-color: #1E1E2E !important; }
+      .dm-o { background-color: #252535 !important; }
+      .dm-f { background-color: #0D0D1A !important; }
+      .dm-r { background-color: #2E3040 !important; }
+      .dm-t { color: #E0E0E0 !important; }
+      .dm-m { color: #B0B0C0 !important; }
+      .dm-tr { color: #FFD700 !important; }
+      .dm-btn{ background-color: #FFD700 !important; color: #000 !important; }
+      }
+
+      @media only screen and (max-width: 480px) {
+      .center-on-mobile div, .center-on-mobile table { text-align: center !important; margin: 0 auto !important; }
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#FEFDFD">
+
+    <mj-section background-color="#FFF" padding="0" css-class="dm-w">
+      <mj-column width="600px">
+
+        <mj-image width="600px" padding="0" border="0" src="https://i.ibb.co/FB2sK5B/DALL-E-2024-02-23-11-01-51-Generate-a-realistic-high-resolution-wide-horizontal-hero-image-with-two.png" alt="Frameler Eyewear" />
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FFF" padding="10px 0" css-class="dm-w">
+      <mj-column>
+
+        <mj-text align="center" color="#000" font-family="Georgia, serif" font-size="22px" css-class="dm-t">
+          Your Order is on its way Linley!
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FFF" padding="30px" css-class="dm-w">
+      <mj-column>
+
+        <mj-image width="330px" padding="0" border="0" src="https://i.ibb.co/MxpBPBXv/Chat-GPT-Image-Dec-17-2025-10-44-07-AM.png" alt="Order on its way" />
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FAF9F6" padding="25px 25px 0" css-class="dm-o">
+      <mj-column>
+
+        <mj-text align="center" color="#000" font-size="20px" line-height="1.5" css-class="dm-t">
+          Good news Linley!<br /><br />
+          Your order from Frameler Eyewear is on its way!<br /><br />
+          Your Aus PPA Tracking number is
+        </mj-text>
+
+        <mj-text align="center" color="#000" font-size="26px" text-decoration="underline" padding="5px 0" css-class="dm-tr">
+          <strong>PPA234RT567</strong>
+        </mj-text>
+
+        <mj-text align="center" color="#555" font-size="17px" padding="5px 0 25px" css-class="dm-m">
+          Note: Tracking information can take 1 hour to update.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FAF9F6" padding="15px" css-class="dm-o">
+      <mj-column>
+
+        <mj-button background-color="#00101F" color="#FFF" font-size="20px" border-radius="55px" height="70px" width="300px" border="5px solid yellow" href="https://example.com" css-class="dm-btn">
+          TRACK YOUR ORDER
+        </mj-button>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FAF9F6" css-class="dm-o">
+      <mj-column>
+
+        <mj-text align="center" font-size="20px" padding="15px" line-height="1.5" css-class="dm-t">
+          <strong>YOUR ORDER</strong><br />Moda 1960 FRAME
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FAF9F6" padding="25px" css-class="dm-o">
+      <mj-column width="25%">
+
+        <mj-image padding="0" border="0" src="https://i.ibb.co/1vx8xz4/DALL-E-2024-02-19-19-48-41-Design-a-product-photo-of-women-s-sunglasses-for-the-brand-Frameler-Captu.webp" alt="Womens Sunglasses Moda 1960" css-class="center-on-mobile" />
+
+      </mj-column>
+      <mj-column width="25%">
+
+        <mj-text font-size="17px" css-class="dm-t center-on-mobile">Womens Sunglasses<br />Model: Moda 1960</mj-text>
+
+      </mj-column>
+      <mj-column width="25%">
+
+        <mj-text font-size="17px" css-class="dm-t center-on-mobile">Price:<br />$50.00 AUD</mj-text>
+
+      </mj-column>
+      <mj-column width="25%">
+
+        <mj-text font-size="17px" css-class="dm-t center-on-mobile">Quantity:<br />1</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FFF" css-class="dm-w">
+      <mj-column>
+
+        <mj-text align="center" font-size="18px" line-height="1.5" padding-bottom="15px" css-class="dm-t">
+          <strong>YOUR EYEWEAR IS BEING SHIPPED TO:</strong><br /><br />
+          10 All Street<br />Melbourne VIC 3000<br />Australia
+        </mj-text>
+
+        <mj-image width="230px" border="0" src="https://i.ibb.co/Y7SjCPvK/Chat-GPT-Image-Dec-17-2025-11-07-53-AM.png" alt="Delivery truck" />
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#C4C6BB" padding-top="35px" border-radius="10px 10px 0 0" css-class="dm-r">
+      <mj-column>
+
+        <mj-text align="center" font-size="20px" font-family="Georgia, serif" font-weight="bold" line-height="1.5" css-class="dm-t">
+          Need to return items or would like an exchange? Click here
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#C4C6BB" padding="0" css-class="dm-r">
+      <mj-column>
+
+        <mj-text align="center" font-family="Georgia, serif" font-size="20px" padding="18px" color="#000" text-decoration="underline" css-class="dm-t">
+          <strong>Email us at info@frameler.com</strong>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#00101F" padding="15px 0" css-class="dm-f">
+      <mj-column>
+
+        <mj-text align="center" color="#FFF" font-family="Georgia, serif" font-size="15px" padding="0">Follow us on:</mj-text>
+
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#00101F" padding="0" css-class="dm-f">
+      <mj-column>
+
+        <mj-social font-size="16px" icon-size="33px" mode="horizontal" padding="0">
+          <mj-social-element name="facebook" href="your-facebook-link" background-color="#00101F" color="#CCC"></mj-social-element>
+          <mj-social-element name="twitter" href="your-twitter-link" background-color="#00101F" color="#CCC"></mj-social-element>
+          <mj-social-element name="instagram" href="your-instagram-link" background-color="#00101F" color="#CCC"></mj-social-element>
+          <mj-social-element name="youtube" href="your-youtube-link" background-color="#00101F" color="#CCC"></mj-social-element>
+          <mj-social-element name="tumblr" href="your-tumblr-link" background-color="#00101F" color="#CCC"></mj-social-element>
+        </mj-social>
+
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#00101F" padding="15px" css-class="dm-f">
+      <mj-column>
+
+        <mj-text align="center" color="#BBB" font-size="14px">
+          If you no longer want to receive emails, please click the link below.<br /><br />
+          <span style="text-decoration:underline; color:#FFF;">Unsubscribe</span>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#00101F" padding="15px 30px 30px" css-class="dm-f">
+      <mj-column>
+
+        <mj-text align="center" color="#BBB" font-size="14px" line-height="1.5">
+          | About Us | Data Privacy | Web View |<br /><br />
+          <strong style="color:#FFF;">&copy; Frameler Eyewear</strong><br /><br />
+          1 Smithy Place Melbourne, VIC 3000 Australia<br /><br />
+          Tel +(230) 5831 0268
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
