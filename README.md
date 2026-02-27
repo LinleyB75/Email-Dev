@@ -1,5 +1,11 @@
 # ✉️ Email Development Portfolio -LinleyBignoux - Email Developer  | Email Marketing Development.
 
+🌐 **View my full portfolio website:** [linleyb.com](https://linleyb.com/)
+
+Welcome to my Email Development portfolio. This repository showcases my ability to build clean, responsive, and highly accessible email templates that render perfectly across all major email clients (including Microsoft Outlook, Gmail, and Apple Mail). I specialize in pure MJML structural blueprinting, static HTML conversions, and dynamic Handlebars data injection.
+
+---
+
 Welcome to my Email Development portfolio. This repository showcases my ability to build clean, responsive, and highly accessible email templates that render perfectly across all major email clients (including Microsoft Outlook, Gmail, and Apple Mail). I specialize in pure MJML structural blueprinting, static HTML conversions, and dynamic Handlebars data injection.
 
 ---
