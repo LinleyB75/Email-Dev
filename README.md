@@ -1,10 +1,6 @@
-# ✉️ Email Development Portfolio -LinleyBignoux - Email Developer  | Email Marketing Development.
+# ✉️ Email Development Portfolio - LinleyBignoux - Email Developer | Email Marketing Development.
 
-🌐 **View my full portfolio website:** [linleyb.com](https://linleyb.com/)
-
-Welcome to my Email Development portfolio. This repository showcases my ability to build clean, responsive, and highly accessible email templates that render perfectly across all major email clients (including Microsoft Outlook, Gmail, and Apple Mail). I specialize in pure MJML structural blueprinting, static HTML conversions, and dynamic Handlebars data injection.
-
----
+🌐 **View my full portfolio website:** [linleyb.com](https://linleyb.com/) HTML,CSS,MJML & Handlebars.js
 
 Welcome to my Email Development portfolio. This repository showcases my ability to build clean, responsive, and highly accessible email templates that render perfectly across all major email clients (including Microsoft Outlook, Gmail, and Apple Mail). I specialize in pure MJML structural blueprinting, static HTML conversions, and dynamic Handlebars data injection.
 
@@ -46,3 +42,13 @@ A sleek promotional campaign for a premium headphone brand, focusing on high-end
 A clean, responsive promotional email for a food brand utilizing a classic alternating Z-pattern layout.
 * **Key Features:** Optimized for high readability, bulletproof functionality across tough email clients, integrated hidden preheader text, and fully verified, accessible HTML code.
 * **Files:** Contains both the raw tomma-pasta-promo1.mjml blueprint and the compiled tomma-pasta-promo1.html production file.
+
+**8. Frameler Eyewear Order Notification (frameler-order-shipped)**
+A transactional shipping confirmation email featuring a responsive product grid and dynamic tracking details.
+* **Key Features:** Native MJML mobile column stacking, injected Dark Mode metadata for email client compatibility, and Handlebars.js templating for dynamic order and shipping data.
+* **Files:** Contains the Handlebars-ready index.html template, the index.mjml structural blueprint, and the data.json mock backend payload.
+
+**9. Meaty Australia Promotional Campaign (meaty-australia-promo)**
+A high-contrast promotional email designed with a premium vanilla and black aesthetic.
+* **Key Features:** Strict Light Mode design preservation with seamless native Dark Mode auto-inversion. Features CSS drop-shadow enhancements for transparent PNG social icons to ensure visibility across varying environments.
+* **Files:** Contains both the raw index.mjml blueprint and the compiled index.html production file.
