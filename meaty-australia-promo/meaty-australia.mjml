@@ -1,0 +1,183 @@
+<mjml>
+  <mj-head>
+
+    <!-- Preview text shown in inbox before the email is opened -->
+    <mj-preview></mj-preview>
+
+    <!-- Email title shown in browser tab if viewed online -->
+    <mj-title></mj-title>
+
+    <!-- Enables dark and light mode switching in supported email clients -->
+
+    <mj-raw>
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+    </mj-raw>
+
+    <mj-style>
+      @media (prefers-color-scheme: dark) {
+      /* Applies a white drop-shadow (outline) to the transparent PNGs */
+      .social-fix img { filter: drop-shadow(0px 0px 3px #ffffff) !important; }
+
+      /* Ensures the text labels next to the icons flip to white */
+      .social-fix td { color: #ffffff !important; }
+      }
+    </mj-style>
+
+  </mj-head>
+
+  <mj-body width="600px" background-color="#f9f5eb">
+
+    <!-- NAV BAR — text navigation links at the top of the email -->
+    <mj-section padding="0">
+      <mj-column>
+
+        <mj-text font-size="18px" color="#000" align="center">Home | About Us | Contact | Delivery</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- BRAND NAME -->
+    <mj-section padding="10px 0">
+      <mj-column>
+
+        <mj-text font-size="48px" font-family="Impact" color="#000" align="center">Meaty Australia</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- PROMO HEADLINE — 20% discount offer -->
+    <mj-section padding="84px 0">
+      <mj-column>
+
+        <mj-text font-size="49px" color="#000" align="center"><span style="color:red;">20%</span> off this week only</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- HERO IMAGE -->
+    <mj-section padding="0">
+      <mj-column>
+
+        <mj-image src="https://i.ibb.co/R082DRt/pexels-helia-ghaharian-17949898.jpg" alt="Hero image" border="0" width="600px" border-radius="10px"></mj-image>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- COUPON INTRO TEXT -->
+    <mj-section padding="38px 0">
+      <mj-column>
+
+        <mj-text line-height="1.5" font-size="20px" color="#000" align="center">Dont forget to use your code when you purchase your first order with us.</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- COUPON CODE -->
+    <mj-section padding="31px 0">
+      <mj-column>
+
+        <mj-text font-size="24px" font-weight="bold" color="black" align="center">Use coupon code: <span style="color:red;">7EF7BBEA</span></mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- SPACER -->
+    <mj-section padding="15px 0">
+      <mj-column>
+
+        <mj-text font-size="18px" color="#000" align="center"></mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- BODY COPY — contact and product description -->
+    <mj-section padding="10px 0">
+      <mj-column>
+
+        <mj-text line-height="1.5" font-size="20px" color="#000" align="center">Call us if you have any questions or queries about or products or services we provide. Also, if you would to know what we stand for and how we strive to give our customers great quality meat, contact us please!</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- SECONDARY IMAGE -->
+    <mj-section padding="0">
+      <mj-column>
+
+        <mj-image src="https://i.ibb.co/thSKK8f/pexels-los-muertos-crew-8477074.jpg" alt="Quality meat image" border="0" width="600px" border-radius="10px"></mj-image>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- FREE DELIVERY MESSAGE -->
+    <mj-section padding="45px 0">
+      <mj-column>
+
+        <mj-text font-size="18px" color="#000" align="center">In providing and maintaining good customer service, any purchase over $100 dollars has free delivery </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- CTA BUTTON -->
+    <mj-section padding="41px 0">
+      <mj-column>
+
+        <mj-button background-color="#000" color="#fff" font-size="22px" align="center" width="225px" height="65px" border-radius="10px" border="4px solid red">Enquire today</mj-button>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- SOCIAL ICONS — css-class="social-fix" hooks into the dark mode CSS in mj-head
+         to apply a white glow to the icons and flip the labels to white -->
+    <mj-section background-color="#f9f5eb" padding="80px 0">
+      <mj-column>
+
+        <mj-social font-size="16px" icon-size="30px" mode="horizontal">
+
+          <mj-social-element css-class="social-fix" src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" background-color="transparent" color="#000000" href="your-link-here">
+            Instagram
+          </mj-social-element>
+
+          <mj-social-element css-class="social-fix" src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" background-color="transparent" color="#000000" href="your-link-here">
+            Facebook
+          </mj-social-element>
+
+          <mj-social-element css-class="social-fix" src="https://img.icons8.com/ios-filled/50/000000/twitter.png" background-color="transparent" color="#000000" href="your-link-here">
+            Twitter
+          </mj-social-element>
+
+          <mj-social-element css-class="social-fix" src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" background-color="transparent" color="#000000" href="your-link-here">
+            LinkedIn
+          </mj-social-element>
+
+        </mj-social>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- UNSUBSCRIBE LINK -->
+    <mj-section padding="15px">
+      <mj-column>
+
+        <mj-text align="center" color="#000" font-size="15px">
+          If you no longer want to receive emails, please click the link below<br /><br />
+          <span style="text-decoration:underline; color:#000; font-size: 17px">Unsubscribe ?</span>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- FOOTER — legal links, address and phone number -->
+    <mj-section padding="13px 0">
+      <mj-column>
+
+        <mj-text line-height="1.6" font-size="15px" color="#000" align="center">
+          Data Privacy | Visit Us | Contact Us | Privacy<br>
+          Allee des Bambous Montagne Ory, Moka Mauritius 80825<br>Tel: (+230)58310268
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
