@@ -1,0 +1,34 @@
+{
+  "customer": {
+    "firstName": "Linley",
+    "lastName": "Bignoux",
+    "accountId": "99281-A",
+    "address": {
+      "line1": "123 Coastal Highway",
+      "city": "Grand Baie",
+      "state": "Rivière du Rempart",
+      "zipCode": "30510",
+      "country": "Mauritius"
+    }
+  },
+  "receipt": {
+    "number": "558879",
+    "invoiceDate": "March 1st, 2024",
+    "paymentDate": "March 1st, 2024",
+    "totalAmount": "50.00",
+    "currency": "AUD"
+  },
+  "billing": {
+    "startDate": "March 1st, 2024",
+    "endDate": "April 1st, 2024"
+  },
+  "plan": {
+    "name": "Monthly plan (2 hours of class)",
+    "price": "50.00"
+  },
+  "payment": {
+    "cardType": "Mastercard",
+    "cardLast4": "4456",
+    "statementDescriptor": "Debit 101 KICK OFF-Geo English Brazil LLC"
+  }
+}
