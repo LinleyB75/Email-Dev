@@ -1,0 +1,219 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all font-family="Arial, Helvetica, sans-serif" />
+
+      <mj-text color="#233044" font-size="16px" line-height="1.5" />
+
+      <mj-button background-color="#FF6A00" color="#ffffff" font-weight="700" border-radius="6px" padding="12px 24px" />
+
+      <mj-class name="preheader" color="#8a94a6" font-size="13px" />
+      <mj-class name="headline" font-size="22px" font-weight="700" color="#233044" />
+      <mj-class name="product-title" font-size="16px" font-weight="700" color="#233044" padding-top="12px" />
+      <mj-class name="product-desc" font-size="14px" color="#425066" padding="6px 0px 12px 24px" />
+      <mj-class name="product-price" align="center" font-size="16px" font-weight="700" color="#233044" />
+      <mj-class name="product-btn" background-color="#FF6A00" color="#ffffff" padding="12px 0 0 0" />
+    </mj-attributes>
+
+    <mj-preview>New Arrivals + Exclusive offers — handpicked for you.</mj-preview>
+    <mj-title>IGNITE Clothing — New Arrivals & Picks</mj-title>
+
+    <mj-raw>
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+    </mj-raw>
+
+    <mj-raw>
+      <style>
+        @media (prefers-color-scheme: dark) {
+
+          /* Main Backgrounds to pure black */
+          .dm-bg {
+            background-color: #0b0b0d !important;
+          }
+
+          /* SNIPER FIX: Targets nested table cells for product grids / panels */
+          .dm-panel>table>tbody>tr>td {
+            background-color: #0f1519 !important;
+          }
+
+          /* Headlines & main text to Off-White */
+          .dm-text div,
+          .dm-text span,
+          .dm-text strong {
+            color: #e6eef8 !important;
+          }
+
+          /* Subtext to light grey */
+          .dm-subtext div {
+            color: #bfc9d6 !important;
+          }
+
+          /* Buttons adjust slightly for dark mode contrast */
+          .dm-btn table td {
+            background-color: #ff8a33 !important;
+          }
+
+          .dm-btn table td a {
+            color: #0b0b0d !important;
+          }
+
+          /* Footer links */
+          .dm-link {
+            color: #ffd76b !important;
+          }
+        }
+      </style>
+    </mj-raw>
+  </mj-head>
+
+  <mj-body css-class="dm-bg" background-color="#FFFDFA" width="650px">
+
+    <mj-section background-color="#90360A" padding="20px 0">
+      <mj-column width="100%" vertical-align="middle">
+
+        <mj-text align="left" font-size="27px" color="#FFF" font-weight="700" font-family="Arial, Helvetica, sans-serif">
+          IGNITE Clothing — New Arrivals & Picks
+        </mj-text>
+
+        <mj-text align="left" color="#E6D2C1" font-size="20px" css-class="preheader" padding-top="5px">
+          Curated items + exclusive discounts for subscribers
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" css-class="dm-bg" padding="0px">
+      <mj-column>
+
+        <mj-image src="https://i.ibb.co/gLZJ53Py/Chat-GPT-Image-Oct-31-2025-04-55-10-PM.png" alt="IGNITE Spring Edition Hero Image showcasing fresh styles for your wardrobe" border="0" fluid-on-mobile="true" padding="0px" />
+
+        <mj-text mj-class="headline" css-class="dm-text" padding-top="20px">
+          Spring Edition — Fresh styles for your wardrobe
+        </mj-text>
+
+        <mj-text font-size="17px" color="#425066" css-class="dm-subtext" padding="5px 25px 16px 25px">
+          Discover new arrivals selected by our fashion team. Limited stock — shop early.
+        </mj-text>
+
+        <mj-button width="250px" align="left" font-size="16px" href="https://example.com/shop" css-class="dm-btn">
+          Shop the Collection
+        </mj-button>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f4f6f8" css-class="dm-panel" padding="20px">
+
+      <mj-column width="50%">
+
+        <mj-image src="https://i.ibb.co/yB6VsGfN/Gemini-Generated-Image-uh80pnuh80pnuh80.png" alt="Men's lightweight spring jacket on display" border="0" width="240px" />
+
+        <mj-text mj-class="product-title" css-class="dm-text">Mens Jackets</mj-text>
+
+        <mj-text mj-class="product-desc" css-class="dm-subtext">Clothing that suits the season in style.</mj-text>
+
+        <mj-text mj-class="product-price" css-class="dm-text">$79.00</mj-text>
+
+        <mj-button mj-class="product-btn" href="https://example.com/product-1" css-class="dm-btn">View product</mj-button>
+
+      </mj-column>
+
+      <mj-column width="50%">
+
+        <mj-image src="https://i.ibb.co/S8Zbbbv/Gemini-Generated-Image-d70yg2d70yg2d70y-1.png" alt="Women's spring fashion apparel and accessories" border="0" width="240px" />
+
+        <mj-text mj-class="product-title" css-class="dm-text">Women's Spring</mj-text>
+
+        <mj-text mj-class="product-desc" css-class="dm-subtext">New releases for Spring fashion.</mj-text>
+
+        <mj-text mj-class="product-price" css-class="dm-text">$129.00</mj-text>
+
+        <mj-button mj-class="product-btn" href="https://example.com/product-2" css-class="dm-btn">View product</mj-button>
+
+      </mj-column>
+
+    </mj-section>
+
+    <mj-section background-color="#f4f6f8" css-class="dm-panel" padding="0 20px 24px 20px">
+
+      <mj-column width="50%">
+
+        <mj-image src="https://i.ibb.co/0VDGY3mp/Chat-GPT-Image-Nov-12-2025-07-23-28-PM.png" alt="Stylish men's hat designed for comfortable everyday wear" border="0" width="280px" />
+
+        <mj-text mj-class="product-title" css-class="dm-text">New Hats-Men</mj-text>
+
+        <mj-text mj-class="product-desc" css-class="dm-subtext">Comfortable, stylish, and durable — perfect everyday wear.</mj-text>
+
+        <mj-text mj-class="product-price" css-class="dm-text">$59.00</mj-text>
+
+        <mj-button mj-class="product-btn" href="https://example.com/product-3" css-class="dm-btn">View product</mj-button>
+
+      </mj-column>
+
+      <mj-column width="50%">
+
+        <mj-image src="https://i.ibb.co/fVmP1v7q/Chat-GPT-Image-Nov-12-2025-07-19-31-PM.png" alt="Elegant women's hat designed for special occasions" border="0" width="280px" />
+
+        <mj-text mj-class="product-title" css-class="dm-text">New Hats-Woman</mj-text>
+
+        <mj-text mj-class="product-desc" css-class="dm-subtext">An eye-catching piece for special occasions and daily style.</mj-text>
+
+        <mj-text mj-class="product-price" css-class="dm-text">$99.00</mj-text>
+
+        <mj-button mj-class="product-btn" href="https://example.com/product-4" css-class="dm-btn">View product</mj-button>
+
+      </mj-column>
+
+    </mj-section>
+
+    <mj-section css-class="dm-bg" padding="20px 0">
+      <mj-column>
+
+        <mj-image src="https://i.ibb.co/6RtQn2gV/Gemini-Generated-Image-7hwo57hwo57hwo57.png" alt="Showcase of matching IGNITE Spring accessories" border="0" width="300px" align="center" />
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" css-class="dm-bg" padding="20px">
+      <mj-column>
+
+        <mj-text font-size="22px" font-weight="800" color="#000000" css-class="dm-text">
+          Exclusive Subscriber Offer
+        </mj-text>
+
+        <mj-text font-size="16px" font-weight="500" color="#1A1A1A" css-class="dm-subtext" padding="8px 25px 16px 25px">
+          Use code <strong style="color:#FF6A00;">SAVE15</strong> for an additional 15% off sitewide. Valid this weekend only.
+        </mj-text>
+
+        <mj-button width="250px" align="left" font-size="16px" href="https://example.com/shop" css-class="dm-btn">
+          Shop & Save
+        </mj-button>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#90360A" padding="24px 0">
+      <mj-column width="100%">
+
+        <mj-text align="center" color="#E6D2C1" font-size="15px">Follow us on</mj-text>
+
+        <mj-social align="center" mode="horizontal" icon-size="34px" padding="10px 0">
+          <mj-social-element name="facebook" href="https://facebook.com" background-color="#90360A" />
+          <mj-social-element name="instagram" href="https://instagram.com" background-color="#90360A" />
+          <mj-social-element name="twitter" href="https://twitter.com" background-color="#90360A" />
+          <mj-social-element name="youtube" href="https://youtube.com" background-color="#90360A" />
+        </mj-social>
+
+        <mj-text align="center" color="#E6D2C1" font-size="15px" padding-top="15px" line-height="1.6">
+          <span style="text-decoration:underline; font-weight:bold; cursor:pointer;">Unsubscribe?</span><br />
+          Ignite Clothing Pty Ltd • 123 Marketo St • Melbourne, VIC 3000<br />
+          Tel +61 999 9999<br /><br />
+          <a href="https://example.com/unsubscribe" style="color:#ffffff; text-decoration:underline; font-size:14px;">Data Privacy | About Us | Web View</a>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
