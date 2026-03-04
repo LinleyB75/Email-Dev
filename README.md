@@ -52,3 +52,8 @@ A transactional shipping confirmation email featuring a responsive product grid 
 A high-contrast promotional email designed with a premium vanilla and black aesthetic.
 * **Key Features:** Strict Light Mode design preservation with seamless native Dark Mode auto-inversion. Features CSS drop-shadow enhancements for transparent PNG social icons to ensure visibility across varying environments.
 * **Files:** Contains both the raw index.mjml blueprint and the compiled index.html production file.
+
+**10. Dynamic Billing Receipt - Kick-Off English (kick-off-billing-receipt)**
+A transactional email receipt designed for an online English learning platform, built with a pure MJML structural blueprint and engineered for backend data integration.
+* **Key Features:** Features a custom CSS "sniper" fix for perfect Dark Mode rendering across nested MJML table cells. Utilizes Handlebars.js templating to dynamically inject customer profiles, variable billing dates, and payment statement descriptors.
+* **Files:** Contains the raw `index.mjml` blueprint, the Handlebars-ready `index.html` production file, and the `data.json` mock backend payload.
