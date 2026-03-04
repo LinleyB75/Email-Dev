@@ -5,6 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- =============================================
+       BASE RESET STYLES
+       Normalizes default browser/email client styles.
+       Removes padding on Outlook links, resets body
+       margins, collapses table borders, and fixes
+       image rendering across clients.
+  ============================================= -->
   <style type="text/css">
     #outlook a { padding: 0; }
     body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
@@ -12,6 +20,14 @@
     img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
     p { display: block; margin: 13px 0; }
   </style>
+
+  <!-- =============================================
+       RESPONSIVE / FLUID COLUMN WIDTHS
+       Min-width: 480px — switches layout columns
+       from stacked (mobile) to side-by-side (tablet+).
+       Classes like .mj-column-per-50 set percentage
+       widths for each column block.
+  ============================================= -->
   <style type="text/css">
     @media only screen and (min-width:480px) {
       .mj-column-per-50 { width: 50% !important; max-width: 50%; }
@@ -22,14 +38,39 @@
       .mj-column-per-70 { width: 70% !important; max-width: 70%; }
     }
   </style>
+
+  <!-- =============================================
+       MOBILE FULL-WIDTH OVERRIDE
+       Max-width: 479px — forces certain tables and
+       cells to stretch full width on small screens,
+       preventing narrow columns from being cut off.
+  ============================================= -->
   <style type="text/css">
     @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
   </style>
+
+  <!-- =============================================
+       DARK MODE META TAGS
+       Declares support for both light and dark color
+       schemes. Required by Apple Mail and some other
+       clients to activate dark mode CSS overrides below.
+  ============================================= -->
   <meta name="color-scheme" content="light dark">
   <meta name="supported-color-schemes" content="light dark">
+
+  <!-- =============================================
+       DARK MODE OVERRIDES
+       Triggered when the user's OS/email client is
+       set to dark mode (prefers-color-scheme: dark).
+       - .dm-bg: main background darkened to near-black
+       - .dm-panel: receipt/billing panel background darkened
+       - .dm-text: all text lightened to off-white for legibility
+       - .dm-divider: dashed divider line softened to mid-grey
+       - .dm-link: links changed to light blue for contrast
+  ============================================= -->
   <style>
     @media (prefers-color-scheme: dark) {
       .dm-bg { background-color: #121212 !important; }
@@ -41,14 +82,38 @@
   </style>
 </head>
 <body style="word-spacing:normal;background-color:#FFFFFF;">
+
+  <!-- =============================================
+       PREHEADER TEXT
+       Hidden preview text shown in inbox snippet view
+       before the email is opened. Invisible to readers
+       but visible to email clients as preview copy.
+  ============================================= -->
   <div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Thanks from Kick-off→ Your English</div>
+
+  <!-- =============================================
+       OUTER EMAIL WRAPPER
+       Main container for the entire email. Sets
+       max-width to 600px and centers the layout.
+       aria-label and role="article" improve
+       accessibility in screen readers.
+  ============================================= -->
   <div aria-label="Notification: We have successfully charged your account" aria-roledescription="email" class="dm-bg" style="background-color:#FFFFFF;" role="article" lang="und" dir="auto">
     
+    <!-- =============================================
+         HEADER SECTION — Brand Banner
+         Orange background banner with the brand name
+         "Kick off → Your English" on the left and the
+         company logo image on the right. Two 50/50
+         columns side by side.
+    ============================================= -->
     <div style="background:orange;background-color:orange;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:orange;background-color:orange;width:100%;">
         <tbody>
           <tr>
             <td style="border:0;direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+
+              <!-- Left column: Brand name text -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:middle;" width="100%">
                   <tbody>
@@ -60,6 +125,8 @@
                   </tbody>
                 </table>
               </div>
+
+              <!-- Right column: Company logo image -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:middle;" width="100%">
                   <tbody>
@@ -79,12 +146,21 @@
                   </tbody>
                 </table>
               </div>
+
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <!-- END HEADER SECTION -->
 
+    <!-- =============================================
+         INTRO / NOTIFICATION MESSAGE SECTION
+         White background (dark mode: dark grey via .dm-bg).
+         Contains the thank-you heading and the main
+         notification paragraph explaining the charge,
+         statement descriptor, plan name, and support link.
+    ============================================= -->
     <div class="dm-bg" style="margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
         <tbody>
@@ -93,16 +169,21 @@
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
+
+                    <!-- Thank-you heading -->
                     <tr>
                       <td align="left" class="dm-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Arial, sans-serif;font-size:26px;line-height:1.5;text-align:left;color:#000000;"><strong>❤️ Thanks from Kick-off→ Your English</strong></div>
                       </td>
                     </tr>
+
+                    <!-- Notification body: charge confirmation, descriptor, and support link -->
                     <tr>
                       <td align="left" class="dm-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Arial, sans-serif;font-size:18px;line-height:1.6;text-align:left;color:#000000;"><br />This is a notification to let you know that we have successfully charged your credit card account.<br /><br /> The charged amount will appear on your account statement as: <strong>"{{payment.statementDescriptor}}"</strong>. This will include the monthly cost for your ${{receipt.totalAmount}} ({{plan.name}}).<br /><br /> Please <a href="mailto:support@example.com" class="dm-link" style="text-decoration: underline; color: #007bff; font-weight: bold;">Contact Support</a> if you feel that this transaction was not by you, or if you feel this transaction was suspicious in any way.</div>
                       </td>
                     </tr>
+
                   </tbody>
                 </table>
               </div>
@@ -111,7 +192,14 @@
         </tbody>
       </table>
     </div>
+    <!-- END INTRO SECTION -->
 
+    <!-- =============================================
+         RECEIPT PANEL — Billing Period Header
+         Light yellow panel (#FFFFF0, dark mode: dark grey).
+         Displays the heading "Your account details during
+         this billing period" with start and end dates.
+    ============================================= -->
     <div class="dm-panel" style="background:#FFFFF0;background-color:#FFFFF0;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFF0;background-color:#FFFFF0;width:100%;">
         <tbody>
@@ -133,12 +221,21 @@
         </tbody>
       </table>
     </div>
+    <!-- END BILLING PERIOD HEADER -->
 
+    <!-- =============================================
+         RECEIPT PANEL — Company Address & Receipt Info
+         Two 50/50 columns side by side:
+         Left: Company postal address (Geo English Brazil LLC)
+         Right: Receipt number, invoice date, payment received date
+    ============================================= -->
     <div class="dm-panel" style="background:#FFFFF0;background-color:#FFFFF0;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFF0;background-color:#FFFFF0;width:100%;">
         <tbody>
           <tr>
             <td style="direction:ltr;font-size:0px;padding:5px 0;text-align:center;">
+
+              <!-- Left column: Company address -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -150,6 +247,8 @@
                   </tbody>
                 </table>
               </div>
+
+              <!-- Right column: Receipt number and dates -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -161,17 +260,28 @@
                   </tbody>
                 </table>
               </div>
+
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <!-- END COMPANY ADDRESS & RECEIPT INFO -->
 
+    <!-- =============================================
+         RECEIPT PANEL — Bill To & Billing Address
+         Two 50/50 columns side by side:
+         Left: Customer name and account ID (Bill to)
+         Right: Customer billing address
+         Bottom: Full-width dashed divider line
+    ============================================= -->
     <div class="dm-panel" style="background:#FFFFF0;background-color:#FFFFF0;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFF0;background-color:#FFFFF0;width:100%;">
         <tbody>
           <tr>
             <td style="direction:ltr;font-size:0px;padding:5px 0;text-align:center;">
+
+              <!-- Left column: Bill to (customer name + account ID) -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -183,6 +293,8 @@
                   </tbody>
                 </table>
               </div>
+
+              <!-- Right column: Billing address -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -194,6 +306,8 @@
                   </tbody>
                 </table>
               </div>
+
+              <!-- Full-width dashed divider (dark mode: softened to #888888) -->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -205,17 +319,27 @@
                   </tbody>
                 </table>
               </div>
+
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <!-- END BILL TO & BILLING ADDRESS -->
 
+    <!-- =============================================
+         RECEIPT PANEL — Line Item: Plan Name & Amount
+         Two 50/50 columns side by side:
+         Left: Plan name (e.g. "Monthly Plan")
+         Right: Plan cost aligned right (e.g. "$29.99 USD")
+    ============================================= -->
     <div class="dm-panel" style="background:#FFFFF0;background-color:#FFFFF0;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFF0;background-color:#FFFFF0;width:100%;">
         <tbody>
           <tr>
             <td style="direction:ltr;font-size:0px;padding:5px 0;text-align:center;">
+
+              <!-- Left column: Plan name -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -227,6 +351,8 @@
                   </tbody>
                 </table>
               </div>
+
+              <!-- Right column: Plan amount (right-aligned) -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -238,17 +364,27 @@
                   </tbody>
                 </table>
               </div>
+
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <!-- END LINE ITEM -->
 
+    <!-- =============================================
+         RECEIPT PANEL — Total Row
+         Two 50/50 columns side by side:
+         Left: Bold "Total" label
+         Right: Bold total amount right-aligned
+    ============================================= -->
     <div class="dm-panel" style="background:#FFFFF0;background-color:#FFFFF0;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFF0;background-color:#FFFFF0;width:100%;">
         <tbody>
           <tr>
             <td style="direction:ltr;font-size:0px;padding:5px 0;text-align:center;">
+
+              <!-- Left column: "Total" label -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -260,6 +396,8 @@
                   </tbody>
                 </table>
               </div>
+
+              <!-- Right column: Total amount (bold, right-aligned) -->
               <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -271,17 +409,28 @@
                   </tbody>
                 </table>
               </div>
+
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <!-- END TOTAL ROW -->
 
+    <!-- =============================================
+         RECEIPT PANEL — Payment Method & Dashed Divider
+         60/40 column split:
+         Left (60%): Card type and last 4 digits used for payment
+         Right (40%): Amount charged, right-aligned
+         Bottom: Full-width dashed divider to close the receipt panel
+    ============================================= -->
     <div class="dm-panel" style="background:#FFFFF0;background-color:#FFFFF0;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFF0;background-color:#FFFFF0;width:100%;">
         <tbody>
           <tr>
             <td style="direction:ltr;font-size:0px;padding:5px 0;padding-bottom:15px;text-align:center;">
+
+              <!-- Left column (60%): Payment card info -->
               <div class="mj-column-per-60 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -293,6 +442,8 @@
                   </tbody>
                 </table>
               </div>
+
+              <!-- Right column (40%): Amount charged (bold, right-aligned) -->
               <div class="mj-column-per-40 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -304,6 +455,8 @@
                   </tbody>
                 </table>
               </div>
+
+              <!-- Closing dashed divider for receipt panel (dark mode: #888888) -->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
@@ -315,12 +468,21 @@
                   </tbody>
                 </table>
               </div>
+
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <!-- END PAYMENT METHOD SECTION -->
 
+    <!-- =============================================
+         TRANSACTION HISTORY & CONTACT SECTION
+         White background (dark mode: dark grey via .dm-bg).
+         Single full-width column with:
+         - Link to view full transaction history
+         - Contact email address for questions
+    ============================================= -->
     <div class="dm-bg" style="margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
         <tbody>
@@ -342,7 +504,15 @@
         </tbody>
       </table>
     </div>
+    <!-- END TRANSACTION HISTORY & CONTACT SECTION -->
 
+    <!-- =============================================
+         FOOTER SECTION — Support Contact
+         Dark grey (#555555) background.
+         Centered layout with:
+         - Customer service icon image
+         - Support email address text
+    ============================================= -->
     <div style="background:#555555;background-color:#555555;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#555555;background-color:#555555;width:100%;">
         <tbody>
@@ -351,6 +521,8 @@
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
+
+                    <!-- Customer service icon -->
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
@@ -364,6 +536,8 @@
                         </table>
                       </td>
                     </tr>
+
+                    <!-- Support email text -->
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Arial, sans-serif;font-size:17px;line-height:1.5;text-align:center;color:#FFFFFF;">For any other questions you may have. Contact support at <br />
@@ -371,6 +545,7 @@
                         </div>
                       </td>
                     </tr>
+
                   </tbody>
                 </table>
               </div>
@@ -379,7 +554,10 @@
         </tbody>
       </table>
     </div>
+    <!-- END FOOTER SECTION -->
 
   </div>
+  <!-- END OUTER EMAIL WRAPPER -->
+
 </body>
 </html>
