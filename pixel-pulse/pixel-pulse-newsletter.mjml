@@ -1,0 +1,192 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all font-family="'Helvetica', sans-serif" />
+
+      <mj-class name="bg-light" background-color="#ffffff" css-class="dm-bg" />
+      <mj-class name="article-img" padding="0px" border-radius="10px" border="3px solid #FFD700" width="250px" />
+      <mj-class name="article-title" css-class="dm-text title" line-height="1.4" align="left" padding-left="25px" font-size="20px" color="#1a1a1a" />
+      <mj-class name="article-sub" css-class="dm-text subtitle" line-height="1.5" align="left" padding-left="25px" color="#4a4a4a" padding-bottom="20px" font-size="15px" />
+      <mj-class name="article-btn" css-class="cta-btn" align="left" padding-left="25px" background-color="#FFD700" color="#000000" font-size="14px" font-weight="bold" border-radius="25px" />
+    </mj-attributes>
+
+    <mj-raw>
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+    </mj-raw>
+
+    <mj-raw>
+      <style>
+        .title {
+          font-weight: bold;
+        }
+
+        .cta-btn table td {
+          border-radius: 25px !important;
+          width: 150px;
+        }
+
+        .social-icons {
+          margin-top: 20px;
+        }
+
+        .social-icon {
+          margin-right: 10px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .dm-bg {
+            background-color: #000000 !important;
+          }
+
+          .dm-bg>table>tbody>tr>td {
+            background-color: #000000 !important;
+          }
+
+          /* Targeting divs, spans, AND links (a) to ensure they flip to white */
+          .dm-text div,
+          .dm-text span,
+          .dm-text a {
+            color: #ffffff !important;
+          }
+
+          .dm-social table td {
+            background-color: #000000 !important;
+          }
+        }
+      </style>
+    </mj-raw>
+  </mj-head>
+
+  <mj-body css-class="dm-bg" background-color="#e0e0e0">
+
+    <mj-wrapper mj-class="bg-light" padding="0">
+
+      <mj-section padding-bottom="0">
+        <mj-column width="600px">
+
+          <mj-image src="https://i.ibb.co/MD64N8Sm/Gemini-Generated-Image-64amjl64amjl64am.png" alt="Gemini Generated Image 64amjl64amjl64am" border="0" alt="PixelPulse Logo" padding="0px" width="200px"></mj-image>
+
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column width="600px">
+
+          <mj-text css-class="dm-text" align="center" line-height="1.6" color="#1a1a1a" font-size="26px">
+            Welcome Linley to the February 2026 Newsletter from PixelPulse Photography
+          </mj-text>
+
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0">
+        <mj-column width="600px">
+
+          <mj-image src="https://i.ibb.co/W0xT0W8/DALL-E-2024-02-07-11-35-56-Create-a-cyberpunk-themed-image-with-two-realistic-camera-lenses-side-by.webp" alt="Cyberpunk Camera Lenses" width="600px" border-radius="4px" border="3px solid #FFD700" padding-bottom="45px"></mj-image>
+
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding-top="0px">
+        <mj-column width="50%" vertical-align="middle">
+
+          <mj-image mj-class="article-img" src="https://i.ibb.co/2Z9qqVS/DSC-7105.jpg" alt="Pentax MG Film SLR"></mj-image>
+
+        </mj-column>
+        <mj-column width="50%" vertical-align="middle">
+
+          <mj-text mj-class="article-title" padding-top="45px">Featured Review: Pentax's MG Film SLR</mj-text>
+
+          <mj-text mj-class="article-sub">After so many years, we look at Pentax's MG film SLR, a review with the legend that lives on!</mj-text>
+
+          <mj-button mj-class="article-btn" href="#">READ MORE</mj-button>
+
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column width="50%" vertical-align="middle">
+
+          <mj-image mj-class="article-img" src="https://i.ibb.co/XY4rqgZ/samsung-june-2020-369.jpg" alt="Nikon D300 and D300S"></mj-image>
+
+        </mj-column>
+        <mj-column width="50%" vertical-align="middle">
+
+          <mj-text mj-class="article-title" padding-top="90px">Nikon D300 & D300S: Game-Changers in DSLR Photography</mj-text>
+
+          <mj-text mj-class="article-sub">This week we also look at another Nikon, the D300 AND D300S, which was a game-changer for APS-C format DSLRs.</mj-text>
+
+          <mj-button mj-class="article-btn" href="#">READ MORE</mj-button>
+
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column width="50%" vertical-align="middle">
+
+          <mj-image mj-class="article-img" src="https://i.ibb.co/pJWyK9s/DSC-7715.jpg" alt="Mauritius Photography"></mj-image>
+
+        </mj-column>
+        <mj-column width="50%" vertical-align="middle">
+
+          <mj-text mj-class="article-title" font-size="21px" padding-top="92px">Exploring Mauritius: Paradise Island Photography</mj-text>
+
+          <mj-text mj-class="article-sub">We look at some great places to photograph around the paradise island of Mauritius in the Indian Ocean.</mj-text>
+
+          <mj-button mj-class="article-btn" href="#">READ MORE</mj-button>
+
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding-bottom="40px">
+        <mj-column width="50%" vertical-align="middle">
+
+          <mj-image mj-class="article-img" src="https://i.ibb.co/jb1QkX3/DSC-4731.jpg" alt="Bird Photography"></mj-image>
+
+        </mj-column>
+        <mj-column width="50%" vertical-align="middle">
+
+          <mj-text mj-class="article-title" font-size="21px" padding-top="41px">Exciting Bird Photography Adventures</mj-text>
+
+          <mj-text mj-class="article-sub">Discover new and exciting bird photography adventures that will inspire your creativity.</mj-text>
+
+          <mj-button mj-class="article-btn" href="#">READ MORE</mj-button>
+
+        </mj-column>
+      </mj-section>
+
+    </mj-wrapper>
+
+    <mj-section css-class="dm-bg social-icons" background-color="#f4f4f4" padding="55px 0px">
+      <mj-column width="600px">
+
+        <mj-text css-class="dm-text" align="center" color="#1a1a1a" font-size="16px">
+          Follow Us on Social Media
+        </mj-text>
+
+        <mj-social font-size="20px" icon-size="30px" mode="horizontal" align="center">
+          <mj-social-element name="facebook" href="https://facebook.com" css-class="social-icon dm-social" background-color="#1a1a1a"></mj-social-element>
+          <mj-social-element name="instagram" href="https://instagram.com" css-class="social-icon dm-social" background-color="#1a1a1a"></mj-social-element>
+          <mj-social-element name="twitter" href="https://twitter.com" css-class="social-icon dm-social" background-color="#1a1a1a"></mj-social-element>
+          <mj-social-element name="linkedin" href="https://linkedin.com" css-class="social-icon dm-social" background-color="#1a1a1a"></mj-social-element>
+        </mj-social>
+
+        <mj-text css-class="dm-text" align="center" padding-top="45px">
+          <a href="#" style="color: #1a1a1a; text-decoration: underline; font-size: 18px; font-weight: bold;">Unsubscribe?</a>
+        </mj-text>
+
+        <mj-text css-class="dm-text" color="#4a4a4a" font-size="14px" align="center" padding-top="20px">
+          Email Preferences | Privacy | Contact | Web View
+        </mj-text>
+
+        <mj-text css-class="dm-text" line-height="1.6" color="#4a4a4a" font-size="14px" align="center">
+          Allee des Bambous, Montagne Ory, Moka 80825 Mauritius<br />
+          Tel: <a href="tel:+23058310268" style="color: #1a1a1a; text-decoration: none;">(230) 58310268</a>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
