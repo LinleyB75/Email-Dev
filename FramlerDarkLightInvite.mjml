@@ -1,0 +1,446 @@
+<mjml>
+  <mj-head>
+    <mj-preview>New Framler Eyewear Store Opening Notification.</mj-preview>
+    <mj-title>Hi, Linley we sent you an invitation to our store opening.</mj-title>
+
+    <!-- Supported color schemes meta tags -->
+
+    <mj-raw>
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+    </mj-raw>
+
+    <!-- Disables Apple Mail's (and some other clients') "data detectors" -
+    the feature that auto-scans text for anything resembling a phone
+    number, physical address, date, or email address and force-styles it
+    as a blue clickable link -->
+    <mj-raw>
+      <meta name="format-detection" content="telephone=no">
+      <meta name="format-detection" content="date=no">
+      <meta name="format-detection" content="address=no">
+      <meta name="format-detection" content="email=no">
+    </mj-raw>
+
+    <!-- Disables Word's "Advanced Typography" (Smart Justification /
+    Hyphenation) reading-mail feature in Outlook 2021+/365 desktop (Win11) -->
+
+    <mj-raw><!--[if mso]><xml><w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyReadingMail/></w:WordDocument></xml><![endif]--></mj-raw>
+
+    <!-- Forces Outlook desktop to treat the email as 96 PPI regardless of
+    the user's Windows display-scaling setting (125%, 150%, etc). Without
+    this, Outlook's own DPI up-scaling of the rendered table grid can
+    introduce sub-pixel rounding artifacts - this is the documented fix for
+    the "Outlook 2021 (150 DPI)" hairline that was still showing after every
+    other fix, since that one is a scaling-engine issue rather than a markup
+    or typography issue. -->
+
+    <mj-raw><!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--></mj-raw>
+
+    <!-- Global Outlook table/border reset (EmailOnAcid-recommended fix for
+    stray grid/hairlines between stacked tables in classic Outlook desktop).
+    Plain, non-!important rules, so this only fills in a default for tables
+    that don't already declare their own border-collapse -->
+    <mj-style>
+      table {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      border-collapse: collapse;
+      border: 0;
+      }
+      td {
+      border-collapse: collapse;
+      }
+    </mj-style>
+
+    <!-- MSO/IE-only conditional border-collapse reset. Distinct from the
+    plain global rule above - this one is scoped ONLY to Outlook/IE via the
+    conditional wrapper -->
+
+    <mj-raw><!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+    </style>
+    <![endif]--></mj-raw>
+
+    <mj-style inline="inline">
+      /* ALT-TEXT FALLBACK STYLING
+      Inlined here (not in the head-level style block) so it survives clients
+      that strip head styles. When an image is blocked or fails to load, the
+      alt text needs an explicit color/font or it renders using the client's
+      default color, which is invisible on a dark section background. */
+      img {
+      color: #333333;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      }
+
+      /* Logo images sit on permanently-dark sections - alt text must be
+      light, or a blocked/failed image is invisible instead of just missing. */
+      .protected-logo {
+      color: #1a1a1a !important;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      }
+
+      /* CTA button: disguise the flat color as a same-color gradient (as
+      before). Color itself changed to a mid-tone teal as part of testing
+      whether a bright/pastel accent color is what's vanishing under a
+      broader auto-inversion filter in these clients, separate from the
+      targeted flat-color rewrite this gradient trick defends against. */
+      .cta-button td,
+      .cta-button a {
+      background: #2E8B87 linear-gradient(180deg, #2E8B87, #2E8B87) !important;
+      color: #FFFFFF !important;
+      }
+
+    </mj-style>
+
+    <!-- Dark Mode Overrides -->
+    <mj-style>
+      @media (prefers-color-scheme: dark) {
+      body,
+      .body-bg,
+      .body-bg > div,
+      body > div {
+      background-color: #00101F !important;
+      }
+
+      /* Sections that are white in light mode flip to dark navy */
+      .card-section,
+      .card-section > table,
+      .card-section td {
+      background-color: #00101F !important;
+      }
+
+      .card-text,
+      .card-text span,
+      .card-text p,
+      .card-text div,
+      .card-text strong,
+      .card-text b {
+      color: #ffffff !important;
+      }
+
+      /* Nested light-gray card gets its own, lighter dark tone (declared
+      after .card-section so it wins for this specific nested element) */
+      .dark-card,
+      .dark-card > table,
+      .dark-card td {
+      background-color: #112233 !important;
+      }
+      }
+
+      /* Outlook App & Office 365 in-app dark mode ([data-ogsc] / [data-ogsb]) */
+      [data-ogsb] .body-bg,
+      [data-ogsb] body {
+      background-color: #00101F !important;
+      }
+
+      [data-ogsc] .card-section,
+      [data-ogsb] .card-section,
+      [data-ogsc] .card-section td,
+      [data-ogsb] .card-section td {
+      background-color: #00101F !important;
+      }
+
+      [data-ogsc] .card-text,
+      [data-ogsc] .card-text span,
+      [data-ogsc] .card-text p,
+      [data-ogsc] .card-text div,
+      [data-ogsc] .card-text strong,
+      [data-ogsc] .card-text b {
+      color: #ffffff !important;
+      }
+
+      [data-ogsc] .dark-card,
+      [data-ogsb] .dark-card,
+      [data-ogsc] .dark-card td,
+      [data-ogsb] .dark-card td {
+      background-color: #112233 !important;
+      }
+
+      /* CTA button backstop for genuine prefers-color-scheme dark mode
+      (the gradient-disguise inline styling above is the primary defense;
+      this just keeps the color correct if anything still slips through) */
+      [data-ogsc] .cta-button a,
+      [data-ogsb] .cta-button a,
+      [data-ogsc] .cta-button td,
+      [data-ogsb] .cta-button td {
+      background: #2E8B87 linear-gradient(180deg, #2E8B87, #2E8B87) !important;
+      color: #FFFFFF !important;
+      }
+
+      /* Text already on a permanently-dark section still needs protection -
+      Outlook's per-element contrast rewrite can selectively recolor an
+      unclassed element even when the section around it stays correct */
+      [data-ogsc] .dark-static-white,
+      [data-ogsc] .dark-static-white span,
+      [data-ogsc] .dark-static-white p,
+      [data-ogsc] .dark-static-white div,
+      [data-ogsc] .dark-static-white a {
+      color: #1a1a1a !important;
+      }
+
+      [data-ogsc] .dark-static-yellow,
+      [data-ogsc] .dark-static-yellow a {
+      color: #8B0000 !important;
+      }
+
+      /* ==========================================================================
+      1. UNIVERSAL MOBILE BASE (Up to 480px)
+      Targets: Standard mobile breakpoint, ensures full-width buttons
+      and stacked layouts where needed.
+      ========================================================================== */
+      @media only screen and (max-width: 480px) {
+      .button table {
+      width: 100% !important;
+      }
+      .button a {
+      width: auto !important;
+      display: block !important;
+      text-align: center !important;
+      }
+      .mobile-center {
+      text-align: center !important;
+      }
+      }
+
+      /* ==========================================================================
+      2. LARGE PHABLETS & PLUS/MAX MODELS (Up to 430px)
+      Targets: iPhone 14/15/16 Plus & Pro Max, Pixel Pro, Galaxy Ultra
+      ========================================================================== */
+      @media only screen and (max-width: 430px) {
+      .badge-image img {
+      width: 105px !important;
+      height: auto !important;
+      }
+      }
+
+      /* ==========================================================================
+      3. MODERN MAINSTREAM MOBILES (Up to 393px)
+      Targets: iPhone 12 / 13 / 14 / 15 / 16 / Pro, Galaxy S21 - S24
+      ========================================================================== */
+      @media only screen and (max-width: 393px) {
+      .badge-image img {
+      width: 95px !important;
+      height: auto !important;
+      }
+      }
+
+      /* ==========================================================================
+      4. COMPACT MOBILES (Up to 375px)
+      Targets: iPhone 6, 7, 8, SE (2nd/3rd Gen), iPhone X / XS / 11 Pro
+      ========================================================================== */
+      @media only screen and (max-width: 375px) {
+      .badge-column {
+      width: 33.33% !important;
+      display: inline-block !important;
+      }
+      .badge-image img {
+      width: 85px !important;
+      height: auto !important;
+      }
+      }
+
+      /* ==========================================================================
+      5. ULTRA-COMPACT MOBILES (Up to 320px)
+      Targets: iPhone SE (1st Gen), Samsung Galaxy Fold (Cover Screen)
+      ========================================================================== */
+      @media only screen and (max-width: 320px) {
+      .badge-image img {
+      width: 70px !important;
+      height: auto !important;
+      }
+      }
+
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#d1d1d1" css-class="body-bg">
+
+    <!-- Header Logo -->
+    <mj-section padding="14px 0">
+      <mj-column padding="0px">
+
+        <mj-image src="https://i.ibb.co/nsVnT6rj/DALL-E-2024-02-19-19-53-42-Create-a-sophisticated-logo-for-the-eyewear-brand-Frameler-The-logo.png" alt="DALL E 2024 02 19 19 53 42 Create a sophisticated logo for the eyewear brand Frameler The logo" border="0" padding="0" width="180px" border-radius="10px" css-class="protected-logo" />
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Hero Banner -->
+    <mj-section background-color="#F9F9F9" padding="0" css-class="card-section">
+      <mj-column padding="0px">
+
+        <mj-image src="https://i.ibb.co/KvKDPnW/DALL-E-2024-02-23-10-58-10-Create-a-wide-horizontal-hero-image-for-Frameler-featuring-one-pair.png" alt="Frameler Eyewear Hero Image" border="0" padding="0" width="600px" />
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Greeting & Image -->
+    <mj-section background-color="#F9F9F9" padding="24px" css-class="card-section">
+      <mj-column padding="0px" background-color="#F9F9F9">
+
+        <mj-image width="300px" align="center" src="https://i.ibb.co/BVvRVRjB/Gemini-Generated-Image-4ujd5q4ujd5q4ujd.png" alt="Audrey wearing stylish Frameler glasses" border="0" padding="0" border-radius="20px" css-class="responsive-image" />
+
+        <mj-text padding="36px 0 0 0" color="#00101F" align="center" font-family="Georgia, serif" font-size="36px" css-class="card-text">
+          <strong>G'day Linley!</strong>&nbsp;
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Announcement Card & Fixed Width Button with Inner Padding -->
+    <!-- Support text is merged into this same section/column (rather than
+    its own mj-section below) so both live in one continuous table with no
+    boundary between them - the stray hairline artifact in classic Outlook -->
+    <mj-section padding="24px" background-color="#F9F9F9" css-class="dark-card">
+      <mj-column background-color="#F0F0F0" padding="24px" css-class="card-section">
+
+        <mj-text align="left" font-family="Georgia, serif" font-size="24px" line-height="1.4" padding="0 0 24px 0" color="#333333" css-class="card-text">
+          <strong>We Will Open a New Frameler Eyewear Store</strong>
+        </mj-text>
+
+        <mj-text align="left" font-family="Georgia, serif" font-size="20px" line-height="36px" padding="0 0 24px 0" color="#333333" css-class="card-text">
+          We are sending you this email since you participated in receiving notifications about the opening of our new store in Melbourne.<br /><br />
+          <strong>GET THE CHANCE TO GET A NEW IPHONE</strong><br /><br />
+          Our new premises are located at <strong>Marina Wharf, Rite Complex Level 1 (opposite KFC) in Melbourne city.</strong><br /><br />
+          As part of our <strong>Grand Opening on Saturday 14th of March 2026 at 11am</strong> we are giving away <strong>50 Frameler Sunglasses to the first 50 customers</strong> through the door.<br /><br />
+          Register below to participate!&nbsp;
+        </mj-text>
+
+        <!-- Ghost break: Outlook-only forced <br> to smooth the height
+        transition into the button, per EmailOnAcid's ghost-break technique -->
+
+        <mj-raw><!--[if gte mso 12]><br /><![endif]--></mj-raw>
+
+        <!-- Button using 360px fixed width & inner-padding for robust email client support -->
+
+        <mj-button css-class="button cta-button" align="left" background-color="#2E8B87" color="#FFFFFF" font-size="20px" border-radius="4px" width="360px" inner-padding="16px 20px" font-family="Tahoma, serif" font-weight="bold" border="4px solid #00101F" padding="0px" line-height="28px" href="https://example.com/">
+          Register Participation
+        </mj-button>
+
+        <!-- Ghost break: Outlook-only forced <br> to smooth the height
+        transition out of the button, ghost-break technique -->
+
+        <mj-raw><!--[if gte mso 12]><br /><![endif]--></mj-raw>
+
+        <mj-text align="left" font-size="20px" line-height="28px" font-family="Georgia, serif" color="#333333" padding="24px 0 0 0" css-class="card-text">If you have questions or how you received this invitation please do not hesitate to contact us or just reply to this email, or contact : <a href="mailto:support@example.com" style="text-decoration: underline; color: #2E8B87;">support@example.com</a>&nbsp;
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- App Download Section -->
+    <mj-section background-color="#F9F9F9" padding="10px 0 20px 0" css-class="card-section">
+      <mj-column padding="0px" background-color="#F9F9F9">
+
+        <mj-text align="center" font-size="20px" font-family="Tahoma, serif" color="#333" css-class="card-text">
+          <strong>Want To Download Our New APP?</strong><br /><br />
+          You can download on....&nbsp;
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- App Badges -->
+    <mj-section padding="30px 0px" background-color="#F9F9F9">
+      <mj-group>
+        <mj-column width="33.33%" css-class="badge-column">
+
+          <mj-image align="right" padding="0px" width="122px" href="https://example.com/" src="https://i.ibb.co/jP2KH1gp/transparent.png" alt="transparent Google Play icon" border="0" css-class="badge-image" />
+
+        </mj-column>
+        <mj-column width="33.33%" css-class="badge-column">
+
+          <mj-image align="center" padding="0px" width="120px" href="https://example.com/" src="https://i.ibb.co/5Wr67Chk/Windows-Store-icon-808080-1.png" border="0" alt="Windows Store icon 808080" css-class="badge-image" />
+
+        </mj-column>
+        <mj-column width="33.33%" css-class="badge-column">
+
+          <mj-image align="left" padding="0px" width="122px" href="https://example.com/" src="https://i.ibb.co/2TrRfsZ/App-Store-i-OS-Logo-wine-2.png" alt="App Store i OS Logo wine icon" alt="App Store" border="0" css-class="badge-image" />
+
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Social Header -->
+    <mj-section background-color="#a9a9a9" padding-top="40px" padding-bottom="10px">
+      <mj-column padding="0px" background-color="#a9a9a9">
+
+        <mj-text align="center" font-size="16px" font-family="Georgia, serif" padding="0" color="#1a1a1a" line-height="24px">Follow us on :</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Social Icons -->
+    <mj-section padding="10px 0 24px 0" border="0" background-color="#a9a9a9">
+      <mj-column background-color="#a9a9a9" padding="0px" width="600px">
+
+        <mj-social container-background-color="#a9a9a9" icon-size="34px" font-size="20px" icon-size="32px" mode="horizontal" padding="5px">
+          <mj-social-element name="facebook" href="https://example.com/" background-color="#a9a9a9" color="#FFF"></mj-social-element>
+          <mj-social-element name="twitter" href="https://example.com/" background-color="#a9a9a9" color="#FFF"></mj-social-element>
+          <mj-social-element name="instagram" href="https://example.com/" background-color="#a9a9a9" color="#FFF"></mj-social-element>
+          <mj-social-element name="youtube" href="https://example.com/" background-color="#a9a9a9" color="#FFF"></mj-social-element>
+        </mj-social>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Unsubscribe -->
+    <mj-section background-color="#a9a9a9" border="0" padding="24px 0">
+      <mj-column width="100%" padding="0px">
+
+        <mj-text line-height="24px" color="#8B0000" align="center" text-decoration="underline" font-size="18px" padding="0px">
+          <a href="https://example.com/" style="color:#2E8B87;">Unsubscribe?</a>&nbsp;
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Navigation Links -->
+    <mj-section border="0" background-color="#a9a9a9" padding="0 0 24px 0">
+      <mj-column padding="0px" background-color="#a9a9a9">
+
+        <mj-text align="center" font-size="16px" padding="0px">
+          <span style="white-space: nowrap;">
+            <a href="https://example.com/" style="text-decoration:none;color:#1a1a1a;">Data Privacy</a>
+            &nbsp;|&nbsp;
+            <a href="https://example.com/" style="text-decoration:none;color:#1a1a1a;">Home</a>
+            &nbsp;|&nbsp;
+            <a href="https://example.com/" style="text-decoration:none;color:#1a1a1a;">Contact Us</a>
+            &nbsp;|&nbsp;
+            <a href=" https://example.com/" style="text-decoration:none;color:#1a1a1a;">Webview</a>
+          </span>&nbsp;
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Logo -->
+    <mj-section padding="24px 0" background-color="#a9a9a9">
+      <mj-column padding="0px" background-color="#a9a9a9">
+
+        <mj-image src="https://i.ibb.co/nsVnT6rj/DALL-E-2024-02-19-19-53-42-Create-a-sophisticated-logo-for-the-eyewear-brand-Frameler-The-logo.png" alt="DALL E 2024 02 19 19 53 42 Create a sophisticated logo for the eyewear brand Frameler The logo" border="0" padding="0px" width="180px" border-radius="10px" css-class="protected-logo" />
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Address Footer -->
+    <mj-section background-color="#a9a9a9" padding="24px 0">
+      <mj-column padding="0px" background-color="#a9a9a9">
+
+        <mj-text font-size="16px" align="center" color="#1a1a1a" line-height="24px" padding="0">
+          <strong>&copy; Frameler Eyewear</strong><br /><br />
+          1 Smithy Place, Melbourne, VIC 3000, Australia<br /><br />
+          Tel + (230) 5831 0268&nbsp;
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
