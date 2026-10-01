@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E37T8FJ661"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E37T8FJ661');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    
+    <title>Linley Bignoux | Email Developer</title>
+    <meta name="description" content="Email developer. I turn your static designs into bulletproof HTML/CSS and responsive MJML campaigns optimized for all inboxes.">
+    
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/TD8P4tx2/IRw-Qy-FCDJgx7s-Ovm-DHk0-Kr-QPZdh-Il-Cnl2-DUi2-BML.jpg">
+    <link rel="icon" type="image/jpeg" sizes="192x192" href="https://i.ibb.co/TD8P4tx2/IRw-Qy-FCDJgx7s-Ovm-DHk0-Kr-QPZdh-Il-Cnl2-DUi2-BML.jpg">
+    <link rel="apple-touch-icon" href="https://i.ibb.co/TD8P4tx2/IRw-Qy-FCDJgx7s-Ovm-DHk0-Kr-QPZdh-Il-Cnl2-DUi2-BML.jpg">
+
+    <meta property="og:title" content="Linley Bignoux | Email Developer">
+    <meta property="og:description" content="Email developer. I turn your static designs into bulletproof HTML/CSS and responsive MJML campaigns.">
+    <meta property="og:image" content="https://i.ibb.co/TD8P4tx2/IRw-Qy-FCDJgx7s-Ovm-DHk0-Kr-QPZdh-Il-Cnl2-DUi2-BML.jpg">
+    <meta property="og:url" content="https://linleyb.com/">
+    <meta property="og:type" content="website">
+    
+    <link rel="canonical" href="https://linleyb.com/" />
+    <meta name="google-site-verification" content="psUf9L9vQpweUrvTikNOYh2rmWYmKcQfyXXhUGQ3EDY" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Linley Bignoux Email Development",
+      "jobTitle": "Email Developer",
+      "url": "https://linleyb.com",
+      "image": "https://i.ibb.co/TD8P4tx2/IRw-Qy-FCDJgx7s-Ovm-DHk0-Kr-QPZdh-Il-Cnl2-DUi2-BML.jpg",
+      "sameAs": [
+        "https://github.com/LinleyB75/Email-Dev",
+        "https://linleybignouxzqme9nmu.contra.com/"
+      ],
+      "description": "I turn your designs into bulletproof HTML/CSS emails. Email developer specializing in MJML, Outlook-safe code, and custom ESP integration."
+    }
+    </script>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <style>
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            /* Default Light Mode */
+            color-scheme: light dark;
+            forced-color-adjust: none;
+            -webkit-print-color-adjust: exact;
+            
+            --primary: #0a0a0a; 
+            --accent: #E10600; 
+            --text: #1a1a1a;
+            --text-light: #55555a; 
+            --bg: #ffffff; 
+            --bg-alt: #f2f2f2;
+            --border: #e0e0e0; 
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --section-highlight: #f2f2f2;
+            --cert-bg-dark: #0a0a0a;
+            --card-bg: #ffffff;
+            --input-bg: #f7f7f7;
+            --quote-bg: #f7f7f7;
+        }
+
+        /* Dark Mode Overrides */
+        [data-theme="dark"] {
+            color-scheme: dark;
+            forced-color-adjust: none;
+            
+            --primary: #f5f5f5; 
+            --accent: #FF1A1A; 
+            --text: #000000;   
+            --text-light: #000000; 
+            --bg: #0a0a0a;      
+            --bg-alt: #141414;  
+            --border: #2a2a2a; 
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.5);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+            --section-highlight: #141414;
+            --cert-bg-dark: #000000;
+            --card-bg: #141414;
+            --input-bg: #1c1c1c;
+            --quote-bg: #141414;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                color-scheme: dark;
+                forced-color-adjust: none;
+                --primary: #f5f5f5; --accent: #FF1A1A; --text: #f2f2f2; --text-light: #b0b0b0; --bg: #0a0a0a; --bg-alt: #141414; --border: #2a2a2a; --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.5); --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5); --section-highlight: #141414; --cert-bg-dark: #000000; --card-bg: #141414; --input-bg: #1c1c1c; --quote-bg: #141414;
+            }
+        }
+
+        html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; max-width: 100vw; background-color: var(--bg); }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); overflow-x: hidden; max-width: 100vw; transition: background 0.3s, color 0.3s; padding-top: 115px; }
+        
+        header { background: var(--bg); border-bottom: 3px solid var(--primary); position: fixed; top: 0; z-index: 100; min-height: 115px; display: flex; align-items: center; width: 100%; transition: background 0.3s; left: 0; right: 0; }
+        .container { max-width: 1350px; margin: 0 auto; width: 100%; padding: 0 5%; }
+        nav { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px 0; }
+        
+        .logo-wrap { display: flex; align-items: center; gap: 15px; text-decoration: none; flex-shrink: 0; margin-right: auto; }
+        .header-photo { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); flex-shrink: 0; }
+        
+        .logo-text-group { display: flex; align-items: center; }
+        .logo-main { font-size: 1.6rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; background: var(--section-highlight); padding: 8px 22px; border-radius: 50px; display: inline-flex; align-items: center; white-space: nowrap; }
+        .logo-main .pipe { margin: 0 10px; font-weight: 300; opacity: 0.3; color: var(--text); }
+        .logo-main .job-title { color: var(--text); font-size: 1.15rem; margin-top: 2px; }
+
+        .theme-toggle { background: none; border: 2px solid var(--border); color: var(--text); cursor: pointer; font-size: 1.2rem; padding: 8px; border-radius: 50%; margin-left: 10px; margin-right: 25px; transition: 0.3s; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex-shrink: 0; }
+        .theme-toggle:hover { background: var(--bg-alt); color: var(--primary); border-color: var(--primary); }
+
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; } 
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 0.95rem; transition: 0.3s; border-bottom: 3px solid transparent; padding-bottom: 5px; }
+        .nav-links a:hover { border-bottom: 3px solid var(--accent); color: var(--primary); }
+        
+        .nav-fix-btn { background-color: var(--bg); color: var(--primary) !important; padding: 10px 18px !important; border-radius: 50px; border: 2px solid var(--primary) !important; box-shadow: 0 4px 0 var(--accent); display: inline-block; transition: 0.3s all ease; }
+        .nav-links .nav-fix-btn:hover { background-color: var(--primary) !important; color: #ffffff !important; border-bottom: 2px solid var(--primary) !important; }
+
+        /* FIXED: For You button now automatically uses the opposite color of its background in both themes */
+        .nav-for-you { background-color: var(--primary); color: var(--bg) !important; height: 46px; padding: 0 25px; border-radius: 50px; display: inline-flex !important; align-items: center; justify-content: center; gap: 10px; border: none !important; font-weight: 800; position: relative; box-shadow: var(--shadow); white-space: nowrap; }
+        .nav-links .nav-for-you:hover { border-bottom: none !important; background-color: var(--primary) !important; color: var(--bg) !important; }
+        .nav-for-you::after { content: ""; position: absolute; bottom: 10px; left: 25px; right: 25px; height: 3px; background-color: var(--accent); border-radius: 2px; }
+
+        .menu-toggle { display: none; font-size: 1.8rem; background: none; border: none; cursor: pointer; color: var(--primary); margin-left: auto; flex-shrink: 0;}
+
+        .consult-btn-wrapper { width: 100%; display: flex; justify-content: center; margin-top: 2rem; }
+        .cta-button { display: inline-block; padding: 1.2rem 2.5rem; background: var(--accent); color: #ffffff; text-decoration: none; border-radius: 10px; font-weight: 800; cursor: pointer; border: none; font-size: clamp(1.1rem, 2vw, 1.35rem); transition: 0.3s; text-align: center; max-width: 100%; }
+        .cta-button:hover { background: #b30000; transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+
+        .hero { background: linear-gradient(135deg, #050505 0%, #1a1a1a 100%); color: white; padding: clamp(4rem, 10vh, 7rem) 0; text-align: center; }
+        
+        .hero-badge { display: inline-block; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.25); color: var(--accent); padding: 8px 25px; border-radius: 50px; font-weight: 800; font-size: 0.95rem; letter-spacing: 1px; margin-bottom: 2rem; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .hero-badge .sep { opacity: 0.5; margin: 0 6px; font-weight: 400; color: #ffffff;}
+        
+        .hero h1 { font-size: clamp(1.8rem, 5vw, 3.2rem); margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; }
+        
+        .hero .subtitle-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; list-style: none; margin: 0 auto 2.5rem; padding: 0; font-size: clamp(1rem, 2vw, 1.4rem); color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; max-width: 900px; }
+        .hero .subtitle-list li { display: flex; align-items: center; }
+        .hero .subtitle-list li:not(:last-child)::after { content: '•'; color: white; font-weight: 300; margin-left: 20px; }
+
+        .hero .hero-intro-text { font-size: clamp(1.1rem, 2vw, 1.45rem); max-width: 900px; margin: 0 auto; line-height: 1.7; font-weight: 400; opacity: 0.95; padding: 0 20px;}
+
+        .tech-stack-icons { display: flex; justify-content: center; align-items: center; gap: clamp(1.5rem, 4vw, 3rem); margin-top: 3.5rem; color: rgba(255, 255, 255, 0.85); flex-wrap: wrap; }
+        .tech-item { display: flex; align-items: center; gap: 12px; font-size: clamp(1.15rem, 2vw, 1.35rem); font-weight: 700; letter-spacing: 1px; transition: all 0.3s ease; cursor: default; }
+        .tech-item i, .tech-item svg { font-size: clamp(1.8rem, 3vw, 2.5rem); width: 1em; height: 1em; }
+        .tech-item:hover { color: var(--accent); transform: translateY(-4px); }
+
+        section { padding: clamp(3.5rem, 8vh, 6rem) 0; }
+        .section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 3.5rem; text-align: center; color: var(--primary); font-weight: 800; padding: 0 20px;}
+        
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; justify-content: center; }
+        .card { background: var(--card-bg); padding: 2.5rem 1.5rem; border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: 10px; transition: 0.3s; box-shadow: var(--shadow); height: 100%; display: flex; flex-direction: column; text-align: center; }
+        .card i, .card svg { font-size: 2.8rem; color: var(--primary); margin: 0 auto 1.5rem auto; display: block; width: 1em; height: 1em; text-align: center; }
+        .card h3 { margin-bottom: 1rem; color: var(--primary); font-size: 1.4rem; }
+        .card:hover { transform: translateY(-8px); border-color: var(--primary); border-top-color: var(--primary); box-shadow: var(--shadow-lg); }
+
+        .blog-date { font-size: 0.8rem; color: #ffffff; font-weight: 800; background: var(--accent); padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
+        
+        .about-content { display: flex; gap: clamp(2rem, 5vw, 5rem); align-items: flex-start; max-width: 1200px; margin: 0 auto; }
+        .about-image img { width: 350px; height: auto; max-width: 100%; aspect-ratio: 1 / 1; border-radius: 15px; object-fit: cover; border: 6px solid var(--primary); box-shadow: var(--shadow-lg); }
+        .about-text { flex: 1; text-align: left; }
+        .about-text h3 { color: var(--primary); margin: 1.5rem 0 0.8rem; font-size: 1.5rem; font-weight: 800; border-left: 5px solid var(--accent); padding-left: 15px; }
+        
+        .statement-section { background: var(--bg); padding: 4rem 0; text-align: center; }
+        .statement-text { color: var(--primary); font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.4; max-width: 1100px; margin: 0 auto; padding: 0 20px;}
+
+        .fit-box { background: var(--card-bg); padding: clamp(1.5rem, 5%, 3.5rem); border-radius: 12px; border-left: 8px solid var(--accent); box-shadow: var(--shadow); max-width: 1000px; margin: 2rem auto; }
+        .fit-box li { padding: 0.8rem 0 0.8rem 2.5rem; position: relative; list-style: none; color: var(--text-light); border-bottom: 1px solid var(--border); font-size: 1.15rem; text-align: left; }
+        .fit-box li:before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--accent); }
+
+        .hear-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+        .hear-quote { background: var(--quote-bg); padding: 1.5rem; border-radius: 10px; border-left: 5px solid var(--primary); font-style: italic; position: relative; text-align: left; color: var(--text-light); font-weight: 600; }
+        .hear-quote::after { content: "\f10e"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; bottom: 10px; right: 10px; color: var(--border); font-size: 1.2rem; }
+
+        .cert-container-box { border: 3px solid var(--primary); border-radius: 15px; padding: 3rem 1.5rem; background-color: var(--cert-bg-dark); }
+        .cert-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .cert-item { flex: 1 1 180px; max-width: 300px; min-width: 180px; }
+        .cert-item img { width: 100%; height: auto; border-radius: 8px; border: 3px solid var(--accent); cursor: zoom-in; }
+
+        .contact-container { max-width: 750px; margin: 0 auto; background: var(--card-bg); padding: clamp(1.5rem, 5%, 3.5rem); border-radius: 20px; box-shadow: var(--shadow-lg); border-bottom: 8px solid var(--accent); }
+        .contact-intro-text { text-align: center; max-width: 800px; margin: -1rem auto 3rem; font-size: 1.25rem; color: var(--text-light); font-weight: 500; line-height: 1.6; padding: 0 20px; }
+        .form-group label { display: block; margin-bottom: 0.8rem; font-weight: 700; color: var(--primary); }
+        .form-group input, .form-group textarea { width: 100%; padding: 1.1rem; border: 2px solid var(--border); border-radius: 10px; font-family: inherit; font-size: 1rem; background-color: var(--input-bg); color: var(--text); margin-bottom: 1.2rem; }
+        .form-btn-wrap { display: flex; justify-content: center; width: 100%; margin-top: 1.5rem; }
+
+        .final-cta { background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); color: white; padding: 6rem 0; text-align: center; }
+        .cta-profile-img { width: 125px; height: 125px; border-radius: 50%; border: 4px solid var(--accent); margin-bottom: 2rem; object-fit: cover; }
+
+        footer { padding: 4rem 0; text-align: center; background: var(--bg-alt); border-top: 3px solid var(--primary); }
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; width: 100%;}
+        .social-icon { font-size: 1.5rem; color: #ffffff; background: var(--accent); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 50% !important; text-decoration: none !important; transition: 0.4s; flex-shrink: 0; }
+        .social-icon:hover { transform: scale(1.1) rotate(360deg); background: var(--primary); color: white; }
+        .footer-credit { margin-bottom: 10px; font-weight: 700; color: var(--primary); }
+
+        #lightbox { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; text-align: center; padding: 20px; }
+        #lightbox img { max-width: 90%; max-height: 90vh; border: 4px solid white; cursor: zoom-in; margin: auto; display: block; transition: 0.3s; position: relative; z-index: 2001;}
+        #lightbox img.expanded { max-height: none; max-width: 100%; width: auto; cursor: zoom-out; }
+        .close-lightbox { position: fixed; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 2005; transition: 0.3s; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .close-lightbox:hover { color: var(--accent); transform: scale(1.1); }
+
+        /* MOBILE FIXES */
+        @media (max-width: 1024px) { .about-content { gap: 2rem; padding: 0 20px; } .hero { padding: 5rem 0; } }
+        @media (max-width: 767px) {
+            body { padding-top: 80px; }
+            header { min-height: 80px; }
+            .container { padding: 0 15px; }
+            
+            /* FORCE SPACING AND PREVENT OVERLAP */
+            nav { gap: 8px; } 
+            .logo-wrap { flex: 1; max-width: calc(100% - 90px); gap: 10px; } 
+            .header-photo { width: 45px; height: 45px; } 
+            
+            .logo-text-group { flex: 1; min-width: 0; }
+            .logo-main { 
+                font-size: 1.05rem; 
+                padding: 6px 12px; 
+                margin-bottom: 0; 
+                white-space: normal; 
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                border-radius: 12px;
+                line-height: 1.2;
+                width: 100%;
+            }
+            .logo-main .pipe { display: none; } 
+            .logo-main .job-title { font-size: 0.8rem; margin-top: 2px; opacity: 0.9; }
+
+            .theme-toggle { margin: 0; margin-left: auto; width: 38px; height: 38px; font-size: 1.1rem; flex-shrink: 0; }
+            .menu-toggle { display: block; margin: 0; padding: 0; width: 35px; text-align: right; flex-shrink: 0; font-size: 1.6rem;} 
+
+            .nav-links { display: none; position: fixed; top: 80px; left: 0; width: 100%; background: var(--bg); flex-direction: column; padding: 2rem 0; border-bottom: 4px solid var(--accent); box-shadow: var(--shadow-lg); z-index: 99; }
+            .nav-links.active { display: flex; }
+            
+            .cta-button { padding: 1rem 1.5rem; font-size: 1rem; width: auto; max-width: 90%; }
+            .hero-badge { font-size: 0.75rem; padding: 6px 15px; }
+            .hero h1 { font-size: 2rem; } 
+            .hero .subtitle-list { font-size: 0.9rem; gap: 8px 12px; }
+            .hero .subtitle-list li:not(:last-child)::after { margin-left: 12px; }
+            .tech-item { flex-direction: column; gap: 5px; font-size: 1rem; }
+            .tech-stack-icons { margin-top: 2.5rem; gap: 2rem; }
+            .hero .hero-intro-text { font-size: 1rem; }
+            .about-content { flex-direction: column; text-align: center; align-items: center; }
+            .about-text { text-align: center; }
+            .grid-cards { grid-template-columns: 1fr; }
+            .footer-credit { font-size: 0.85rem; padding: 0 10px; }
+            .social-links { gap: 10px; }
+            .social-icon { width: 45px; height: 45px; font-size: 1.2rem; }
+            #lightbox { padding: 10px; }
+            #lightbox img { max-width: 100%; }
+            .close-lightbox { top: 10px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="lightbox" onclick="closeLightbox(event)">
+        <span class="close-lightbox" onclick="closeLightbox(event)">&times;</span>
+        <img id="lightbox-img" src="" onclick="toggleZoom(event)">
+    </div>
+
+    <header role="banner">
+        <nav class="container" role="navigation">
+            <a href="#home" class="logo-wrap">
+                <img src="https://i.ibb.co/TD8P4tx2/IRw-Qy-FCDJgx7s-Ovm-DHk0-Kr-QPZdh-Il-Cnl2-DUi2-BML.jpg" alt="Linley Bignoux - Email Developer" class="header-photo" width="60" height="60" fetchpriority="high">
+                <div class="logo-text-group">
+                    <div class="logo-main">Linley Bignoux <span class="pipe">|</span> <span class="job-title">Email Developer</span></div>
+                </div>
+            </a>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#fix" class="nav-fix-btn">What I Fix</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#certifications">Certs</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services" class="nav-for-you"><i class="fas fa-user-check"></i> For You</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-badge">Email Developer <span class="sep">|</span> HTML <span class="sep">•</span> CSS <span class="sep">•</span> MJML <span class="sep">•</span> Handlebars</div>
+                
+                <h1>I Code Custom Emails<br>From Design to Inbox</h1>
+                
+                <ul class="subtitle-list">
+                    <li>Design to HTML</li>
+                    <li>Code for ESP</li>
+                    <li>Cross-Client Rendering QA</li>
+                    <li>Deliverability Best Practices</li>
+                </ul>
+
+                <div class="hero-intro-text">
+                    <p style="margin-top: 1.5rem;">Hi, I'm <b>Linley Bignoux</b>. If you have a custom design that needs to be converted into <b>bulletproof code</b> tailored exactly to your campaigns, I can help.</p>
+                    <p style="margin-top: 1.5rem;">I solve issues with <b>deliverability, functionality, accessibility, and UI/UX</b> across different email clients. I am an <b>email developer</b> with over <b>6 years of email development experience</b>.</p>
+                </div>
+                <div class="consult-btn-wrapper">
+                    <a href="#contact" class="cta-button">Book a Consultation</a>
+                </div>
+
+                <div class="tech-stack-icons">
+                    <div class="tech-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="tech-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <rect x="2" y="4" width="12" height="4" rx="2" />
+                            <circle cx="20" cy="6" r="2" />
+                            <circle cx="4" cy="12" r="2" />
+                            <rect x="10" y="10" width="12" height="4" rx="2" />
+                            <rect x="2" y="16" width="12" height="4" rx="2" />
+                            <circle cx="20" cy="18" r="2" />
+                        </svg>
+                        <span>MJML</span>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <span>Handlebars</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="fix" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-tools"></i> What I Actually Help You Fix</h2>
+                <div class="grid-cards">
+                    <div class="card"><i class="fas fa-envelope-open-text"></i><h3>Broken Outlook Layouts</h3><p>Stop fighting Ghost Tables. I ensure your custom designs render perfectly across Outlook 2013-2021.</p></div>
+                    <div class="card"><i class="fas fa-mobile-alt"></i><h3>Mobile Responsiveness</h3><p>Say goodbye to microscopic text. I code fluid, mobile-first emails that scale perfectly on every device.</p></div>
+                    <div class="card"><i class="fas fa-moon"></i><h3>Dark Mode Disasters</h3><p>Stop iOS from ruining your brand colors. I apply targeted CSS to control how Dark Mode inverts your emails.</p></div>
+                    <div class="card"><i class="fas fa-inbox"></i><h3>Deliverability Best Practices</h3><p>Stop landing in the spam folder. I ensure your code follows strict semantic rules and optimal text-to-image ratios for maximum inbox placement.</p></div>
+                    <div class="card"><i class="fas fa-weight-hanging"></i><h3>Gmail Clipping</h3><p>Keep it under 102KB. I minify and optimize all HTML code so your entire message gets delivered and read.</p></div>
+                    <div class="card"><i class="fas fa-paint-brush"></i><h3>Design Translation</h3><p>Pixel-perfect precision. I turn your flat UI/UX designs into living, breathing, clickable email templates.</p></div>
+                    <div class="card"><i class="fas fa-bug"></i><h3>Rendering Bugs</h3><p>Move away from "hope it works." Every file is rigorously QA-tested across 50+ major email clients before handoff.</p></div>
+                    <div class="card"><i class="fas fa-clock"></i><h3>Workflow Bottlenecks</h3><p>Stop missing campaign deadlines because your drag-and-drop builder is acting up or limiting your layout.</p></div>
+                    <div class="card"><i class="fas fa-folder-open"></i><h3>Clunky Handoffs</h3><p>Just copy, paste, and send. I deliver clean, documented HTML ZIP files ready for immediate ESP upload.</p></div>
+                    <div class="card"><i class="fas fa-cog"></i><h3>Functionality</h3><p>Ensure interactive elements, anchor links, and complex structural components work flawlessly across all major email clients.</p></div>
+                    <div class="card"><i class="fas fa-server"></i><h3>ESP Integration Issues</h3><p>Stop wrestling with platform-specific HTML editors. I ensure your code imports cleanly into Klaviyo, Mailchimp, and other ESPs without breaking.</p></div>
+                    <div class="card"><i class="fas fa-code-branch"></i><h3>Dynamic Personalization</h3><p>I code and safely integrate dynamic merge tags to personalize your campaigns, ensuring specific customer data renders flawlessly every time.</p></div>
+                </div>
+                <div class="consult-btn-wrapper" style="margin-top: 5rem;">
+                    <a href="mailto:blanyves@optusnet.com.au" class="cta-button">Book a Meeting</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-code-branch"></i> Email Development Services</h2>
+                <div class="grid-cards">
+                    <div class="card"><i class="fas fa-laptop-code"></i><h3>MJML Development</h3><p>Bulletproof, responsive framework coding for modern and complex email layouts.</p></div>
+                    <div class="card"><i class="fas fa-table"></i><h3>Custom HTML/CSS</h3><p>Hand-coded, semantic table layouts designed to survive legacy desktop clients.</p></div>
+                    <div class="card"><i class="fas fa-file-code"></i><h3>Design to HTML Code</h3><p>Flawless pixel-to-pixel conversion from your design files (Figma, XD, PSD) directly into functional email code.</p></div>
+                    <div class="card"><i class="fas fa-check-double"></i><h3>Rigorous QA Testing</h3><p>Every file is verified via professional testing tools (Testi.at/Litmus) before delivery.</p></div>
+                    <div class="card"><i class="fas fa-cubes"></i><h3>Design Systems</h3><p>Modular, reusable email components built for your internal team to scale production.</p></div>
+                    <div class="card"><i class="fas fa-user-secret"></i><h3>White-Label Coding</h3><p>Confidential, high-quality development delivered quietly under your brand.</p></div>
+                    <div class="card"><i class="fas fa-image"></i><h3>Asset Optimization</h3><p>Retina-ready, fast-loading image slicing and compression for lightning-fast opens.</p></div>
+                    <div class="card"><i class="fas fa-universal-access"></i><h3>Email Accessibility</h3><p>Semantic coding with correct ARIA roles and alt-text to ensure screen-reader compatibility.</p></div>
+                    <div class="card"><i class="fas fa-globe-americas"></i><h3>Global Support</h3><p>Providing reliable asynchronous development for remote partnerships worldwide.</p></div>
+                    <div class="card"><i class="fas fa-server"></i><h3>ESP Code Integration</h3><p>Direct upload and strict testing of coded templates inside your specific Email Service Provider to guarantee logic and layout compatibility.</p></div>
+                    <div class="card"><i class="fas fa-code"></i><h3>Handlebars Templating</h3><p>I can use templating for dynamic emails — enabling personalized and data-driven content to render accurately for every recipient.</p></div>
+                    <div class="card"><i class="fas fa-mouse-pointer"></i><h3>Interactive Elements</h3><p>Coding safe CSS hover effects, image carousels, and responsive accordions to boost engagement where supported.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="campaign-types" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-layer-group"></i> Email Campaigns I Develop</h2>
+                <p style="text-align: center; max-width: 800px; margin: -2rem auto 3rem; color: var(--text-light); font-size: 1.15rem; padding: 0 20px;">
+                    I specialize in coding and rigorously testing responsive HTML/CSS email templates for all types of marketing and transactional flows.
+                </p>
+                <div class="fit-box">
+                    <ul>
+                        <li><b>Newsletters:</b> Engaging, content-rich layouts to keep your subscribers informed and connected to your brand.</li>
+                        <li><b>Promotional Campaigns:</b> High-converting designs to drive sales, highlight discounts, and showcase exclusive offers.</li>
+                        <li><b>Abandoned Cart Emails:</b> Automated, revenue-recovering templates sent to users who left items at checkout.</li>
+                        <li><b>Transactional Emails:</b> Bulletproof layouts for order confirmations, shipping updates, and password resets.</li>
+                        <li><b>Lead Nurturing Series:</b> Drip campaign templates designed to seamlessly guide potential customers through the buying journey.</li>
+                        <li><b>Re-engagement Campaigns:</b> Targeted, interactive designs aimed at winning back inactive subscribers.</li>
+                        <li><b>Seasonal & Holiday Promos:</b> Themed, high-impact campaigns tailored for Black Friday, Cyber Monday, or special events.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" style="background-color: var(--section-highlight);">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-laptop-code"></i> Recent Email Builds</h2>
+                <p style="text-align: center; max-width: 800px; margin: -2rem auto 3rem; color: var(--text-light); font-size: 1.15rem; padding: 0 20px;">
+                    A selection of responsive, Outlook-tested emails coded from flat designs. Click any image to view the full design in a new tab.
+                </p>
+                <div class="grid-cards">
+                    <div class="card" style="padding: 0; overflow: hidden; text-align: left;">
+                        <a href="https://i.ibb.co/21WBKz9x/C-Program-Files-x86-Brackets-samples-root-Getting-Started-Frameler-Abondoned-Cart-Final-html.png" target="_blank" rel="noopener noreferrer">
+                            <img src="https://i.ibb.co/21WBKz9x/C-Program-Files-x86-Brackets-samples-root-Getting-Started-Frameler-Abondoned-Cart-Final-html.png" alt="Abandoned Cart Email Build" style="width: 100%; height: 220px; object-fit: cover; object-position: top; border-bottom: 4px solid var(--accent); cursor: pointer; transition: 0.3s;">
+                        </a>
+                        <div style="padding: 1.5rem;">
+                            <span class="blog-date">MJML • E-commerce</span>
+                            <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--primary);">Abandoned Cart Flow</h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 15px; color: var(--text);">Responsive e-commerce email featuring dynamic product grids and mobile-stacked layouts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="padding: 0; overflow: hidden; text-align: left;">
+                        <a href="https://i.ibb.co/q3BpknZs/127-0-0-1-51561-Republica2-FARevised4-html.png" target="_blank" rel="noopener noreferrer">
+                            <img src="https://i.ibb.co/q3BpknZs/127-0-0-1-51561-Republica2-FARevised4-html.png" alt="Agency Newsletter Build" style="width: 100%; height: 220px; object-fit: cover; object-position: top; border-bottom: 4px solid var(--accent); cursor: pointer;">
+                        </a>
+                        <div style="padding: 1.5rem;">
+                            <span class="blog-date">HTML/CSS • Corporate</span>
+                            <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--primary);">Monthly Newsletter</h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 15px; color: var(--text);">Custom HTML coded specifically to survive Outlook 2013-2021 with bulletproof ghost tables.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="padding: 0; overflow: hidden; text-align: left;">
+                        <a href="https://i.ibb.co/3mFRHp4C/127-0-0-1-55724-Welcome-New-Ebook-Kickoff-html.png" target="_blank" rel="noopener noreferrer">
+                            <img src="https://i.ibb.co/3mFRHp4C/127-0-0-1-55724-Welcome-New-Ebook-Kickoff-html.png" alt="Welcome Series Email Build" style="width: 100%; height: 220px; object-fit: cover; object-position: top; border-bottom: 4px solid var(--accent); cursor: pointer;">
+                        </a>
+                        <div style="padding: 1.5rem;">
+                            <span class="blog-date">MJML • Onboarding</span>
+                            <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--primary);">Welcome Series Kickoff</h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 15px; color: var(--text);">A clean, engaging welcome email structured for accessibility and high conversion click-through rates.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="consult-btn-wrapper" style="margin-top: 4rem;">
+                    <a href="portfolio.html" class="cta-button" style="background: var(--primary); color: white;">View Full Portfolio & Code &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="who-for">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-bullseye"></i> Who Is This For</h2>
+                <div class="fit-box" style="margin-bottom: 4rem;">
+                    <ul>
+                        <li><b>Marketing Agencies & Teams</b> struggling with complex designs that builders can't handle.</li>
+                        <li><b>Design Studios</b> that need their beautiful UI/UX properly translated to HTML.</li>
+                        <li><b>E-commerce Brands</b> wanting custom, dynamic flows for better engagement.</li>
+                        <li>Teams dealing with constant <b>Microsoft Outlook rendering bugs</b>.</li>
+                        <li>Businesses looking for a reliable <b>white-label email developer</b> to handle overflow.</li>
+                        <li>Professionals that need their emails to look perfect in both <b>Light and Dark Mode</b>.</li>
+                        <li>Marketing Directors who want to stop fixing code and start <b>focusing on strategy</b>.</li>
+                        <li>Teams that need <b>minified code</b> to prevent the dreaded "Message Clipped" warning.</li>
+                        <li>Anyone tired of generic, unbranded drag-and-drop templates.</li>
+                    </ul>
+                </div>
+
+                <h2 class="section-title"><i class="fas fa-server"></i> ESP Integration</h2>
+                <div class="fit-box" style="margin-bottom: 4rem;">
+                    <p style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text);">I will work with the exact ESP you need. If you have a custom or different platform, I provide the raw, tested HTML ready for upload. For example:</p>
+                    <ul>
+                        <li><b>Mailchimp</b></li>
+                        <li><b>MailerLite</b></li>
+                        <li><b>Mailjet</b></li>
+                        <li><b>Brevo</b></li>
+                        <li><b>Stripo</b></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="way-we-learn" style="background-color: var(--section-highlight);">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-cogs"></i> The Way I Work</h2>
+                <div class="fit-box">
+                    <p style="margin-bottom: 1.5rem; font-size: 1.3rem;">I focus strictly on <b>clean code and reliable delivery</b>. I do not do copywriting or marketing strategy—I solve your technical bottlenecks.</p>
+                    <p style="margin-bottom: 2rem; font-size: 1.3rem;">My process is <b>simple and task-based</b>, acting as the perfect technical pair of hands for your projects.</p>
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary); font-weight: 800;">My Streamlined Handoff Process</h3>
+                    <ul>
+                        <li><b>1. The Design Handoff:</b> You send over your flat design files, links, and desired ESP.</li>
+                        <li><b>2. Pixel-Perfect Coding:</b> I hand-code the MJML/HTML structure to match your vision exactly.</li>
+                        <li><b>3. Rigorous QA Testing:</b> I run the code through live testing to ensure 100% compatibility across major clients.</li>
+                        <li><b>4. Code Minification:</b> The final file is stripped of bloat to guarantee fast load times and avoid clipping.</li>
+                        <li><b>5. ESP Code Integration:</b> The final HTML is loaded directly into your Email Service Provider to ensure variable logic and layouts are fully compatible.</li>
+                        <li><b>6. Final Delivery:</b> You receive a zipped folder with the HTML and assets, ready to schedule and send.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <div class="container">
+                <div class="cert-container-box">
+                    <h2 class="section-title" style="color: white;"><i class="fas fa-id-badge"></i> Background & Experience</h2>
+                    <div class="cert-grid">
+                        <div class="cert-item"><img src="https://i.ibb.co/6J7HsxYF/UC-e0732ac0-e884-4061-8104-d4183a396f62.jpg" alt="Email Developer Certification - HTML & CSS Coding" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/N2QBGPJ6/Screenshot-2024-05-15-220124.png" alt="MJML Framework Development Qualification" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/3YMdrb2T/UC-5470b374-47e2-45e1-8a42-96a57f1491b0.jpg" alt="Responsive Email Layouts and QA Testing Certificate" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/YTjFT09X/UC-443a3f23-9f0d-4f21-be68-c78cc35fddba.jpg" alt="Klaviyo and Mailchimp Logic Integration Certificate" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/N2qZxwKz/UC-22ed3d60-cf94-4cff-94f1-ca9433bc1ce9.jpg" alt="Technical Logic and Problem Solving Credential" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/5X3pff8Q/UC-8f49453e-ec74-44be-a3bd-5dd2bbdc48d2.jpg" alt="Custom HTML Email Development for Agencies" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/j9qpGWxk/Screenshot-2024-05-06-111012.png" alt="Advanced Coding and Digital Environment Architecture" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/RkDvnHgq/Screenshot-2024-05-06-110829.png" alt="UI to HTML Code Translation Certification" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/NdZpYMX3/1e83e38cb78b429689e304fe773667bd.png" alt="Email Asset Delivery and Optimization Methodology" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/rKWkyjcy/Screenshot-2026-02-19-161324.png" alt="Technical Email Development and Professional Certification" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                        <div class="cert-item"><img src="https://i.ibb.co/WNtjzJp9/Screenshot-2026-02-19-235754.png" alt="Professional Technical Certification for Email Development and Marketing Automation" width="300" height="200" loading="lazy" onclick="zoom(this)"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-terminal"></i> The Developer Behind the Screen</h2>
+                <div class="about-content">
+                    <div class="about-image"><img src="https://i.ibb.co/N2XP1vPP/post-035.jpg" alt="Linley Bignoux - Email Developer" width="350" height="350" loading="lazy"></div>
+                    <div class="about-text">
+                        <p style="font-size: 1.25rem;">Hello, I'm <b>Linley Bignoux</b>. I am an <b>Email Developer</b>. I help businesses and teams solve the technical puzzles that frustrate their campaigns.</p>
+                        
+                        <h3>Professional Background & Qualifications</h3>
+                        <p>With a foundation of over <b>6 years in email development</b>, I bring a unique blend of systematic problem-solving and clear communication to my work. I hold multiple formal qualifications, including professional certificates in <b>Email Development, Web Design, IT Technical Support, Email Marketing, and Advanced HTML/CSS Coding</b>.</p>
+                        
+                        <h3>Why Email Development?</h3>
+                        <p>Email development is a unique technical challenge. Every email client has its own quirks, and forcing a modern design to render flawlessly everywhere requires deep problem-solving skills. I don't do marketing strategy or copywriting; I just write clean, bulletproof code that fixes your technical headaches and makes your campaigns look brilliant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="statement-section">
+            <div class="container">
+                <div class="statement-text">
+                    "I act as your technical pair of hands, turning your designs into bulletproof HTML that actually reaches the inbox exactly the way you intended."
+                </div>
+            </div>
+        </section>
+
+        <section id="what-i-hear" style="background-color: var(--section-highlight);">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-eye"></i> What I Often SEE</h2>
+                <div class="fit-box" style="margin-bottom: 3rem;">
+                    <ul>
+                        <li><b>The Outlook Nightmare:</b> You have a beautiful design, but Outlook destroys the margins.</li>
+                        <li><b>The Drag-and-Drop Limit:</b> Your builder simply won't let you place a button exactly where you want it.</li>
+                        <li><b>The Mobile Mess:</b> The desktop email looks great, but mobile users have to pinch and zoom to read it.</li>
+                        <li><b>The Missing Data:</b> You tried coding custom logic, but the dynamic tags keep breaking.</li>
+                        <li><b>The Ghost Developer:</b> You hired a general web developer who didn't understand that email CSS works entirely differently.</li>
+                        <li><b>The Clipped Message:</b> Your email is so full of bloated code that Gmail hides the bottom half.</li>
+                        <li><b>The In-House Bottleneck:</b> Your internal team is too busy with web projects to code a massive newsletter campaign.</li>
+                    </ul>
+                </div>
+                <div class="hear-grid">
+                    <div class="hear-quote">"We love the design, but Outlook completely destroyed the formatting."</div>
+                    <div class="hear-quote">"Mailchimp's builder just can't do this specific layout we approved."</div>
+                    <div class="hear-quote">"I'm an expert in strategy, but I don't know how to fix a Ghost Table."</div>
+                    <div class="hear-quote">"I spend hours trying to make the mobile view look decent and it still breaks."</div>
+                    <div class="hear-quote">"Our web developer tried to code it, but they didn't know email CSS has to be inline."</div>
+                    <div class="hear-quote">"The email looks great, but iOS Dark Mode inverted our logo."</div>
+                    <div class="hear-quote">"We need someone to just take this design file and give us the raw HTML by Thursday."</div>
+                    <div class="hear-quote">"We have a massive campaign to build and our internal dev is booked."</div>
+                </div>
+                <div class="consult-btn-wrapper">
+                    <a href="#contact" class="cta-button" style="background: var(--primary); color: white;">Book a Meeting</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="github-portfolio">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title"><i class="fab fa-github"></i> Inspect My Code</h2>
+                <div class="contact-container" style="border: 2px solid var(--primary); border-bottom: 8px solid var(--primary); background-color: var(--card-bg); background-image: linear-gradient(135deg, rgba(225, 6, 0, 0.08) 0%, transparent 100%);">
+                    <img src="https://i.ibb.co/TD8P4tx2/IRw-Qy-FCDJgx7s-Ovm-DHk0-Kr-QPZdh-Il-Cnl2-DUi2-BML.jpg" alt="Linley Bignoux - GitHub Portfolio" class="cta-profile-img" width="100" height="100" loading="lazy" style="width: 100px; height: 100px; margin-top: -1rem; margin-bottom: 1.5rem;">
+                    <p style="font-size: 1.2rem; color: var(--text); line-height: 1.8; margin-bottom: 2rem;">
+                        Every email in my portfolio is hand-coded from scratch. Visit my GitHub to inspect the raw HTML, CSS, MJML, and templating logic, and review my clean coding practices firsthand.
+                    </p>
+                    <div class="consult-btn-wrapper" style="margin-top: 0;">
+                        <a href="https://github.com/LinleyB75/Email-Dev" target="_blank" rel="noopener noreferrer" class="cta-button" style="background: var(--primary); color: white;"><i class="fab fa-github"></i> View GitHub Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-paper-plane"></i> Get In Touch</h2>
+                <p class="contact-intro-text">Have a design that needs coding or an Outlook bug that needs fixing? Send me the details below to get a quote for your next campaign.</p>
+                <div class="contact-container">
+                    <form action="https://formsubmit.co/blanyves@optusnet.com.au" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://linleyb.com/thanks.html">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" required placeholder="example@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Message (Project Details)</label>
+                            <textarea name="message" rows="5" placeholder="Tell me about the design, which ESP you use, or paste a link..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>ESP (Optional)</label>
+                            <input type="text" name="esp" placeholder="e.g., Mailchimp, MailerLite, Mailjet, Custom...">
+                        </div>
+                        <div class="form-btn-wrap" style="display: flex; justify-content: center; width: 100%;">
+                            <button type="submit" class="cta-button">Send Secure Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <img src="https://i.ibb.co/TD8P4tx2/IRw-Qy-FCDJgx7s-Ovm-DHk0-Kr-QPZdh-Il-Cnl2-DUi2-BML.jpg" alt="Linley Bignoux - Contact" class="cta-profile-img" width="125" height="125" loading="lazy">
+                <h2>Ready to clear your development bottleneck?</h2>
+                <p style="margin-bottom: 2.5rem; font-size: 1.4rem; opacity: 0.9;">No more ghost tables. No more clipped emails. Just clean code.</p>
+                <div class="consult-btn-wrapper">
+                    <a href="mailto:blanyves@optusnet.com.au" class="cta-button">Book a Consultation</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://linleybignouxzqme9nmu.contra.com/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Visit my Contra Profile"><i class="fas fa-file-invoice"></i></a>
+                <a href="https://github.com/LinleyB75/Email-Dev" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="mailto:blanyves@optusnet.com.au" class="social-icon" aria-label="Send me an email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="footer-credit">Site designed and developed by Linley Bignoux</div>
+            <p>&copy; 2026 <b>Linley Bignoux</b> | Email Developer | <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => { document.getElementById('navLinks').classList.remove('active'); });
+        });
+
+        // --- LIGHTBOX ZOOM LOGIC FOR CERTIFICATIONS ---
+        function zoom(img) { 
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src; 
+            lightboxImg.classList.remove('expanded'); 
+            document.getElementById('lightbox').style.display = 'block'; 
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function toggleZoom(event) {
+            event.stopPropagation(); 
+            const img = document.getElementById('lightbox-img');
+            img.classList.toggle('expanded');
+        }
+
+        function closeLightbox(event) {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+        }
+
+        // THEME TOGGLE LOGIC
+        const themeBtn = document.getElementById('themeToggle');
+        const icon = themeBtn.querySelector('i');
+        const storedTheme = localStorage.getItem('theme');
+
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+            updateIcon(storedTheme);
+        }
+
+        themeBtn.addEventListener('click', () => {
+            let currentTheme = document.documentElement.getAttribute('data-theme');
+            let targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            if (!currentTheme) {
+                const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                targetTheme = systemDark ? 'light' : 'dark';
+            }
+
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+            updateIcon(targetTheme);
+        });
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // LAZY LOAD RECAPTCHA
+        let recaptchaLoaded = false;
+        function loadRecaptcha() {
+            if (recaptchaLoaded) return;
+            recaptchaLoaded = true;
+            const script = document.createElement('script');
+            script.src = "https://www.google.com/recaptcha/api.js";
+            script.defer = true;
+            document.body.appendChild(script);
+        }
+
+        // Trigger on interaction
+        ['mousemove', 'scroll', 'touchstart', 'keydown'].forEach(event => {
+            window.addEventListener(event, () => {
+                setTimeout(loadRecaptcha, 1000); 
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>

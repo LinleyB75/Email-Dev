@@ -37,7 +37,7 @@
 
     <mj-section background-color="#FFFFFF" padding="15px">
       <mj-column width="500px">
-        <mj-image align="center" width="200px" src="https://i.ibb.co/Z1Kkqm8/shopping-cart.png" alt="Shopping Cart Icon" border="0" padding="20px" border-radius="20px" css-class="responsive-image" />
+        <mj-image align="center" width="150px" src="https://i.ibb.co/Z1Kkqm8/shopping-cart.png" alt="Shopping Cart Icon" border="0" padding="20px" border-radius="20px" css-class="responsive-image" />
         <mj-text color="#333333" align="center" font-family="Georgia, serif" font-size="24px" line-height="1.5">
           You still have items in your shopping cart!<br /><br />Don't miss out on these prices.
         </mj-text>
