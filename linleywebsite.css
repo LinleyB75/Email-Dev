@@ -1,0 +1,962 @@
+/* =================================================================at
+   1. GLOBAL RESET & BASE STYLES
+   ================================================================ */
+/* Reset margins, paddings, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =================================================================
+   2. CSS CUSTOM PROPERTIES (THEMING - LIGHT MODE DEFAULT)
+   ================================================================ */
+:root {
+    color-scheme: light dark;
+    -webkit-print-color-adjust: exact;
+    --primary: #0a0a0a;          /* Primary dark color */
+    --accent: #e10600;           /* Brand accent red */
+    --text: #1a1a1a;             /* Primary text color */
+    --text-light: #55555a;       /* Secondary/muted text color */
+    --bg: #ffffff;               /* Background color */
+    --bg-alt: #f2f2f2;           /* Alternative section background */
+    --border: #e0e0e0;           /* Border color */
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); /* Subtle box shadow */
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1); /* Large box shadow */
+    --section-highlight: #f2f2f2; /* Highlighted section background */
+    --card-bg: #ffffff;          /* Card background color */
+    --input-bg: #f7f7f7;         /* Form input background */
+}
+
+/* =================================================================
+   3. DARK MODE STYLING & PREFERENCES
+   ================================================================ */
+/* Manual dark theme toggle override via HTML data attribute */
+[data-theme="dark"] {
+    color-scheme: dark;
+    --primary: #f5f5f5;
+    --accent: #ff1a1a;
+    --text: #f2f2f2;
+    --text-light: #b0b0b0;
+    --bg: #0a0a0a;
+    --bg-alt: #141414;
+    --border: #2a2a2a;
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.5);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+    --section-highlight: #141414;
+    --card-bg: #141414;
+    --input-bg: #1c1c1c;
+}
+
+/* Automatic system-level dark mode preference detection */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --primary: #f5f5f5;
+        --accent: #ff1a1a;
+        --text: #f2f2f2;
+        --text-light: #b0b0b0;
+        --bg: #0a0a0a;
+        --bg-alt: #141414;
+        --border: #2a2a2a;
+        --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.5);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+        --section-highlight: #141414;
+        --card-bg: #141414;
+        --input-bg: #1c1c1c;
+    }
+}
+
+/* =================================================================
+   4. ROOT HTML & BODY SETUP
+   ================================================================ */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    font-size: 16px;
+    overflow-x: hidden;
+    max-width: 100vw;
+    background-color: var(--bg);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+    overflow-x: hidden;
+    max-width: 100vw;
+    transition: background 0.3s, color 0.3s; /* Smooth theme transition */
+    padding-top: 135px; /* Offset for fixed header */
+}
+
+/* =================================================================
+   5. HEADER & NAVIGATION STYLES
+   ================================================================ */
+header {
+    background: var(--bg);
+    border-bottom: 3px solid var(--primary);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    min-height: 135px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: background 0.3s;
+    left: 0;
+    right: 0;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 5%;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.header-photo {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    flex-shrink: 0;
+}
+
+.logo-text-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Theme toggle button styling */
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-right: 15px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    background: var(--bg-alt);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Navigation links container & items */
+.nav-links {
+    display: flex;
+    gap: 0.6rem;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover {
+    border-bottom: 3px solid var(--accent);
+    color: var(--accent);
+}
+
+/* Special button styles inside navigation */
+.nav-fix-btn {
+    background-color: var(--bg);
+    color: var(--primary) !important;
+    padding: 8px 14px !important;
+    border-radius: 50px;
+    border: 2px solid var(--primary) !important;
+    box-shadow: 0 4px 0 var(--accent);
+    display: inline-block;
+    transition: 0.3s all ease;
+}
+
+.nav-links .nav-fix-btn:hover {
+    background-color: var(--accent) !important;
+    color: #fff !important;
+    border-color: var(--accent) !important;
+    border-bottom: 2px solid var(--accent) !important;
+}
+
+.nav-for-you {
+    background-color: var(--primary);
+    color: var(--bg) !important;
+    height: 40px;
+    padding: 0 18px;
+    border-radius: 50px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none !important;
+    font-weight: 800;
+    position: relative;
+    box-shadow: var(--shadow);
+    white-space: nowrap;
+}
+
+.nav-links .nav-for-you:hover {
+    border-bottom: none !important;
+    background-color: var(--accent) !important;
+    color: #fff !important;
+}
+
+.nav-for-you::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 18px;
+    right: 18px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.nav-for-you:hover::after {
+    background-color: #fff !important;
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* =================================================================
+   6. BUTTONS & CALL-TO-ACTIONS
+   ================================================================ */
+.consult-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    transition: 0.3s;
+    text-align: center;
+    max-width: 100%;
+}
+
+.cta-button:hover {
+    background: #b30000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* =================================================================
+   7. HERO SECTION
+   ================================================================ */
+.hero {
+    background: linear-gradient(135deg, #050505 0%, #1a1a1a 100%);
+    color: #fff;
+    padding: clamp(4rem, 10vh, 7rem) 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 5vw, 3.2rem);
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.hero .subtitle-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    list-style: none;
+    margin: 0 auto 2.5rem;
+    padding: 0;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    max-width: 900px;
+}
+
+.hero .subtitle-list li {
+    display: flex;
+    align-items: center;
+}
+
+.hero .subtitle-list li:not(:last-child)::after {
+    content: "•";
+    color: #fff;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+.hero .hero-intro-text {
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 400;
+    opacity: 0.95;
+    padding: 0 20px;
+}
+
+/* Tech stack badges in hero */
+.tech-stack-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 3.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tech-item i,
+.tech-item svg {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    width: 1em;
+    height: 1em;
+}
+
+.tech-item:hover {
+    color: var(--accent);
+    transform: translateY(-4px);
+}
+
+/* =================================================================
+   8. SECTIONS, CARDS & GRIDS
+   ================================================================ */
+section {
+    padding: clamp(3.5rem, 8vh, 6rem) 0;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 3.5rem;
+    text-align: center;
+    color: var(--primary);
+    font-weight: 800;
+    padding: 0 20px;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2.5rem 1.5rem;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: var(--shadow);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card i,
+.card svg {
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    border-top-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Portrait card grid layouts */
+.portrait-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portrait-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.portrait-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 3px solid var(--border);
+}
+
+.portrait-card .content {
+    padding: 1.5rem;
+}
+
+.blog-date {
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 800;
+    background: var(--accent);
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* =================================================================
+   9. ABOUT SECTION & FEATURE BOXES
+   ================================================================ */
+.about-content {
+    display: flex;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 6px solid var(--primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h3 {
+    color: var(--primary);
+    margin: 1.5rem 0 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-left: 5px solid var(--accent);
+    padding-left: 15px;
+}
+
+.fit-box {
+    background: var(--card-bg);
+    padding: clamp(1.5rem, 5%, 3.5rem);
+    border-radius: 12px;
+    border-left: 8px solid var(--accent);
+    box-shadow: var(--shadow);
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.fit-box li {
+    padding: 0.8rem 0 0.8rem 2.5rem;
+    position: relative;
+    list-style: none;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border);
+    font-size: 1.15rem;
+    text-align: left;
+}
+
+/* Custom checkmark bullets for list items */
+.fit-box li:before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* =================================================================
+   10. CONTACT FORM STYLES
+   ================================================================ */
+.contact-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: clamp(1.5rem, 5%, 3.5rem);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border-bottom: 8px solid var(--accent);
+}
+
+.contact-intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin: -1rem auto 3rem;
+    font-size: 1.25rem;
+    color: var(--text-light);
+    font-weight: 500;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1.1rem;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    color: var(--text);
+    margin-bottom: 1.2rem;
+}
+
+.form-btn-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+/* =================================================================
+   11. FINAL CTA & FOOTER STYLES
+   ================================================================ */
+.final-cta {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.cta-profile-img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+footer {
+    padding: 4rem 0;
+    text-align: center;
+    background: var(--bg-alt);
+    border-top: 3px solid var(--primary);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    background: var(--accent);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    transition: 0.4s;
+    flex-shrink: 0;
+}
+
+.social-icon:hover {
+    transform: scale(1.1) rotate(360deg);
+    background: var(--primary);
+    color: #fff;
+}
+
+.footer-credit {
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+section[id] {
+    scroll-margin-top: 150px;
+}
+
+/* =================================================================
+   12. RESPONSIVE MEDIA QUERIES
+   ================================================================ */
+@media (max-width: 1024px) {
+    .about-content {
+        gap: 2rem;
+        padding: 0 20px;
+    }
+    .hero {
+        padding: 5rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 15px;
+    }
+    .cta-button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        width: auto;
+        max-width: 90%;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero .subtitle-list {
+        font-size: 0.9rem;
+        gap: 8px 12px;
+    }
+    .hero .subtitle-list li:not(:last-child)::after {
+        margin-left: 12px;
+    }
+    .tech-item {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 1rem;
+    }
+    .tech-stack-icons {
+        margin-top: 2.5rem;
+        gap: 2rem;
+    }
+    .hero .hero-intro-text {
+        font-size: 1rem;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+    .portrait-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-credit {
+        font-size: 0.85rem;
+        padding: 0 10px;
+    }
+    .social-links {
+        gap: 10px;
+    }
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Specific overrides for site-header layout */
+header.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 3px solid var(--primary);
+    min-height: 135px;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+}
+
+.site-header nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.site-header .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    min-width: 0;
+    max-width: none;
+}
+
+.site-header .header-photo {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.site-header .logo-text-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.site-header .pipe {
+    color: #888;
+    margin: 0 6px;
+}
+
+.site-header .job-title {
+    color: var(--accent);
+}
+
+.site-header .theme-wrap {
+    position: static;
+    transform: none;
+}
+
+.site-header .theme-toggle {
+    margin: 0;
+    width: 44px;
+    height: 44px;
+    background: rgba(128, 128, 128, 0.15);
+    border: none;
+    font-size: 1.25rem;
+}
+
+.site-header .nav-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.site-header .nav-links {
+    gap: 1.2rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.site-header .nav-links a {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.site-header .menu-toggle {
+    display: none;
+}
+
+/* Mobile & tablet breakpoint for site header and collapsible menu */
+@media (max-width: 1100px) {
+    section[id] {
+        scroll-margin-top: 90px;
+    }
+    body {
+        padding-top: 76px;
+    }
+    header.site-header {
+        min-height: 76px;
+        padding: 0;
+    }
+    .site-header nav {
+        padding: 8px 14px;
+        gap: 10px;
+    }
+    .site-header .logo-wrap {
+        flex: 1;
+        min-width: 0;
+        gap: 10px;
+    }
+    .site-header .header-photo {
+        width: 48px;
+        height: 48px;
+    }
+    .site-header .logo-text-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        white-space: normal;
+        font-size: 1rem;
+        line-height: 1.2;
+        min-width: 0;
+    }
+    .site-header .pipe {
+        display: none;
+    }
+    .site-header .job-title {
+        font-size: 0.78rem;
+        font-weight: 600;
+    }
+    .site-header .theme-wrap {
+        position: static;
+        transform: none;
+        flex-shrink: 0;
+    }
+    .site-header .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    .site-header .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        margin: 0 0 0 4px;
+        padding: 0;
+        background: none;
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        color: var(--primary);
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+    .site-header .nav-links {
+        display: none;
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        max-height: calc(100vh - 76px);
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.5rem 1.25rem 1.25rem;
+        background: var(--bg);
+        border-bottom: 4px solid var(--accent);
+        box-shadow: var(--shadow-lg);
+        white-space: normal;
+        z-index: 99;
+    }
+    .site-header .nav-links.active {
+        display: flex;
+    }
+    .site-header .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+    }
+    .site-header .nav-links li:last-child {
+        border-bottom: none;
+    }
+    .site-header .nav-links a {
+        display: block;
+        padding: 14px 6px;
+        font-size: 1.1rem;
+        border-bottom: none;
+        text-align: left;
+    }
+    .site-header .nav-links a.nav-fix-btn {
+        box-shadow: none;
+        border: none !important;
+        border-radius: 0;
+        padding: 14px 6px !important;
+    }
+    .site-header .nav-links a.nav-for-you {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+        height: 46px;
+        margin-top: 12px;
+    }
+    .site-header .nav-for-you::after {
+        display: none;
+    }
+}
