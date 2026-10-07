@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Giovaldo • Coming Soon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Italianno&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & DYNAMIC TRANSITION TOKENS */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        :root {
+            --bg: #000000;
+            --surface: #000000;
+            --footer-bg: #121212;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #ffffff;
+            --gold-gradient: linear-gradient(135deg, #fcebb6 0%, #d4af37 50%, #9e7b24 100%);
+            --gold-border: #d4af37;
+            --border: #1e293b;
+        }
+
+        [data-theme="light"] {
+            --bg: #ffffff;
+            --surface: #ffffff;
+            --footer-bg: #f1f5f9;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --primary: #0f172a;
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #b8860b 50%, #8b6508 100%);
+            --gold-border: #b8860b;
+            --border: #cbd5e1;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            min-height: 100dvh; /* accounts for mobile browser address bars */
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden; /* prevents sideways scrolling on phones */
+        }
+
+        /* HEADER POSITIONED FURTHER TO THE LEFT */
+        header {
+            width: 100%;
+            padding: 2.5rem 3vw; /* Sits closer to the extreme left edge of the screen */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2.5rem;
+            width: 100%;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            background: transparent;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            overflow: visible;
+            min-width: 0;
+        }
+
+        /* HEADER LOGO: transparent PNG, nothing painted behind it */
+        .header-logo {
+            height: 115px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+            background: transparent;
+            flex-shrink: 0;
+        }
+
+        .logo-text-wrapper {
+            overflow: visible;
+            padding: 1rem 4rem 1rem 0;
+        }
+
+        .logo-text {
+            font-family: 'Italianno', cursive;
+            font-size: clamp(3.2rem, 5.2vw, 4.2rem);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            white-space: nowrap;
+            filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.35));
+            display: inline-block;
+        }
+
+        /* BORDERLESS PHONE SLIDE TOGGLE SWITCH */
+        .theme-toggle-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            flex-shrink: 0;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 58px;
+            height: 30px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: var(--border);
+            transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 34px;
+            border: 1px solid var(--border);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 3px;
+            bottom: 3px;
+            background-color: var(--text);
+            transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+        }
+
+        input:checked + .slider {
+            background: var(--gold-gradient);
+            border-color: var(--gold-border);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(27px);
+            background-color: #ffffff;
+        }
+
+        .slider .sun-icon, .slider .moon-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 11px;
+            color: var(--text-muted);
+            transition: 0.4s;
+        }
+
+        .slider .sun-icon { left: 7px; opacity: 1; }
+        .slider .moon-icon { right: 7px; opacity: 0.4; }
+        input:checked + .slider .sun-icon { opacity: 0.4; }
+        input:checked + .slider .moon-icon { opacity: 1; color: #ffffff; }
+
+        .toggle-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        /* HERO COMING SOON SECTION WITH GENEROUS BREATHING SPACE */
+        @keyframes slideInFade {
+            0% {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Luxury Shimmer Animation cycling exactly every 6 seconds */
+        @keyframes goldShine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Moving Animation for Badge Backdrop cycling every 6 seconds */
+        @keyframes logoFloatPulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1) translateY(0);
+                opacity: 0.16;
+                filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.25));
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.08) translateY(-10px);
+                opacity: 0.32;
+                filter: drop-shadow(0 0 35px rgba(252, 235, 182, 0.55));
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1) translateY(0);
+                opacity: 0.16;
+                filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.25));
+            }
+        }
+
+        .hero-section {
+            text-align: center;
+            max-width: 1100px;
+            margin: 4.5rem auto 14rem; /* Ample separation from the 3 cards below */
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.2rem, 7.5vw, 5.8rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.8rem;
+            letter-spacing: -0.03em;
+            color: var(--primary);
+            text-transform: uppercase;
+            opacity: 0;
+            animation: slideInFade 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+        }
+
+        .hero-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 4.5vw, 3.5rem);
+            font-weight: 600;
+            font-style: italic;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.015em;
+            margin-bottom: 3.2rem;
+            opacity: 0;
+            animation: slideInFade 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+        }
+
+        /* BRANDED TITLE CONTAINER (FIXED CENTERED ANIMATION) */
+        .brand-title-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 2.5rem 3.5rem;
+            opacity: 0;
+            animation: slideInFade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+            overflow: visible;
+        }
+
+        .animated-logo-backdrop {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 260px;
+            max-width: 60%;
+            height: auto;
+            opacity: 0.2;
+            z-index: 0;
+            pointer-events: none;
+            animation: logoFloatPulse 6s ease-in-out infinite; /* Recycles every 6 seconds */
+        }
+
+        .shining-brand-title {
+            position: relative;
+            z-index: 1;
+            font-family: 'Italianno', cursive;
+            font-size: clamp(6.2rem, 14vw, 11.5rem);
+            font-weight: 700;
+            line-height: 0.95;
+            letter-spacing: 0.04em;
+            background: linear-gradient(90deg, #9e7b24 0%, #d4af37 25%, #fcebb6 50%, #d4af37 75%, #9e7b24 100%);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: goldShine 6s ease infinite; /* Recycles every 6 seconds */
+            filter: drop-shadow(0 4px 18px rgba(212, 175, 55, 0.45));
+            white-space: nowrap;
+        }
+
+        /* GALLERY IMAGES */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-bottom: 6rem;
+            align-items: center;
+        }
+
+        .gallery-item {
+            background: transparent;
+            border-radius: 16px;
+            overflow: visible;
+            border: none;
+            box-shadow: none;
+            aspect-ratio: 4 / 5; /* same height for all 3 cards - change to taste */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            object-fit: contain; /* whole image always visible, never cropped */
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: auto;
+            background: var(--footer-bg);
+            border-top: 1px solid var(--border);
+            padding: 3.5rem 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .social-icons a {
+            color: var(--text);
+            font-size: 1.8rem;
+            text-decoration: none;
+        }
+
+        .footer-info {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            overflow-wrap: anywhere;
+        }
+
+        .footer-info a {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer-location {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        /* HOVER EFFECTS ONLY ON DEVICES THAT ACTUALLY HOVER (avoids sticky hover on phones) */
+        @media (hover: hover) {
+            .gallery-item:hover img {
+                transform: translateY(-8px);
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+            }
+            .social-icons a:hover {
+                color: #d4af37;
+                transform: translateY(-4px) scale(1.1);
+            }
+            .footer-info a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        /* TABLET & BELOW */
+        @media (max-width: 900px) {
+            header {
+                padding: 1.75rem 4vw;
+            }
+            .container {
+                padding: 0 1.5rem;
+            }
+            .header-logo {
+                height: 85px;
+            }
+            .logo-text-wrapper {
+                padding-right: 1rem;
+            }
+            .hero-section {
+                margin: 3rem auto 8rem;
+            }
+            .brand-title-wrapper {
+                padding: 1.5rem 0;
+            }
+            .shining-brand-title {
+                font-size: clamp(3.4rem, 13vw, 8rem);
+                white-space: normal;
+            }
+            .gallery-grid {
+                gap: 1.5rem;
+                margin-bottom: 4rem;
+            }
+        }
+
+        /* SINGLE-COLUMN GALLERY */
+        @media (max-width: 700px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* PHONES */
+        @media (max-width: 600px) {
+            header {
+                padding: 1.25rem 4vw;
+                gap: 0.75rem;
+            }
+            .logo-container {
+                gap: 10px;
+            }
+            .header-logo {
+                height: 56px;
+            }
+            .logo-text-wrapper {
+                padding: 0.5rem 0;
+            }
+            .logo-text {
+                font-size: clamp(1.9rem, 9vw, 2.6rem);
+            }
+            .toggle-label {
+                font-size: 0.55rem;
+                letter-spacing: 0.06em;
+                line-height: 1.2;
+                max-width: 64px;
+            }
+            .hero-section {
+                margin: 2rem auto 5rem;
+            }
+            .hero-section h1 {
+                margin-bottom: 1rem;
+            }
+            .hero-section h2 {
+                margin-bottom: 1.5rem;
+            }
+            .animated-logo-backdrop {
+                width: 170px;
+            }
+            .gallery-grid {
+                margin-bottom: 3rem;
+            }
+            footer {
+                padding: 2.5rem 0;
+            }
+            .social-icons {
+                gap: 1.25rem;
+                margin-bottom: 1.2rem;
+            }
+            .social-icons a {
+                padding: 0.6rem; /* larger tap target */
+            }
+            .footer-info {
+                font-size: 1rem;
+            }
+            .footer-location {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* RESPECT USERS WHO PREFER REDUCED MOTION */
+        @media (prefers-reduced-motion: reduce) {
+            .hero-section h1,
+            .hero-section h2,
+            .brand-title-wrapper {
+                animation: none;
+                opacity: 1;
+            }
+            .shining-brand-title,
+            .animated-logo-backdrop {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER MOVED FURTHER TO THE LEFT -->
+    <header>
+        <div class="logo-container">
+            <img src="https://i.ibb.co/cSN5W4Vd/0459a0fa-ed6e-4997-b035-f783bc01c3bc.png" alt="San Giovaldo Logo" class="header-logo">
+            <div class="logo-text-wrapper">
+                <span class="logo-text">San Giovaldo</span>
+            </div>
+        </div>
+
+        <!-- BORDERLESS GOLD-COLORED PHONE-STYLE SLIDE TOGGLE -->
+        <div class="theme-toggle-container">
+            <label class="switch" aria-label="Toggle Dark/Light Mode">
+                <input type="checkbox" id="themeCheckbox" checked>
+                <span class="slider">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </span>
+            </label>
+            <span class="toggle-label">Dark Light Mode</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- HERO COMING SOON -->
+        <section class="hero-section">
+            <h1>Coming Soon</h1>
+            <h2>The future is in the past</h2>
+            <div class="brand-title-wrapper">
+                <img src="https://i.ibb.co/fzmwdfZN/d49d4d92-f1b7-47dc-93f0-df84a16f14fe.webp" alt="Animated Badge Backdrop" class="animated-logo-backdrop">
+                <div class="shining-brand-title">San Giovaldo</div>
+            </div>
+        </section>
+
+        <!-- MINIMAL IMAGE SHOWCASE -->
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/fzmwdfZN/d49d4d92-f1b7-47dc-93f0-df84a16f14fe.webp" alt="Primary application dashboard overview interface UI" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/vxjNHWwr/1714020e-4581-419d-8e02-5c4dfd281a46.webp" alt="Secondary analytics module interface UI" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/VWs2cBTR/c843aebe-4e9c-4918-9db2-47edb52dac76.webp" alt="Portrait mobile-first interface layout UI" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/san.giovaldo" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/people/San-Giovaldo/61591678385921/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="mailto:Info@sangiovaldo.com.au" aria-label="Email Contact"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-info">Get in touch: <a href="mailto:Info@sangiovaldo.com.au">Info@sangiovaldo.com.au</a></p>
+            <p class="footer-location"> &copy;San Giovaldo, Melbourne, Victoria, Australia</p>
+        </div>
+    </footer>
+
+    <!-- THEME TOGGLE SCRIPT -->
+    <script>
+        const themeCheckbox = document.getElementById('themeCheckbox');
+        const htmlElement = document.documentElement;
+
+        themeCheckbox.addEventListener('change', () => {
+            if (themeCheckbox.checked) {
+                htmlElement.setAttribute('data-theme', 'dark');
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+            }
+        });
+    </script>
+
+</body>
+</html>
