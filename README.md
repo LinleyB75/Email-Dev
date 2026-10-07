@@ -2,6 +2,8 @@
 
 🌐 **View my full portfolio website:** [linleyb.com](https://linleyb.com/) HTML,CSS,MJML & Handlebars.js
 
+📝 **Read my blog:** [Email Dev Notes](https://linleyb.com/blog/) - real email rendering bugs, tested in real clients, with the fix.
+
 Welcome to my Email Development portfolio. This repository showcases my ability to build clean, responsive, and highly accessible email templates that render perfectly across all major email clients (including Microsoft Outlook, Gmail, and Apple Mail). I specialize in pure MJML structural blueprinting, static HTML conversions, and dynamic Handlebars data injection.
 
 ---
@@ -57,3 +59,29 @@ A high-contrast promotional email designed with a premium vanilla and black aest
 A transactional email receipt designed for an online English learning platform, built with a pure MJML structural blueprint and engineered for backend data integration.
 * **Key Features:** Features a custom CSS "sniper" fix for perfect Dark Mode rendering across nested MJML table cells. Utilizes Handlebars.js templating to dynamically inject customer profiles, variable billing dates, and payment statement descriptors.
 * **Files:** Contains the raw `index.mjml` blueprint, the Handlebars-ready `index.html` production file, and the `data.json` mock backend payload.
+
+---
+
+## 🐞 Issue Log
+
+Real rendering problems found while testing, each with the cause (marked confirmed or suspected), the fix, and where it was retested. Every entry has a trimmed MJML example you can compile yourself.
+
+| ID | Problem | Log entry | Example |
+|---|---|---|---|
+| 001 | MJML images shrink and space apart in columns (`mj-group`) | [ISSUE-001](issues/ISSUE-001-mj-group-padding.md) | [before](examples/issue-001-before.mjml), [after](examples/issue-001-after.mjml) |
+| 002 | CTA button colours changed by dark mode | [ISSUE-002](issues/ISSUE-002-outlook-dark-mode-button.md) | [button](examples/issue-002-cta-button.mjml) |
+| 003 | Footer colour and social icons changed by dark mode inversion | [ISSUE-003](issues/ISSUE-003-footer-social-inversion.md) | [footer and social](examples/issue-003-footer-social.mjml) |
+| 004 | Footer text black instead of white on grey in macOS dark mode | [ISSUE-004](issues/ISSUE-004-footer-text-macos-dark.md) | [footer](examples/issue-004-footer-apple.mjml) |
+
+ISSUE-002 to ISSUE-004 come from the Re-cafe coffee newsletter. The full compiled email is here: [recafe1.html](examples/recafe1.html)
+
+---
+
+## 📝 Blog: Email Dev Notes
+
+Each issue above is written up on my blog:
+
+* [MJML images shrinking and spacing apart in columns: the padding fix](https://linleyb.com/blog/mj-group-padding.html)
+* [What dark mode inversion did to my newsletter, and the fixes](https://linleyb.com/blog/dark-mode-inversion-fixes.html)
+* [Footer text turning black in macOS dark mode: the fix](https://linleyb.com/blog/footer-text-macos-dark-mode.html)
+* [Building a dark promo email: what broke, what fixed it, and what to watch for](https://linleyb.com/blog/dark-promo-email-fundamentals.html)
