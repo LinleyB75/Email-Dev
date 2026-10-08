@@ -35,7 +35,7 @@ A transactional security email notifying users of successful 2FA enrollment, eng
 * **Key Features:** Uses Handlebars.js templating to map user names, masked account details, and dynamic support links. Features enterprise-grade structural comments and pure UI/logic separation.
 * **Files:** Contains the Handlebars-ready index.html template, the index.mjml structural blueprint, and the data.json mock data structure.
 
-**6. Linx Systems Headphone Promo (linx-promo-email)**
+**6. Linx Systems Headphone Promo (Linx-Promo-Email)**
 A sleek promotional campaign for a premium headphone brand, focusing on high-end visual hierarchy and modern aesthetics.
 * **Key Features:** Verified HTML rendering, strict adherence to accessibility standards (a11y) for screen readers, responsive grid layouts, and comprehensive structural code comments for readability.
 * **Files:** Contains both the raw linx-promo1.mjml blueprint and the compiled linx-promo1.html production file.
@@ -45,7 +45,7 @@ A clean, responsive promotional email for a food brand utilizing a classic alter
 * **Key Features:** Optimized for high readability, bulletproof functionality across tough email clients, integrated hidden preheader text, and fully verified, accessible HTML code.
 * **Files:** Contains both the raw tomma-pasta-promo1.mjml blueprint and the compiled tomma-pasta-promo1.html production file.
 
-**8. Frameler Eyewear Order Notification (frameler-order-shipped)**
+**8. Frameler Eyewear Order Notification (Frameler-Order-Shipped-Transactional-Email)**
 A transactional shipping confirmation email featuring a responsive product grid and dynamic tracking details.
 * **Key Features:** Native MJML mobile column stacking, injected Dark Mode metadata for email client compatibility, and Handlebars.js templating for dynamic order and shipping data.
 * **Files:** Contains the Handlebars-ready index.html template, the index.mjml structural blueprint, and the data.json mock backend payload.
@@ -55,10 +55,26 @@ A high-contrast promotional email designed with a premium vanilla and black aest
 * **Key Features:** Strict Light Mode design preservation with seamless native Dark Mode auto-inversion. Features CSS drop-shadow enhancements for transparent PNG social icons to ensure visibility across varying environments.
 * **Files:** Contains both the raw index.mjml blueprint and the compiled index.html production file.
 
-**10. Dynamic Billing Receipt - Kick-Off English (kick-off-billing-receipt)**
+**10. Dynamic Billing Receipt - Kick-Off English (kick-off-billing-receipt-notification)**
 A transactional email receipt designed for an online English learning platform, built with a pure MJML structural blueprint and engineered for backend data integration.
 * **Key Features:** Features a custom CSS "sniper" fix for perfect Dark Mode rendering across nested MJML table cells. Utilizes Handlebars.js templating to dynamically inject customer profiles, variable billing dates, and payment statement descriptors.
 * **Files:** Contains the raw `index.mjml` blueprint, the Handlebars-ready `index.html` production file, and the `data.json` mock backend payload.
+
+**11. Re-cafe Coffee Newsletter**
+A dark-themed coffee newsletter built in MJML on a near-black background with red brand accents.
+* **Key Features:** Hand-built bulletproof CTA button with locked colours for Outlook.com dark mode, footer and social icon colours adjusted for dark mode inversion, and Apple data detector handling for the footer address. Rendered well in 130 clients in testing. See ISSUE-002 to ISSUE-004 in the Issue Log below.
+* **Files:** Contains the compiled `Recafe1.html` production file.
+
+**12. Framler Eyewear Invite Promo (FramlerDarkLightInvite.mjml)**
+A promotional invite email for the Framler eyewear brand, designed in light mode with a dark mode switch.
+* **Key Features:** Light mode invite design that switches to a dark mode version.
+* **Files:** Contains the `FramlerDarkLightInvite.mjml` blueprint.
+
+**13. Finiti Coffee Promo**
+A subscriber promotional email for a coffee brand.
+
+**14. Ignite Clothing Subscriber Promo (Ignite-clothing-promo)**
+A dark mode subscriber promotional email for a clothing brand.
 
 ---
 
@@ -68,12 +84,12 @@ Real rendering problems found while testing, each with the cause (marked confirm
 
 | ID | Problem | Log entry | Example |
 |---|---|---|---|
-| 001 | MJML images shrink and space apart in columns (`mj-group`) | [ISSUE-001](issues/ISSUE-001-mj-group-padding.md) | [before](examples/issue-001-before.mjml), [after](examples/issue-001-after.mjml) |
-| 002 | CTA button colours changed by dark mode | [ISSUE-002](issues/ISSUE-002-outlook-dark-mode-button.md) | [button](examples/issue-002-cta-button.mjml) |
-| 003 | Footer colour and social icons changed by dark mode inversion | [ISSUE-003](issues/ISSUE-003-footer-social-inversion.md) | [footer and social](examples/issue-003-footer-social.mjml) |
-| 004 | Footer text black instead of white on grey in macOS dark mode | [ISSUE-004](issues/ISSUE-004-footer-text-macos-dark.md) | [footer](examples/issue-004-footer-apple.mjml) |
+| 001 | MJML images shrink and space apart in columns (`mj-group`) | [ISSUE-001](https://github.com/LinleyB75/Email-Dev/blob/main/issues/ISSUE-001-mj-group-padding.md) | [before](https://github.com/LinleyB75/Email-Dev/blob/main/examples/issue-001-before.mjml), [after](https://github.com/LinleyB75/Email-Dev/blob/main/examples/issue-001-after.mjml) |
+| 002 | CTA button colours changed by dark mode | [ISSUE-002](https://github.com/LinleyB75/Email-Dev/blob/main/issues/ISSUE-002-outlook-dark-mode-button.md) | [button](https://github.com/LinleyB75/Email-Dev/blob/main/examples/issue-002-cta-button.mjml) |
+| 003 | Footer colour and social icons changed by dark mode inversion | [ISSUE-003](https://github.com/LinleyB75/Email-Dev/blob/main/issues/ISSUE-003-footer-social-inversion.md) | [footer and social](https://github.com/LinleyB75/Email-Dev/blob/main/examples/issue-003-footer-social.mjml) |
+| 004 | Footer text black instead of white on grey in macOS dark mode | [ISSUE-004](https://github.com/LinleyB75/Email-Dev/blob/main/issues/ISSUE-004-footer-text-macos-dark.md) | [footer](https://github.com/LinleyB75/Email-Dev/blob/main/examples/issue-004-footer-apple.mjml) |
 
-ISSUE-002 to ISSUE-004 come from the Re-cafe coffee newsletter. The full compiled email is here: [recafe1.html](examples/recafe1.html)
+ISSUE-002 to ISSUE-004 come from the Re-cafe coffee newsletter (project 11). The full compiled email is here: [recafe1.html](https://github.com/LinleyB75/Email-Dev/blob/main/Recafe1.html)
 
 ---
 
