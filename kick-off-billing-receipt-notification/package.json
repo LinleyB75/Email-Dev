@@ -1,0 +1,23 @@
+{
+  "name": "kick-off-account-setup-brevo",
+  "version": "1.0.0",
+  "description": "Account setup transactional email: MJML template with Brevo Template Language, a params contract, local tests, and scripts that create the Brevo template and send a test email.",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "preview": "node preview.js",
+    "test": "node test.js",
+    "test:brevo": "node test-brevo.js",
+    "create-template:dry": "node create-template.js --dry-run",
+    "create-template": "node create-template.js",
+    "check-template": "node check-template.js",
+    "send:dry": "node send.js --dry-run",
+    "send": "node send.js",
+    "all": "node build.js && node test.js && node test-brevo.js && node preview.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mjml": "^5.4.1",
+    "nunjucks": "^3.2.4"
+  }
+}
