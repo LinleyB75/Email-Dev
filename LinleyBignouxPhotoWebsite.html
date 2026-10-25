@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linley Bignoux Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        charcoal: {
+                            950: '#0d0d0d',
+                            900: '#121212',
+                            800: '#1a1a1a',
+                            700: '#262626',
+                            600: '#333333',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; transition: background-color 0.4s ease, color 0.4s ease; }
+        
+        /* Custom Light Switch Styling */
+        .light-switch-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 56px;
+            height: 30px;
+        }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #262626;
+            transition: .4s;
+            border-radius: 34px;
+            border: 1px solid #333;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 3px;
+            background-color: #f1f5f9;
+            transition: .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        input:checked + .slider {
+            background-color: #e2e8f0;
+            border-color: #cbd5e1;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+            background-color: #0f172a;
+        }
+
+        /* Horizontal Carousel Hide Scrollbar */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Masonry Grid Layout styling */
+        .photo-masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 640px) { .photo-masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .photo-masonry-grid { column-count: 3; } }
+        @media (min-width: 1280px) { .photo-masonry-grid { column-count: 4; } }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-charcoal-900 text-slate-100 dark:bg-charcoal-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-charcoal-900/80 dark:bg-charcoal-900/80 border-b border-charcoal-700 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="https://ibb.co/KxYkNPkk" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-camera text-white text-base"></i>
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight block leading-none">Linley Bignoux</span>
+                    <span class="text-[10px] tracking-widest text-slate-400 font-medium uppercase">Portfolio Photography</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#discover" class="hover:text-cyan-400 transition-colors">Discover</a>
+                <a href="#editors-choice" class="hover:text-cyan-400 transition-colors">Editor's Choice</a>
+                <a href="#gallery" class="hover:text-cyan-400 transition-colors">Feed</a>
+                <a href="#about" class="hover:text-cyan-400 transition-colors">Photographer</a>
+            </nav>
+
+            <!-- Right Controls: Light Switch & Mobile Menu Toggle -->
+            <div class="flex items-center gap-5">
+                <!-- Physical Light Switch Component -->
+                <div class="light-switch-container">
+                    <i class="fa-solid fa-moon text-xs text-slate-400 dark:text-cyan-400 transition-colors"></i>
+                    <label class="switch" title="Toggle Light/Dark Mode">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider"></span>
+                    </label>
+                    <i class="fa-solid fa-sun text-xs text-amber-400 dark:text-slate-500 transition-colors"></i>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal-800 border-b border-charcoal-700 px-6 py-5 space-y-4">
+            <a href="#discover" class="block text-sm font-medium text-slate-300 hover:text-cyan-400 py-1">Discover</a>
+            <a href="#editors-choice" class="block text-sm font-medium text-slate-300 hover:text-cyan-400 py-1">Editor's Choice</a>
+            <a href="#gallery" class="block text-sm font-medium text-slate-300 hover:text-cyan-400 py-1">Feed</a>
+            <a href="#about" class="block text-sm font-medium text-slate-300 hover:text-cyan-400 py-1">Photographer</a>
+        </div>
+    </header>
+
+    <section id="discover" class="pt-32 pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
+                <i class="fa-solid fa-fire text-[10px]">></i> Curated Photography Community
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                Discover & showcase <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">world-class photography</span>
+            </h1>
+            <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
+                Explore breathtaking imagery captured by visionary photographers around the globe. Click any photo to inspect in high-resolution detail.
+            </p>
+
+            <!-- Category Filter Pills -->
+            <div id="category-filters" class="flex flex-wrap items-center justify-center gap-2.5 pt-4">
+                <button data-category="all" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cyan-500 text-white shadow-md transition-all">All Photos</button>
+                <button data-category="nature" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-charcoal-800 text-slate-300 hover:bg-charcoal-700 hover:text-white transition-all">Nature & Wildlife</button>
+                <button data-category="architecture" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-charcoal-800 text-slate-300 hover:bg-charcoal-700 hover:text-white transition-all">Architecture</button>
+                <button data-category="portrait" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-charcoal-800 text-slate-300 hover:bg-charcoal-700 hover:text-white transition-all">Portrait</button>
+                <button data-category="street" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-charcoal-800 text-slate-300 hover:bg-charcoal-700 hover:text-white transition-all">Street & Urban</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="editors-choice" class="py-12 border-y border-charcoal-700 bg-charcoal-950/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 flex items-center justify-between">
+            <div>
+                <h2 class="text-xl font-bold tracking-tight flex items-center gap-2">
+                    <i class="fa-solid fa-award text-amber-400"></i> Editor's Choice Strip
+                </h2>
+                <p class="text-xs text-slate-400 mt-0.5">Horizontally scrolling showcase of top-rated masterpieces</p>
+            </div>
+            <!-- Carousel Navigation Buttons -->
+            <div class="flex items-center gap-2">
+                <button id="carousel-prev" class="w-9 h-9 rounded-xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-charcoal-700 transition-colors" aria-label="Scroll Left">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button id="carousel-next" class="w-9 h-9 rounded-xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-charcoal-700 transition-colors" aria-label="Scroll Right">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Horizontal Scrolling Strip Container -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="horizontal-carousel" class="flex gap-6 overflow-x-auto no-scrollbar pb-4 snap-x snap-mandatory scroll-smooth">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 w-full">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-xl font-bold tracking-tight">Discover Feed</h3>
+            <span id="photo-count" class="text-xs text-slate-400 font-medium">Showing all photos</span>
+        </div>
+
+        <!-- Masonry Grid Container -->
+        <div id="masonry-container" class="photo-masonry-grid">
+            <!-- Injected via JavaScript -->
+        </div>
+    </section>
+
+    <footer id="about" class="border-t border-charcoal-700 bg-charcoal-950 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-8 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-cover bg-center border-2 border-cyan-500 shadow-md" style="background-image: url('https://i.ibb.co/N2XP1vPP/post-035.jpg' )"></div>
+                    <div>
+                        <h4 class="text-lg font-bold">Linley Bignoux</h4>
+                        <p class="text-xs text-cyan-400 font-medium">Landscape &amp; Underwater Photographer</p>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-400 max-w-xl leading-relaxed">
+                    Lumina is an independent homage to 500px, celebrating breathtaking visual artistry across landscape, urban exploration, and intimate portraiture. Built with pure Vanilla HTML, CSS, and JS.
+                </p>
+            </div>
+            <div class="md:col-span-4 flex md:justify-end gap-4 text-slate-400">
+                <a href="#" class="w-10 h-10 rounded-xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center hover:text-cyan-400 hover:border-cyan-500/50 transition-all"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center hover:text-cyan-400 hover:border-cyan-500/50 transition-all"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center hover:text-cyan-400 hover:border-cyan-500/50 transition-all"><i class="fa-brands fa-500px"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center hover:text-cyan-400 hover:border-cyan-500/50 transition-all"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-charcoal-800 text-center text-xs text-slate-500">
+            © 2026 Lumina Photography Inc. All photography sourced via Unsplash API placeholders.
+        </div>
+    </footer>
+
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <!-- Close Button -->
+        <button id="lightbox-close" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all text-xl z-10 focus:outline-none" aria-label="Close Lightbox">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Modal Card Wrapper -->
+        <div id="lightbox-card" class="bg-charcoal-900 border border-charcoal-700 rounded-3xl shadow-2xl overflow-hidden max-w-full transition-all duration-300 relative my-auto">
+            <!-- Image Container -->
+            <div class="w-full bg-black flex items-center justify-center overflow-hidden relative">
+                <img id="lightbox-img" src="" alt="Enlarged View" class="w-full h-auto object-contain max-h-[80vh] transition-transform duration-300">
+            </div>
+
+            <!-- Details Footer Bar -->
+            <div class="p-6 sm:p-8 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 id="lightbox-title" class="text-xl font-bold text-white">Title Here</h3>
+                        <p id="lightbox-author" class="text-xs text-cyan-400 font-medium mt-1">Photo by Author Name</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button id="lightbox-like-btn" class="px-4 py-2 rounded-xl bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 text-xs font-semibold text-slate-300 flex items-center gap-2 transition-all">
+                            <i class="fa-solid fa-heart text-rose-500"></i> <span id="lightbox-likes">342</span>
+                        </button>
+                        <button id="lightbox-share-btn" class="px-4 py-2 rounded-xl bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 text-xs font-semibold text-slate-300 flex items-center gap-2 transition-all">
+                            <i class="fa-solid fa-share-nodes text-cyan-400"></i> Share
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Camera Metadata Tags -->
+                <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-charcoal-800 text-xs text-slate-400">
+                    <span class="px-3 py-1 rounded-lg bg-charcoal-800"><i class="fa-solid fa-camera-retro mr-1.5 text-cyan-400"></i> <span id="meta-camera">Sony A7R V</span></span>
+                    <span class="px-3 py-1 rounded-lg bg-charcoal-800"><i class="fa-solid fa-bolt mr-1.5 text-cyan-400"></i> <span id="meta-lens">24-70mm f/2.8</span></span>
+                    <span class="px-3 py-1 rounded-lg bg-charcoal-800"><i class="fa-solid fa-sliders mr-1.5 text-cyan-400"></i> <span id="meta-settings">ISO 100 • 1/500s • f/4.0</span></span>
+                    <span class="px-3 py-1 rounded-lg bg-charcoal-800 ml-auto uppercase font-bold text-cyan-400 tracking-wider" id="meta-orientation">Landscape</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Comprehensive Photography Dataset (Mixed Landscape & Portrait)
+        const photosData = [
+            {
+                id: 1,
+                title: "Alpine Mist over Emerald Lake",
+                author: "Matthias Le Roux",
+                category: "nature",
+                orientation: "landscape", // ~600px width target in lightbox
+                url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85",
+                likes: 1420,
+                camera: "Canon EOS R5",
+                lens: "16-35mm f/2.8L",
+                settings: "ISO 100 • 1/250s • f/8.0"
+            },
+            {
+                id: 2,
+                title: "Solitude in Neon Alleyways",
+                author: "Kenji Takahashi",
+                category: "street",
+                orientation: "portrait", // ~400px width target in lightbox
+                url: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=85",
+                likes: 980,
+                camera: "Fujifilm X-T5",
+                lens: "35mm f/1.4",
+                settings: "ISO 800 • 1/125s • f/2.0"
+            },
+            {
+                id: 3,
+                title: "Geometric Brutalist Facade",
+                author: "Clara Lindqvist",
+                category: "architecture",
+                orientation: "landscape",
+                url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85",
+                likes: 2150,
+                camera: "Sony A7IV",
+                lens: "24-70mm f/2.8 GM",
+                settings: "ISO 50 • 1/60s • f/11"
+            },
+            {
+                id: 4,
+                title: "Gaze of the North",
+                author: "Astrid Lindgren",
+                category: "portrait",
+                orientation: "portrait",
+                url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85",
+                likes: 3410,
+                camera: "Leica M11",
+                lens: "50mm f/1.2 Noctilux",
+                settings: "ISO 200 • 1/1000s • f/1.4"
+            },
+            {
+                id: 5,
+                title: "Golden Hour Sand Dunes",
+                author: "Tariq Al-Mansoor",
+                category: "nature",
+                orientation: "landscape",
+                url: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=85",
+                likes: 1890,
+                camera: "Nikon Z9",
+                lens: "70-200mm f/2.8",
+                settings: "ISO 64 • 1/800s • f/5.6"
+            },
+            {
+                id: 6,
+                title: "Monolithic Glass Spire",
+                author: "Marcus Vance",
+                category: "architecture",
+                orientation: "portrait",
+                url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=85",
+                likes: 760,
+                camera: "Sony A7R V",
+                lens: "12-24mm f/4",
+                settings: "ISO 100 • 1/400s • f/8"
+            },
+            {
+                id: 7,
+                title: "Midnight Rain in Shinjuku",
+                author: "Daiki Sato",
+                category: "street",
+                orientation: "landscape",
+                url: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=85",
+                likes: 4120,
+                camera: "Fujifilm GFX 100S",
+                lens: "45mm f/2.8",
+                settings: "ISO 1600 • 1/60s • f/2.8"
+            },
+            {
+                id: 8,
+                title: "Silhouettes at Dusk",
+                author: "Elena Rostova",
+                category: "nature",
+                orientation: "portrait",
+                url: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=85",
+                likes: 1540,
+                camera: "Canon EOS R3",
+                lens: "85mm f/1.2L",
+                settings: "ISO 400 • 1/1600s • f/1.8"
+            }
+        ];
+
+        // 2. Light / Dark Mode Light Switch Toggle Logic
+        const themeSwitch = document.getElementById('theme-switch');
+        const htmlElement = document.documentElement;
+
+        // Check local storage or default to dark (charcoal)
+        const savedTheme = localStorage.getItem('lumina_theme') || 'dark';
+        if (savedTheme === 'light') {
+            htmlElement.classList.remove('dark');
+            themeSwitch.checked = true;
+        } else {
+            htmlElement.classList.add('dark');
+            themeSwitch.checked = false;
+        }
+
+        themeSwitch.addEventListener('change', () => {
+            if (themeSwitch.checked) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('lumina_theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('lumina_theme', 'dark');
+            }
+        });
+
+        // 3. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // 4. Populate Horizontal Carousel Strip
+        const carouselContainer = document.getElementById('horizontal-carousel');
+        function renderCarousel() {
+            carouselContainer.innerHTML = photosData.slice(0, 6).map(photo => `
+                <div class="flex-shrink-0 w-72 sm:w-80 group cursor-pointer snap-start" onclick="openLightbox(${photo.id})">
+                    <div class="relative rounded-2xl overflow-hidden bg-charcoal-800 border border-charcoal-700 aspect-[4/3] shadow-lg">
+                        <img src="${photo.url}" alt="${photo.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                            <h4 class="text-sm font-bold text-white truncate">${photo.title}</h4>
+                            <p class="text-xs text-cyan-400">${photo.author}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        renderCarousel();
+
+        // Carousel Scroll Controls
+        document.getElementById('carousel-prev').addEventListener('click', () => {
+            carouselContainer.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+        document.getElementById('carousel-next').addEventListener('click', () => {
+            carouselContainer.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+
+        // 5. Populate Masonry Grid Feed with Category Filtering
+        const masonryContainer = document.getElementById('masonry-container');
+        const photoCountBadge = document.getElementById('photo-count');
+
+        function renderGallery(filter = 'all') {
+            const filtered = filter === 'all' ? photosData : photosData.filter(p => p.category === filter);
+            photoCountBadge.textContent = `Showing ${filtered.length} photos`;
+
+            masonryContainer.innerHTML = filtered.map(photo => `
+                <div class="masonry-item group cursor-pointer" onclick="openLightbox(${photo.id})">
+                    <div class="rounded-2xl overflow-hidden bg-charcoal-800 border border-charcoal-700 shadow-md relative">
+                        <img src="${photo.url}" alt="${photo.title}" loading="lazy" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-5 flex flex-col justify-end">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">${photo.category}</span>
+                                <span class="text-xs text-slate-300 font-semibold"><i class="fa-solid fa-heart text-rose-500 mr-1"></i> ${photo.likes}</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-white">${photo.title}</h4>
+                            <p class="text-xs text-slate-300">by ${photo.author}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        renderGallery('all');
+
+        // Category Filter Buttons Event Listeners
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-cyan-500', 'text-white');
+                    b.classList.add('bg-charcoal-800', 'text-slate-300');
+                });
+                btn.classList.add('bg-cyan-500', 'text-white');
+                btn.classList.remove('bg-charcoal-800', 'text-slate-300');
+                renderGallery(btn.getAttribute('data-category'));
+            });
+        });
+
+        // 6. Interactive Lightbox Modal Logic (Landscape ~600px max width, Portrait ~400px max width)
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxCard = document.getElementById('lightbox-card');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxAuthor = document.getElementById('lightbox-author');
+        const lightboxLikes = document.getElementById('lightbox-likes');
+        const metaCamera = document.getElementById('meta-camera');
+        const metaLens = document.getElementById('meta-lens');
+        const metaSettings = document.getElementById('meta-settings');
+        const metaOrientation = document.getElementById('meta-orientation');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        window.openLightbox = function(id) {
+            const photo = photosData.find(p => p.id === id);
+            if (!photo) return;
+
+            lightboxImg.src = photo.url;
+            lightboxTitle.textContent = photo.title;
+            lightboxAuthor.textContent = `Photo by ${photo.author}`;
+            lightboxLikes.textContent = photo.likes;
+            metaCamera.textContent = photo.camera;
+            metaLens.textContent = photo.lens;
+            metaSettings.textContent = photo.settings;
+            metaOrientation.textContent = photo.orientation;
+
+            // Apply specific width constraint based on orientation requirement:
+            // Landscape ~600px max-width, Portrait ~400px max-width
+            if (photo.orientation === 'landscape') {
+                lightboxCard.style.maxWidth = '600px';
+            } else {
+                lightboxCard.style.maxWidth = '400px';
+            }
+
+            lightboxModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        };
+
+        function closeLightbox() {
+            lightboxModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            lightboxImg.src = '';
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
