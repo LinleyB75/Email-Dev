@@ -1,0 +1,190 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-title>Notification: We have successfully charged your account</mj-title>
+    <mj-preview>Thanks from Kick-off→ Your English</mj-preview>
+    <mj-raw>
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+      <style>
+        @media (prefers-color-scheme: dark) {
+          .dm-bg { background-color: #121212 !important; }
+          .dm-panel > table > tbody > tr > td { background-color: #1E1E1E !important; }
+          .dm-text div, .dm-text span, .dm-text strong { color: #E0E0E0 !important; }
+          .dm-divider p { border-top-color: #888888 !important; }
+          .dm-link { color: #66b3ff !important; }
+        }
+      </style>
+    </mj-raw>
+  </mj-head>
+  <mj-body background-color="#FFFFFF" css-class="dm-bg">
+
+    <!-- Header: brand name and logo -->
+    <mj-section background-color="orange" border="0">
+      <mj-column width="50%" vertical-align="middle">
+        <mj-text align="center" color="#000" font-size="36px" line-height="1.2" font-family="Arial, sans-serif">
+          <span style="color:#FFF;"><strong>Kick&nbsp;</strong></span><br />off → Your English!
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-image width="200px" padding="0" src="https://i.ibb.co/dQfhpdk/Screenshot-2024-04-04-100812-Photoroom-png-Photoroom-2.png" alt="Kick Off English Logo" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Thank you and what was charged -->
+    <mj-section css-class="dm-bg">
+      <mj-column>
+        <mj-text css-class="dm-text" font-size="26px" line-height="1.5" font-family="Arial, sans-serif" color="#000">
+          <strong>❤️ Thanks from Kick-off→ Your English</strong>
+        </mj-text>
+        <mj-text css-class="dm-text" font-size="18px" line-height="1.6" font-family="Arial, sans-serif" color="#000">
+          <br />This is a notification to let you know that we have successfully charged your credit card account.<br /><br /> The charged amount will appear on your account statement as: <strong>"Debit 101 KICK OFF-Geo English Brazil LLC"</strong>. This will include the monthly cost for your {{ params.planSummary }}.<br /><br /> Please <a href="mailto:support@example.com" class="dm-link" style="text-decoration: underline; color: #007bff; font-weight: bold;">Contact Support</a> if you feel that this transaction was not by you, or if you feel this transaction was suspicious in any way.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Billing period. Only shown when params.billingPeriod is sent -->
+    <mj-raw>{% if params.billingPeriod %}</mj-raw>
+    <mj-section background-color="#FFFFF0" css-class="dm-panel" padding="5px 0" padding-top="25px">
+      <mj-column>
+        <mj-text css-class="dm-text" font-family="Georgia, serif" font-size="16px" line-height="1.5">
+          <strong>Your account details during this billing period:</strong><br /> {{ params.billingPeriod }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+
+    <!-- Seller details and receipt details -->
+    <mj-section background-color="#FFFFF0" css-class="dm-panel" padding="5px 0">
+      <mj-column width="50%">
+        <mj-text css-class="dm-text" font-family="Arial, sans-serif" font-size="16px" line-height="1.5">
+          Geo English Brazil LLC<br />1 Allee des Bambous, 8th Floor<br />Classo Complex Building<br />Montagne Ory<br />Moka, 80825<br />Mauritius
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text css-class="dm-text" font-family="Arial, sans-serif" font-size="16px" line-height="1.5">
+          <strong>Receipt #{{ params.receiptNumber }}</strong><br /><br />Invoice Date: {{ params.invoiceDate }}<br />Payment Received: {{ params.paymentDate }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Bill to and billing address -->
+    <mj-section background-color="#FFFFF0" css-class="dm-panel" padding="5px 0">
+      <mj-column width="50%">
+        <mj-text css-class="dm-text" font-family="Arial, sans-serif" font-size="16px" line-height="1.5">
+          <strong>Bill to</strong><br />{{ params.customerName }}
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-raw>{% if params.billingAddressLines %}</mj-raw>
+        <mj-text css-class="dm-text" font-family="Arial, sans-serif" font-size="16px" line-height="1.5">
+          <strong>Billing address</strong>{% for line in params.billingAddressLines %}<div>{{ line }}</div>{% endfor %}
+        </mj-text>
+        <mj-raw>{% endif %}</mj-raw>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-divider css-class="dm-divider" border-style="dashed" border-width="2px" border-color="#000000" padding="15px 25px 0 25px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- One row per line item -->
+    <mj-raw>{% for item in params.lineItems %}</mj-raw>
+    <mj-section background-color="#FFFFF0" css-class="dm-panel" padding="5px 0">
+      <mj-column width="50%">
+        <mj-text css-class="dm-text" font-family="Arial, sans-serif" font-size="16px" line-height="1.5">{{ item.description }}</mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text css-class="dm-text" align="right" font-family="Arial, sans-serif" font-size="16px" line-height="1.5">{{ item.amount }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endfor %}</mj-raw>
+
+    <!-- Total -->
+    <mj-section background-color="#FFFFF0" css-class="dm-panel" padding="5px 0">
+      <mj-column width="50%">
+        <mj-text css-class="dm-text" font-family="Arial, sans-serif" font-size="16px" line-height="1.5"><strong>Total</strong></mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text css-class="dm-text" align="right" font-family="Arial, sans-serif" font-size="16px" line-height="1.5"><strong>{{ params.total }}</strong></mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Amount paid and card -->
+    <mj-section background-color="#FFFFF0" css-class="dm-panel" padding="5px 0" padding-bottom="15px">
+      <mj-column width="60%">
+        <mj-text css-class="dm-text" font-family="Arial, sans-serif" font-size="16px" line-height="1.5">Amount paid with {{ params.cardBrand }} (ending in {{ params.cardEnding }})</mj-text>
+      </mj-column>
+      <mj-column width="40%">
+        <mj-text css-class="dm-text" align="right" font-family="Arial, sans-serif" font-size="16px" line-height="1.5"><strong>{{ params.total }}</strong></mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-divider css-class="dm-divider" border-style="dashed" border-width="2px" border-color="#000000" padding="15px 25px 0 25px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Transaction history and contact -->
+    <mj-section css-class="dm-bg" padding="20px 5px">
+      <mj-column>
+        <mj-text css-class="dm-text" font-family="Arial, sans-serif" font-size="16px" line-height="1.6">
+          A history of all your transactions can be accessed <a href="https://example.com" class="dm-link" style="text-decoration: underline; color:#000;">here</a> by logging into <strong>your Kick Off→ Your English account.</strong><br /><br /> If you have any questions or doubts, please feel free to contact us at <a href="mailto:info@example.com" class="dm-link" style="color:#000;">info@geoenglish.com.br</a>.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Support band -->
+    <mj-section background-color="#555555">
+      <mj-column>
+        <mj-image width="80px" padding-bottom="15px" src="https://i.ibb.co/HFhD4rR/customer-service.png" alt="Customer Service Icon" />
+        <mj-text align="center" color="#FFFFFF" font-size="17px" line-height="1.5" font-family="Arial, sans-serif">
+          For any other questions you may have. Contact support at <br />
+          <span style="text-decoration: underline"><strong>support@geoenglish.com.br</strong></span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Ebook promo -->
+    <mj-section background-color="#F6F4F9" css-class="dm-panel" padding="30px 0">
+      <mj-column>
+        <mj-text css-class="dm-text" align="center" font-family="Arial, sans-serif" font-size="17px" line-height="1.5" padding-bottom="20px">
+          <strong>Don't forget to try our new Teach Ezy Ebook.</strong><br /><br /> You can download for free and once you sign up you can have access to our Premium Online English course on a 14 day trial.<br /><br /> It includes free grammar and conversation tutorials led by our native teachers!
+        </mj-text>
+        <mj-button href="https://example.com/teach-ezy-ebook" padding="0" width="220px" background-color="yellow" color="#000000" font-family="Arial, sans-serif" font-size="20px" font-weight="bold" border="4px solid black" border-radius="25px">Download Now</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Social links, newsletter and brand -->
+    <mj-section background-color="orange" padding="30px 0">
+      <mj-column width="100%">
+        <mj-text align="center" font-family="Georgia, serif" font-size="15px" line-height="1" padding="0 0 10px 0">Follow us on:</mj-text>
+        <mj-social icon-size="33px" mode="horizontal" padding="0 0 20px 0">
+          <mj-social-element name="facebook-noshare" href="https://www.facebook.com/" alt="Facebook" background-color="orange"></mj-social-element>
+          <mj-social-element name="twitter-noshare" href="https://twitter.com/" alt="Twitter" background-color="orange"></mj-social-element>
+          <mj-social-element name="instagram" href="https://www.instagram.com/" alt="Instagram" background-color="orange"></mj-social-element>
+          <mj-social-element name="youtube" href="https://www.youtube.com/" alt="YouTube" background-color="orange"></mj-social-element>
+        </mj-social>
+        <mj-text align="center" color="#FFFFFF" font-family="Arial, sans-serif" font-size="16px" line-height="1" text-decoration="underline" padding="0 0 30px 0">Subscribe to the Kick-Off → Your English newsletter</mj-text>
+      </mj-column>
+      <mj-column width="30%" vertical-align="middle">
+        <mj-image align="right" width="80px" padding="0" src="https://i.ibb.co/VVvw5zs/Screenshot-2024-04-04-100812-Photoroom-png-Photoroom-2.png" alt="Kick Off Logo" />
+      </mj-column>
+      <mj-column width="70%" vertical-align="middle">
+        <mj-text font-family="Georgia, serif" font-size="16px" line-height="1.5"><strong>Kick</strong> off → is brought to you by:<br />
+          <span style="color: #320871;"><strong>Geo English</strong></span>
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-image width="100px" height="100px" padding-top="30px" border-radius="50px" src="https://i.ibb.co/sgn29Yk/Screenshot-2024-04-04-095719.png" alt="Profile Icon" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#d3d3d3" css-class="dm-panel" padding="30px">
+      <mj-column>
+        <mj-text css-class="dm-text" align="center" font-family="Arial, sans-serif" font-size="15px" line-height="1" text-decoration="underline">Web View | Home | Data Privacy</mj-text>
+        <mj-text css-class="dm-text" align="center" font-family="Arial, sans-serif" font-size="14px" line-height="1.5">
+          <br /><strong>&copy; Kick Off → Your English</strong><br /> 1 Rua Des Bambous, Fortaleza, Ceara, Brazil<br /> Tel +55 85 99601 2344
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
