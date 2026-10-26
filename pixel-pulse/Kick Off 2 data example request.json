@@ -1,0 +1,21 @@
+{
+  "to": [
+    { "email": "you@example.com", "name": "Alex Example" }
+  ],
+  "templateId": 1,
+  "params": {
+    "customerName": "Alex Example",
+    "receiptNumber": "100245",
+    "invoiceDate": "March 1st, 2024",
+    "paymentDate": "March 1st, 2024",
+    "billingPeriod": "From March 1st 2024 - Ending 1st April 2024",
+    "planSummary": "$50 (2 hour class plan)",
+    "lineItems": [
+      { "description": "Monthly plan (2 hours of class)", "amount": "$50.00 AUD" }
+    ],
+    "total": "$50.00 AUD",
+    "cardBrand": "Mastercard",
+    "cardEnding": "*****42",
+    "billingAddressLines": ["12 Example Street", "Example City", "Example State", "Country"]
+  }
+}
