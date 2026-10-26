@@ -1,0 +1,15 @@
+{
+  "name": "kick-off-payment-receipt-brevo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "mjml templates/payment-receipt.mjml -o dist/payment-receipt.html",
+    "check-params": "node check-params.js",
+    "send:dry": "node send.js --dry-run",
+    "send": "node send.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mjml": "^5.4.1"
+  }
+}
