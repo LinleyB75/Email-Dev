@@ -1,0 +1,575 @@
+<mjml>
+  <mj-head>
+
+    <mj-preview>Set up your Online Account at Mindable Insurance</mj-preview>
+
+    <mj-title>Set up account notification.</mj-title>
+
+    <mj-style inline="inline">
+
+      @media screen and (max-width: 480px) {
+        mj-column {
+          width: 320px !important;
+        }
+      }
+
+      @media screen and (max-width:720px) {
+        mj-column {
+          width: 50% !important;
+        }
+      }
+
+      @media screen and (max-width:768px) {
+        mj-column {
+          width: 100% !important;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        mj-column {
+          width: 70% !important;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        mj-column {
+          width: 80% !important;
+        }
+      }
+
+    </mj-style>
+
+  </mj-head>
+
+  <mj-body background-color="orange">
+
+    <!-- Header -->
+
+    <mj-section
+      background-color="#FFF"
+      border="0"
+      padding="0"
+    >
+
+      <mj-column width="50%">
+
+        <mj-text
+          padding-top="56px"
+          align="center"
+          color="#000"
+          font-size="42px"
+        >
+
+          <span style="color:orange; line-height:2.0">
+            <strong>Kick&nbsp;</strong>
+          </span>
+
+          off → Your English!
+
+        </mj-text>
+
+      </mj-column>
+
+      <mj-column width="50%">
+
+        <mj-image
+          width="250px"
+          align="left"
+          src="https://i.ibb.co/dQfhpdk/Screenshot-2024-04-04-100812-Photoroom-png-Photoroom-2.png"
+          alt="Kick Off Your English"
+          border="0"
+          padding="0"
+        />
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Hero -->
+
+    <mj-section
+      background-color="#FFF"
+      border="0"
+      padding="0"
+    >
+
+      <mj-column width="600px">
+
+        <mj-image
+          width="600px"
+          src="https://i.ibb.co/gLvMgj3Z/Gemini-Generated-Image-ehknlgehknlgehkn.png"
+          alt="Kick Off Your English"
+          border="0"
+          padding="0"
+          border-radius="20px"
+        />
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Main text -->
+
+    <mj-section
+      padding="10px"
+      background-color="#FFF"
+      border="0"
+    >
+
+      <mj-column>
+
+        <mj-text
+          align="left"
+          font-family="Georgia, serif"
+          font-size="26px"
+          line-height="1.5"
+        >
+
+          <strong>Set Up Your Online Account</strong>
+
+        </mj-text>
+
+
+        <mj-text
+          align="left"
+          font-size="18px"
+          line-height="1.5"
+          font-family="Arial, sans-serif"
+          color="#333"
+        >
+
+          Now that you have signed up with us via your email address
+          and phone number you can easily set up your online account with us.
+
+          <br /><br />
+
+          <strong>Kick off → Your English</strong> account will give you
+          quick and no fuss access to your English class plans and you can
+          make changes or update to your account details.
+
+          <br /><br />
+
+          You can also download your progress reports and change English
+          class plans and a lot more!
+
+          <br /><br />
+
+          <strong>Let's get you set up!</strong>
+
+        </mj-text>
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Account setup button -->
+
+    <mj-section
+      padding="15px 15px 15px 12px"
+      background-color="#fff"
+      border="0"
+    >
+
+      <mj-column
+        background-color="#f2f2f2"
+        border-radius="10px"
+      >
+
+        <mj-button
+          href="{{params.accountSetupUrl}}"
+          width="250px"
+          align="left"
+          background-color="blue"
+          color="#FFF"
+          font-size="22px"
+          border-radius="5px"
+          height="60px"
+          font-family="Arial, serif"
+          font-weight="bold"
+          padding="25px"
+        >
+
+          Set Up Your Account
+
+        </mj-button>
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Account information -->
+
+    <mj-section
+      background-color="#FFF"
+      padding="10px"
+      border="0"
+    >
+
+      <mj-column vertical-align="middle">
+
+        <mj-text
+          vertical-align="top"
+          align="left"
+          font-size="18px"
+          line-height="1.6"
+          font-family="Arial, sans-serif"
+          color="#000"
+        >
+
+          As a reminder
+          (Your email that is registered with us is
+          <strong>{{params.email}}</strong>)
+
+          <br /><br />
+
+          If you have any questions or queries about setting up your account
+          you can email us at
+
+          <a
+            href="mailto:{{params.supportEmail}}"
+            style="text-decoration: underline; color: #007bff;"
+          >
+            Contact Support
+          </a>.
+
+          We will be glad to help you get set up.
+
+          <br /><br />
+
+          You can also visit our website for further details to read up on
+          our security policy and how we safeguard your data and privacy at
+
+          <a
+            href="{{params.securityPrivacyUrl}}"
+            style="text-decoration: underline; color: #007bff;"
+          >
+            Security and Privacy
+          </a>
+
+          on our website.
+
+        </mj-text>
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Sign off -->
+
+    <mj-section
+      background-color="#FFF"
+      padding="10px"
+      border="0"
+    >
+
+      <mj-column>
+
+        <mj-text
+          align="left"
+          font-size="18px"
+          font-family="Arial, sans-serif"
+          color="#333"
+          padding-bottom="30px"
+        >
+
+          Thank you,
+
+          <br />
+
+          Customer Support Team
+
+          <br />
+
+          <a
+            style="color:#007bff"
+            href="mailto:{{params.supportEmail}}"
+          >
+            {{params.supportEmail}}
+          </a>
+
+        </mj-text>
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Social heading -->
+
+    <mj-section
+      background-color="#333"
+      padding-bottom="5px"
+      padding-top="40px"
+      border="0"
+    >
+
+      <mj-column>
+
+        <mj-text
+          align="center"
+          font-size="16px"
+          font-family="Georgia, serif"
+          padding="0"
+          color="#fff"
+          line-height="1.5"
+        >
+
+          Follow us on:
+
+        </mj-text>
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Social links -->
+
+    <mj-section
+      padding="0"
+      border="0"
+      background-color="#fff"
+    >
+
+      <mj-column
+        background-color="#333"
+        padding-top="5px"
+        padding-bottom="0"
+        padding-left="5px"
+        padding-right="5px"
+      >
+
+        <mj-social
+          font-size="18px"
+          icon-size="33px"
+          mode="horizontal"
+          padding-top="0"
+          padding-bottom="0"
+          padding-left="25px"
+          padding-right="25px"
+        >
+
+          <mj-social-element
+            name="facebook"
+            href="{{params.facebookUrl}}"
+            background-color="#333"
+            color="#fff"
+          />
+
+          <mj-social-element
+            name="twitter"
+            href="{{params.twitterUrl}}"
+            background-color="#333"
+            color="#fff"
+          />
+
+          <mj-social-element
+            name="instagram"
+            href="{{params.instagramUrl}}"
+            background-color="#333"
+            color="#fff"
+          />
+
+          <mj-social-element
+            name="youtube"
+            href="{{params.youtubeUrl}}"
+            background-color="#333"
+            color="#fff"
+          />
+
+        </mj-social>
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Newsletter -->
+
+    <mj-section
+      background-color="#333"
+      border="0"
+      padding="20px"
+    >
+
+      <mj-column>
+
+        <mj-text
+          line-height="1.5"
+          color="#FFF"
+          align="center"
+          text-decoration="underline"
+          font-size="18px"
+        >
+
+          <a
+            href="{{params.newsletterUrl}}"
+            style="color:#FFF; text-decoration:underline;"
+          >
+
+            📮 Subscribe to the Kick off → Your English weekly newsletter.
+
+          </a>
+
+        </mj-text>
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Company information -->
+
+    <mj-section
+      background-color="#333"
+      padding="0px"
+      border="0"
+    >
+
+      <mj-column width="30%">
+
+        <mj-image
+          width="100px"
+          align="right"
+          src="https://i.ibb.co/VVvw5zs/Screenshot-2024-04-04-100812-Photoroom-png-Photoroom-2.png"
+          alt="Kick Off Your English"
+          border="0"
+          padding="0"
+        />
+
+      </mj-column>
+
+
+      <mj-column width="70%">
+
+        <mj-text
+          font-size="16px"
+          align="left"
+          color="#FFF"
+          line-height="1.5"
+          font-family="Arial, sans-serif"
+          font-weight="bold"
+          padding-bottom="0px"
+        >
+
+          <strong>Kick</strong> off → is brought to you by:
+
+          <br />
+
+          <span style="color:#FFF;">
+            {{params.companyName}}
+          </span>
+
+        </mj-text>
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Company logo -->
+
+    <mj-section
+      background-color="#333"
+      padding="15px"
+      border="0"
+    >
+
+      <mj-column>
+
+        <mj-image
+          src="https://i.ibb.co/sgn29Yk/Screenshot-2024-04-04-095719.png"
+          alt="Company Logo"
+          border="0"
+          padding="0"
+          css-class="responsive-image"
+          width="100px"
+          height="100px"
+          border-radius="160px"
+        />
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <!-- Footer -->
+
+    <mj-section
+      background-color="#333"
+      padding="15px"
+      border="0"
+    >
+
+      <mj-column>
+
+        <mj-text
+          letter-spacing="1px"
+          color="#fff"
+          text-decoration="underline"
+          font-size="16px"
+          align="center"
+          font-family="Arial, sans-serif"
+        >
+
+          <a
+            href="{{params.websiteUrl}}"
+            style="color:#fff;"
+          >
+            Web View
+          </a>
+
+          |
+
+          <a
+            href="{{params.websiteUrl}}"
+            style="color:#fff;"
+          >
+            Home
+          </a>
+
+          |
+
+          <a
+            href="{{params.securityPrivacyUrl}}"
+            style="color:#fff;"
+          >
+            Data Privacy
+          </a>
+
+        </mj-text>
+
+
+        <mj-text
+          color="#fff"
+          font-size="14px"
+          align="center"
+          line-height="1.5"
+          css-class="dm-text"
+        >
+
+          <br />
+
+          <strong>{{params.companyName}}</strong>
+
+          <br />
+
+          {{params.companyAddress}}
+
+          <br />
+
+          Tel {{params.companyPhone}}
+
+        </mj-text>
+
+      </mj-column>
+
+    </mj-section>
+
+  </mj-body>
+</mjml>
