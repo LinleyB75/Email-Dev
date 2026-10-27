@@ -1,0 +1,16 @@
+{
+  "firstName": "John",
+  "email": "john.smith@example.com",
+  "accountSetupUrl": "https://example.com/account/setup",
+  "supportEmail": "support@example.com",
+  "securityPrivacyUrl": "https://example.com/security-privacy",
+  "websiteUrl": "https://example.com",
+  "facebookUrl": "https://facebook.com/example",
+  "twitterUrl": "https://x.com/example",
+  "instagramUrl": "https://instagram.com/example",
+  "youtubeUrl": "https://youtube.com/@example",
+  "newsletterUrl": "https://example.com/newsletter",
+  "companyName": "Kick Off → Your English",
+  "companyAddress": "1 Rua Des Bambous, Fortaleza, Ceara, Brazil",
+  "companyPhone": "+55 85 99601 2344"
+}
