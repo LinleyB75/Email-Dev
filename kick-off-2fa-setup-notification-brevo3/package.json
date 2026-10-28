@@ -1,0 +1,26 @@
+{
+  "name": "kick-off-2fa-setup-notification-brevo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prebuild": "node scripts/make-dist.js",
+    "build": "mjml templates/2fa-setup-notification.mjml --config.validationLevel=strict -o dist/2fa-setup-notification.html",
+    "postbuild": "node scripts/check-build.js",
+    "check-params": "node check-params.js",
+    "test": "node scripts/test-checks.js",
+    "send:dry": "node send.js",
+    "send:sandbox": "node send.js --sandbox",
+    "send:live": "node send.js --live",
+    "test:send": "node scripts/test-send.js",
+    "simulated-brevo": "node scripts/simulated-brevo.js",
+    "simulate": "node scripts/brevo-walkthrough.js --simulated",
+    "test:brevo": "node scripts/brevo-walkthrough.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mjml": "^5.4.1"
+  },
+  "devDependencies": {
+    "nunjucks": "^3.2.4"
+  }
+}
