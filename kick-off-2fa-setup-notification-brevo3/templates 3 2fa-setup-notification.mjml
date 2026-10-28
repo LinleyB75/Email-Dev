@@ -1,0 +1,136 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-preview>Two-factor authentication is now on for your Kick off → Your English account.</mj-preview>
+    <mj-title>Two-factor authentication set up notification</mj-title>
+    <!-- Breakpoints -->
+    <mj-style inline="inline">
+      @media screen and (max-width:480px) {
+        mj-column {
+          width: 100% !important;
+        }
+      }
+
+      @media screen and (max-width:720px) {
+        mj-column {
+          width: 50% !important;
+        }
+      }
+
+      @media screen and (max-width:768px) {
+        mj-column {
+          width: 100% !important;
+        }
+      }
+    </mj-style>
+    <!-- Phones: when the footer columns stack, centre the logo and its text -->
+    <mj-style>
+      @media only screen and (max-width:479px) {
+        .footer-logo table { margin: 0 auto !important; }
+        .footer-brand div { text-align: center !important; }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#FFF">
+
+    <!-- Header: brand name and logo (unchanged) -->
+    <mj-section background-color="#000" border="0" padding="0" border-radius="0px 0px 10px 10px">
+      <mj-column width="50%">
+        <mj-text align="center" color="#FFF" font-size="42px"><span style="color:#EA6D2F;" line-height="2.0"><strong>Kick&nbsp;</strong></span>
+           off → Your English! </mj-text>
+        </mj-column>
+       <mj-column width="50%">
+        <mj-image width="250px" align="left" src="https://i.ibb.co/dQfhpdk/Screenshot-2024-04-04-100812-Photoroom-png-Photoroom-2.png" alt="Kick Off → Your English logo" border="0" padding="0" />
+   </mj-column>
+    </mj-section>
+
+    <!-- Main text. The greeting uses params.firstName, with a fallback when it is missing or empty -->
+    <mj-section>
+      <mj-column>
+        <mj-text font-family="Georgia, serif" font-size="30px"><strong>{% if params.firstName %}Hi {{ params.firstName }},{% else %}Hi there,{% endif %}</strong></mj-text>
+        <mj-text align="left" font-size="18px" line-height="1.5" font-family="Arial, serif" padding-bottom="15px" color="#333">
+          <br /><br />Two-factor authentication has been turned on for your Kick off → Your English account by our support team.<br /><br />This adds an extra layer of security to your account.<br /><br />The next time you log in, you will be asked to complete a second verification step.<br /><br />This email is a notification that this security feature is now active.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0" background-color="#FFEBF0">
+      <mj-column>
+        <mj-text align="left" font-size="18px" line-height="1.5" font-family="Arial, sans-serif" color="#333">
+          <strong>Let's get you set up. Select the blue button below to set up two-factor authentication:</strong>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Set up button. The link comes from setupUrl -->
+    <mj-section background-color="#FFEBF0">
+      <mj-column>
+        <mj-button href="{{ params.setupUrl }}" width="70%" align="left" background-color="blue" color="#FFF" font-size="18px" border-radius="10px" height="60px" font-family="Arial, sans-serif" font-weight="bold" border="0" padding="25px">
+          Set Up Two-Factor Authentication
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Reminder and support -->
+    <mj-section>
+      <mj-column>
+        <mj-text align="left" font-size="18px" line-height="1.5" font-family="Arial, sans-serif" color="#333">
+          As a reminder, your username is <strong>{{ params.maskedUsername }}</strong>.
+          <br /><br />If you did not expect this change, please contact us right away. If you have any questions about how two-factor authentication works, you can email us at <a href="mailto:support@geoenglish.com.br" style="text-decoration: underline; color: #007bff;">Contact Support</a> or reply to this email.<br /><br />You can also read about our security policy and how we safeguard your data and privacy at <a href="https://example.com/security-and-privacy" style="text-decoration: underline; color: #007bff;">Security and Privacy</a> on our website.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Sign-off -->
+    <mj-section>
+      <mj-column>
+        <mj-text align="left" font-size="18px" font-family="Arial, sans-serif" color="#333">
+          Thank you,<br /><br /><strong>Kick off → Your English Support Team</strong>
+          <br /><br />
+          <a style="color: #007bff;" href="mailto:support@geoenglish.com.br">support@geoenglish.com.br</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer: social icons (orange on the grey), brand and logos, address. Same layout as the payment receipt -->
+    <mj-section background-color="#DFE0E5" padding-bottom="15px" padding-top="40px" border-radius="15px 15px 0px 0px">
+      <mj-column>
+        <mj-text align="center" font-size="15px" font-family="Georgia, serif" padding="0" color="#000" line-height="1.5">Follow us on:</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" border="0" background-color="#DFE0E5">
+      <mj-column background-color="#DFE0E5" padding="15px">
+        <mj-social font-size="18px" icon-size="33px" mode="horizontal" padding-top="0" padding-bottom="0" border="0">
+          <!-- Upload the four icon files, then replace REPLACE-WITH-YOUR-HOST with the address they are hosted at -->
+          <mj-social-element name="facebook-noshare" src="https://REPLACE-WITH-YOUR-HOST/kick-off-icon-facebook.png" href="https://www.facebook.com/" alt="Facebook" background-color="#DFE0E5"></mj-social-element>
+          <mj-social-element name="twitter-noshare" src="https://REPLACE-WITH-YOUR-HOST/kick-off-icon-x-twitter.png" href="https://twitter.com/" alt="X (Twitter)" background-color="#DFE0E5"></mj-social-element>
+          <mj-social-element name="instagram" src="https://REPLACE-WITH-YOUR-HOST/kick-off-icon-instagram.png" href="https://www.instagram.com/" alt="Instagram" background-color="#DFE0E5"></mj-social-element>
+          <mj-social-element name="youtube" src="https://REPLACE-WITH-YOUR-HOST/kick-off-icon-youtube.png" href="https://www.youtube.com/" alt="YouTube" background-color="#DFE0E5"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#DFE0E5" padding="10px 0 30px 0">
+      <mj-column width="30%" vertical-align="middle">
+        <mj-image css-class="footer-logo" align="right" width="80px" padding="0" src="https://i.ibb.co/VVvw5zs/Screenshot-2024-04-04-100812-Photoroom-png-Photoroom-2.png" alt="Kick Off Logo" />
+      </mj-column>
+      <mj-column width="70%" vertical-align="middle">
+        <mj-text css-class="footer-brand" font-family="Georgia, serif" font-size="16px" line-height="1.5"><strong>Kick</strong> off → is brought to you by:<br />
+          <span style="color: #320871;"><strong>Geo English</strong></span>
+        </mj-text>
+      </mj-column>
+      <mj-column>
+        <mj-image width="100px" height="100px" padding-top="30px" border-radius="50px" src="https://i.ibb.co/sgn29Yk/Screenshot-2024-04-04-095719.png" alt="Geo English logo" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Address -->
+    <mj-section background-color="#d3d3d3" padding="30px">
+      <mj-column>
+        <mj-text align="center" font-family="Arial, sans-serif" font-size="15px" line-height="1" text-decoration="underline">Web View | Home | Data Privacy</mj-text>
+        <mj-text align="center" font-family="Arial, sans-serif" font-size="14px" line-height="1.5">
+          <br /><strong>&copy; Kick Off → Your English</strong><br /> 1 Rua Des Bambous, Fortaleza, Ceara, Brazil<br /> Tel +55 85 99601 2344
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
