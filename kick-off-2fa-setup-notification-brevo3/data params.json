@@ -1,0 +1,5 @@
+{
+  "firstName": "Alex",
+  "maskedUsername": "a******e",
+  "setupUrl": "https://app.example.com/2fa/setup?token=SAMPLE-TOKEN-123"
+}
